@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4443bee3-cc38-4a1f-8e9c-dad93ae398db" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/comicmaker$Form.ic" NAME="Form Coverage Results" MODIFIED="1524923420549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.comicteam.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="JAVA/org.comicteam" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/org.comicteam">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>org.comicteam</OriginalElement>
+              <nodes>
+                <node x="300.0" y="320.0">org.comicteam.FormController</node>
+                <node x="515.0" y="320.0">org.comicteam.layouts.ComicTier</node>
+                <node x="272.0" y="513.0">org.comicteam.layouts.Position</node>
+                <node x="0.0" y="683.0">org.comicteam.Main</node>
+                <node x="681.0" y="513.0">org.comicteam.Form</node>
+                <node x="477.0" y="513.0">org.comicteam.layouts.Size</node>
+                <node x="3.0" y="0.0">org.comicteam.layouts.ComicPanel</node>
+                <node x="390.0" y="683.0">org.comicteam.models</node>
+                <node x="0.0" y="198.0">org.comicteam.layouts.ComicSplash</node>
+                <node x="219.0" y="683.0">org.comicteam.helpers</node>
+                <node x="0.0" y="513.0">org.comicteam.layouts.ComicLayout</node>
+                <node x="380.0" y="0.0">org.comicteam.ComicBook</node>
+                <node x="0.0" y="320.0">org.comicteam.layouts.ComicPage</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="org.comicteam.layouts.ComicSplash" target="org.comicteam.layouts.ComicPanel">
+                  <point x="0.0" y="-38.5" />
+                  <point x="0.0" y="74.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="68.50000000000011" y="107.0" />
+              <SelectedNodes>
+                <node>org.comicteam.ComicBook</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComicBook.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/ComicBook.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="22" selection-start-column="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Téléchargements/SampleAsso1" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/ComicBoard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/ComicPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/ComicBox.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/ComicDocument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/Balloon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/layouts/Size.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicLayout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/layouts/Position.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/Sound.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/FormEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/Form.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/test.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/FormController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/ComicModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/SpeechBalloon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/pointers/SpeechBalloonPointer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/Caption.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/ThoughtBalloon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/Text.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/Balloon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/pointers/BalloonPointer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/pointers/ThoughtBalloonPointer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicSplash.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicTier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/ComicBook.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="24" />
+    <option name="width" value="1600" />
+    <option name="height" value="875" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="comicteam" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="comicteam" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="comicteam" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="ballons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="comicteam" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="ballons" type="462c0819:PsiDirectoryNode" />
+              <item name="pointers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/comicteam" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.comicteam" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="Form" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.comicteam.Form" />
+      <module name="ComicMaker" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.comicteam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.comicteam.Main" />
+      <module name="ComicMaker" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Form" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Form" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4443bee3-cc38-4a1f-8e9c-dad93ae398db" name="Default" comment="" />
+      <created>1524853630044</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524853630044</updated>
+      <workItem from="1524853633929" duration="5423000" />
+      <workItem from="1524902833050" duration="6057000" />
+      <workItem from="1524912984178" duration="14954000" />
+      <workItem from="1524934539093" duration="6523000" />
+      <workItem from="1524989954370" duration="5561000" />
+      <workItem from="1524999890154" duration="1170000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="39688000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="24" width="1600" height="875" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.25793102" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.22393823" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info id="UI Designer" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32965517" />
+      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.32965517" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/comicteam/FormController.java</url>
+          <line>20</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicSplash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicTier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.comicteam">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.comicteam</OriginalElement>
+          <nodes>
+            <node x="0.0" y="1450.0">org.comicteam.FormController</node>
+            <node x="200.78710730820092" y="854.5">org.comicteam.models.ballons.pointers.ThoughtBalloonPointer</node>
+            <node x="1979.0103215939153" y="878.5">org.comicteam.layouts.ComicTier</node>
+            <node x="1104.157345403439" y="0.0">org.comicteam.layouts.Position</node>
+            <node x="1335.5625" y="1131.5">org.comicteam.models.ballons.SpeechBalloon</node>
+            <node x="865.0000000000001" y="1131.5">org.comicteam.models.ballons.ThoughtBalloon</node>
+            <node x="215.0" y="1450.0">org.comicteam.Form</node>
+            <node x="1626.8856398809526" y="620.0">org.comicteam.layouts.ComicPanel</node>
+            <node x="925.1573454034391" y="0.0">org.comicteam.layouts.Size</node>
+            <node x="398.29954117063517" y="608.0">org.comicteam.models.ballons.pointers.BalloonPointer</node>
+            <node x="1450.927306547619" y="878.5">org.comicteam.layouts.ComicSplash</node>
+            <node x="566.1050967261906" y="878.5">org.comicteam.models.ballons.pointers.SpeechBalloonPointer</node>
+            <node x="434.0" y="1450.0">org.comicteam.helpers</node>
+            <node x="981.032345403439" y="175.0">org.comicteam.layouts.ComicLayout</node>
+            <node x="1015.7750000000001" y="843.0">org.comicteam.models.ballons.Balloon</node>
+            <node x="463.0000000000001" y="1131.5">org.comicteam.models.Caption</node>
+            <node x="1073.6156787367722" y="608.0">org.comicteam.models.Text</node>
+            <node x="1982.0103215939153" y="1259.0">org.comicteam.ComicBook</node>
+            <node x="1956.5103215939153" y="1108.0">org.comicteam.layouts.ComicPage</node>
+            <node x="1259.582142857143" y="400.0">org.comicteam.models.ComicModel</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="org.comicteam.models.ballons.pointers.BalloonPointer" target="org.comicteam.layouts.ComicLayout">
+              <point x="59.0" y="-62.5" />
+              <point x="575.2995411706352" y="588.0" />
+              <point x="521.7995411706352" y="588.0" />
+              <point x="521.7995411706352" y="360.0" />
+              <point x="1053.9966311177247" y="360.0" />
+              <point x="-40.53571428571422" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.layouts.ComicSplash" target="org.comicteam.layouts.ComicLayout">
+              <point x="-41.875" y="-27.0" />
+              <point x="1576.552306547619" y="823.0" />
+              <point x="1616.3856398809526" y="823.0" />
+              <point x="1616.3856398809526" y="350.0" />
+              <point x="1151.282345403439" y="350.0" />
+              <point x="56.75" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.layouts.ComicSplash" target="org.comicteam.layouts.ComicPanel">
+              <point x="41.875" y="-27.0" />
+              <point x="1660.302306547619" y="823.0" />
+              <point x="1681.7189732142858" y="823.0" />
+              <point x="-109.66666666666674" y="50.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.SpeechBalloon" target="org.comicteam.models.Text">
+              <point x="84.39999999999998" y="-27.0" />
+              <point x="1630.9625" y="988.0" />
+              <point x="1418.275" y="988.0" />
+              <point x="1418.275" y="793.0" />
+              <point x="1356.2156787367721" y="793.0" />
+              <point x="125.59999999999991" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.Caption" target="org.comicteam.models.ballons.Balloon">
+              <point x="76.40000000000009" y="-27.0" />
+              <point x="730.4000000000002" y="1058.0" />
+              <point x="1047.525" y="1058.0" />
+              <point x="-158.75" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.Balloon" target="org.comicteam.layouts.ComicLayout">
+              <point x="-54.42857142857133" y="-62.5" />
+              <point x="1151.8464285714288" y="753.0" />
+              <point x="1063.1156787367722" y="753.0" />
+              <point x="1063.1156787367722" y="380.0" />
+              <point x="1086.425202546296" y="380.0" />
+              <point x="-8.10714285714289" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.layouts.ComicSplash" target="org.comicteam.models.ComicModel">
+              <point x="-125.625" y="-27.0" />
+              <point x="1492.802306547619" y="823.0" />
+              <point x="1486.6713541666668" y="823.0" />
+              <point x="1486.6713541666668" y="588.0" />
+              <point x="1446.6535714285715" y="588.0" />
+              <point x="41.57142857142867" y="74.0" />
+            </edge>
+            <edge source="org.comicteam.layouts.ComicPage" target="org.comicteam.layouts.ComicTier">
+              <point x="-63.75" y="-50.5" />
+              <point x="2020.2603215939153" y="1088.0" />
+              <point x="2031.5103215939153" y="1088.0" />
+              <point x="-52.5" y="27.0" />
+            </edge>
+            <edge source="org.comicteam.layouts.ComicLayout" target="org.comicteam.layouts.Size">
+              <point x="-28.375" y="-62.5" />
+              <point x="1066.157345403439" y="150.0" />
+              <point x="1044.4073454034392" y="150.0" />
+              <point x="39.75" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.pointers.ThoughtBalloonPointer" target="org.comicteam.layouts.ComicLayout">
+              <point x="-100.66666666666674" y="-51.0" />
+              <point x="251.12044064153417" y="823.0" />
+              <point x="246.52176339285734" y="823.0" />
+              <point x="246.52176339285734" y="340.0" />
+              <point x="1021.5680596891532" y="340.0" />
+              <point x="-72.96428571428578" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.ThoughtBalloon" target="org.comicteam.models.Text">
+              <point x="170.79999999999995" y="-27.0" />
+              <point x="1249.3000000000002" y="1088.0" />
+              <point x="1407.275" y="1088.0" />
+              <point x="1407.275" y="803.0" />
+              <point x="1293.4156787367724" y="803.0" />
+              <point x="62.799999999999955" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.ThoughtBalloon" target="org.comicteam.layouts.ComicLayout">
+              <point x="-170.79999999999995" y="-27.0" />
+              <point x="907.7000000000002" y="1038.0" />
+              <point x="190.28710730820092" y="1038.0" />
+              <point x="190.28710730820092" y="330.0" />
+              <point x="1005.3537739748675" y="330.0" />
+              <point x="-89.17857142857144" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.ThoughtBalloon" target="org.comicteam.models.ballons.pointers.BalloonPointer">
+              <point x="-85.39999999999998" y="-27.0" />
+              <point x="993.1000000000001" y="1028.0" />
+              <point x="524.2871073082009" y="1028.0" />
+              <point x="524.2871073082009" y="813.0" />
+              <point x="490.077318948413" y="813.0" />
+              <point x="-26.22222222222217" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.SpeechBalloon" target="org.comicteam.models.ballons.Balloon">
+              <point x="-84.39999999999998" y="-27.0" />
+              <point x="1462.1625000000001" y="1008.0" />
+              <point x="1301.525" y="1008.0" />
+              <point x="95.25" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.SpeechBalloon" target="org.comicteam.layouts.ComicLayout">
+              <point x="168.79999999999995" y="-27.0" />
+              <point x="1715.3625000000002" y="1088.0" />
+              <point x="1966.3856398809526" y="1088.0" />
+              <point x="1966.3856398809526" y="320.0" />
+              <point x="1199.9252025462963" y="320.0" />
+              <point x="105.39285714285734" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.layouts.ComicLayout" target="org.comicteam.layouts.Position">
+              <point x="85.125" y="-62.5" />
+              <point x="1179.657345403439" y="150.0" />
+              <point x="1224.157345403439" y="150.0" />
+              <point x="39.999999999999886" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.layouts.ComicPanel" target="org.comicteam.layouts.ComicLayout">
+              <point x="41.125" y="-50.5" />
+              <point x="1832.5106398809526" y="340.0" />
+              <point x="1167.4966311177247" y="340.0" />
+              <point x="72.96428571428578" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.Balloon" target="org.comicteam.models.ballons.pointers.BalloonPointer">
+              <point x="-163.28571428571422" y="-62.5" />
+              <point x="1042.9892857142859" y="773.0" />
+              <point x="594.9662078373019" y="773.0" />
+              <point x="78.66666666666674" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.pointers.ThoughtBalloonPointer" target="org.comicteam.models.ballons.pointers.BalloonPointer">
+              <point x="100.66666666666663" y="-51.0" />
+              <point x="452.45377397486754" y="823.0" />
+              <point x="437.6328745039684" y="823.0" />
+              <point x="-78.66666666666669" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.pointers.SpeechBalloonPointer" target="org.comicteam.layouts.ComicLayout">
+              <point x="92.33333333333331" y="-27.0" />
+              <point x="796.938430059524" y="823.0" />
+              <point x="827.3704406415342" y="823.0" />
+              <point x="827.3704406415342" y="370.0" />
+              <point x="1070.2109168320105" y="370.0" />
+              <point x="-24.32142857142844" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.layouts.ComicPanel" target="org.comicteam.models.ComicModel">
+              <point x="-123.375" y="-50.5" />
+              <point x="1668.0106398809526" y="578.0" />
+              <point x="1488.225" y="578.0" />
+              <point x="83.14285714285711" y="74.0" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.Balloon" target="org.comicteam.models.Text">
+              <point x="0.0" y="-62.5" />
+              <point x="1206.275" y="823.0" />
+              <point x="1167.8156787367725" y="823.0" />
+              <point x="-62.799999999999955" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.Text" target="org.comicteam.models.ComicModel">
+              <point x="0.0" y="-62.5" />
+              <point x="1230.6156787367722" y="588.0" />
+              <point x="1280.3678571428572" y="588.0" />
+              <point x="-124.71428571428578" y="74.0" />
+            </edge>
+            <edge source="org.comicteam.models.Caption" target="org.comicteam.models.Text">
+              <point x="0.0" y="-27.0" />
+              <point x="654.0000000000001" y="1048.0" />
+              <point x="853.6050967261906" y="1048.0" />
+              <point x="853.6050967261906" y="823.0" />
+              <point x="1105.0156787367723" y="823.0" />
+              <point x="-125.59999999999991" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.layouts.ComicTier" target="org.comicteam.layouts.ComicPanel">
+              <point x="0.0" y="-27.0" />
+              <point x="2084.0103215939153" y="823.0" />
+              <point x="1901.052306547619" y="823.0" />
+              <point x="109.66666666666652" y="50.5" />
+            </edge>
+            <edge source="org.comicteam.models.Caption" target="org.comicteam.layouts.ComicLayout">
+              <point x="-152.79999999999995" y="-27.0" />
+              <point x="501.20000000000016" y="1088.0" />
+              <point x="0.0" y="1088.0" />
+              <point x="0.0" y="320.0" />
+              <point x="989.1394882605819" y="320.0" />
+              <point x="-105.39285714285711" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.pointers.SpeechBalloonPointer" target="org.comicteam.models.ballons.pointers.BalloonPointer">
+              <point x="0.0" y="-27.0" />
+              <point x="704.6050967261906" y="783.0" />
+              <point x="568.7439856150796" y="783.0" />
+              <point x="52.44444444444446" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.ComicBook" target="org.comicteam.layouts.ComicPage">
+              <point x="0.0" y="-73.0" />
+              <point x="0.0" y="50.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.ThoughtBalloon" target="org.comicteam.models.ballons.Balloon">
+              <point x="85.40000000000009" y="-27.0" />
+              <point x="1163.9" y="1088.0" />
+              <point x="1238.025" y="1088.0" />
+              <point x="31.75" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ComicModel" target="org.comicteam.layouts.ComicLayout">
+              <point x="-72.75" y="-74.0" />
+              <point x="1332.332142857143" y="370.0" />
+              <point x="1118.8537739748676" y="370.0" />
+              <point x="24.32142857142867" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.Caption" target="org.comicteam.models.ballons.pointers.BalloonPointer">
+              <point x="-76.40000000000009" y="-27.0" />
+              <point x="577.6" y="1088.0" />
+              <point x="513.2871073082009" y="1088.0" />
+              <point x="513.2871073082009" y="823.0" />
+              <point x="463.8550967261907" y="823.0" />
+              <point x="-52.44444444444446" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.SpeechBalloon" target="org.comicteam.models.ballons.pointers.BalloonPointer">
+              <point x="-168.79999999999995" y="-27.0" />
+              <point x="1377.7625000000003" y="1018.0" />
+              <point x="555.6050967261906" y="1018.0" />
+              <point x="555.6050967261906" y="803.0" />
+              <point x="516.2995411706352" y="803.0" />
+              <point x="0.0" y="62.5" />
+            </edge>
+            <edge source="org.comicteam.models.ballons.Balloon" target="org.comicteam.models.ComicModel">
+              <point x="163.28571428571422" y="-62.5" />
+              <point x="1369.5607142857143" y="823.0" />
+              <point x="1409.1156787367722" y="823.0" />
+              <point x="1409.1156787367722" y="588.0" />
+              <point x="1405.082142857143" y="588.0" />
+              <point x="0.0" y="74.0" />
+            </edge>
+            <edge source="org.comicteam.models.Text" target="org.comicteam.layouts.ComicLayout">
+              <point x="-104.66666666666674" y="-62.5" />
+              <point x="1125.9490120701057" y="380.0" />
+              <point x="1102.6394882605819" y="380.0" />
+              <point x="8.10714285714289" y="62.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="1615.0" y="983.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/SpeechBalloon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="112" selection-start-line="10" selection-start-column="112" selection-end-line="10" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/ThoughtBalloon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/App.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/APIHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/ModelHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/FormatHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/InputFileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/OutputFileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/ComicLayout.java" />
+    <entry file="jar://$PROJECT_DIR$/../../../Software/jdk-9.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="2468" selection-start-line="2468" selection-end-line="2468" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/FormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/Form.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/Sound.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/SettingsHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/ThoughtBalloon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/Balloon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/pointers/BalloonPointer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/pointers/SpeechBalloonPointer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/pointers/ThoughtBalloonPointer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/Caption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ballons/SpeechBalloon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/Size.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicTier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicSplash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/layouts/ComicPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ComicModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/ComicBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.comicteam">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.comicteam</OriginalElement>
+          <nodes>
+            <node x="300.0" y="320.0">org.comicteam.FormController</node>
+            <node x="515.0" y="320.0">org.comicteam.layouts.ComicTier</node>
+            <node x="272.0" y="513.0">org.comicteam.layouts.Position</node>
+            <node x="0.0" y="683.0">org.comicteam.Main</node>
+            <node x="681.0" y="513.0">org.comicteam.Form</node>
+            <node x="477.0" y="513.0">org.comicteam.layouts.Size</node>
+            <node x="3.0" y="0.0">org.comicteam.layouts.ComicPanel</node>
+            <node x="390.0" y="683.0">org.comicteam.models</node>
+            <node x="0.0" y="198.0">org.comicteam.layouts.ComicSplash</node>
+            <node x="219.0" y="683.0">org.comicteam.helpers</node>
+            <node x="0.0" y="513.0">org.comicteam.layouts.ComicLayout</node>
+            <node x="380.0" y="0.0">org.comicteam.ComicBook</node>
+            <node x="0.0" y="320.0">org.comicteam.layouts.ComicPage</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="org.comicteam.layouts.ComicSplash" target="org.comicteam.layouts.ComicPanel">
+              <point x="0.0" y="-38.5" />
+              <point x="0.0" y="74.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="68.50000000000011" y="107.0" />
+          <SelectedNodes>
+            <node>org.comicteam.ComicBook</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>hunspell-native-libs-2.9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ComicMaker</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
