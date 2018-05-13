@@ -15,7 +15,7 @@ public final class Text extends ComicModel {
     }
 
     public String getText() {
-        return this.text;
+        return text;
     }
 
     public void setText(String text) {
@@ -23,7 +23,7 @@ public final class Text extends ComicModel {
     }
 
     public Font getFont() {
-        return this.font;
+        return font;
     }
 
     public void setFont(Font font) {

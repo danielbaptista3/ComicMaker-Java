@@ -1,32 +1,36 @@
 package org.comicteam;
 
 import org.comicteam.layouts.ComicPage;
+import org.comicteam.layouts.Size;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComicBook {
+public class ComicBook implements Serializable {
     private String name;
     private String serie;
     private List<String> authors;
     private String description;
+    private Size size;
     private List<ComicPage> pages;
 
-    public ComicBook(String name, String serie, List<String> authors, String description, List<ComicPage> pages) {
-        this(name, serie, authors, description);
+    public ComicBook(String name, String serie, List<String> authors, String description, Size size, List<ComicPage> pages) {
+        this(name, serie, authors, description, size);
         this.pages = pages;
     }
 
-    public ComicBook(String name, String serie, List<String> authors, String description) {
+    public ComicBook(String name, String serie, List<String> authors, String description, Size size) {
         this.name = name;
         this.serie = serie;
         this.authors = authors;
         this.description = description;
+        this.size = size;
         pages = new ArrayList<>();
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -34,7 +38,7 @@ public class ComicBook {
     }
 
     public String getSerie() {
-        return this.serie;
+        return serie;
     }
 
     public void setSerie(String serie) {
@@ -42,7 +46,7 @@ public class ComicBook {
     }
 
     public List<String> getAuthors() {
-        return this.authors;
+        return authors;
     }
 
     public void setAuthors(List<String> authors) {
@@ -50,7 +54,7 @@ public class ComicBook {
     }
 
     public String getDescription() {
-        return this.description;
+        return description;
     }
 
     public void setDescription(String description) {
@@ -58,11 +62,19 @@ public class ComicBook {
     }
 
     public List<ComicPage> getPages() {
-        return this.pages;
+        return pages;
     }
 
     public void setPages(List<ComicPage> pages) {
         this.pages = pages;
+    }
+
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
     }
 
     @Override
@@ -72,6 +84,7 @@ public class ComicBook {
         sb.append(", serie='").append(serie).append('\'');
         sb.append(", authors=").append(authors);
         sb.append(", description='").append(description).append('\'');
+        sb.append(", size=").append(size);
         sb.append(", pages=").append(pages);
         sb.append('}');
         return sb.toString();

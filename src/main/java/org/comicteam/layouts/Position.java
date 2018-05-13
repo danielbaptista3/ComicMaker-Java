@@ -1,6 +1,8 @@
 package org.comicteam.layouts;
 
-public class Position {
+import java.io.Serializable;
+
+public class Position  implements Serializable {
     private int horizontal;
     private int vertical;
 
@@ -10,7 +12,7 @@ public class Position {
     }
 
     public int getHorizontal() {
-        return this.horizontal;
+        return horizontal;
     }
 
     public void setHorizontal(int horizontal) {
@@ -18,7 +20,7 @@ public class Position {
     }
 
     public int getVertical() {
-        return this.vertical;
+        return vertical;
     }
 
     public void setVertical(int vertical) {

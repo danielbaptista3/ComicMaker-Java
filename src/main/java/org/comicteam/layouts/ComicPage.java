@@ -1,43 +1,44 @@
 package org.comicteam.layouts;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComicPage {
-    private List<ComicTier> tiers;
+public class ComicPage implements Serializable {
     private int index;
+    private List<ComicPanel> panels;
 
     public ComicPage(int index) {
         this.index = index;
-        tiers = new ArrayList<>();
+        panels = new ArrayList<>();
     }
 
-    public ComicPage(List<ComicTier> tiers, int index) {
+    public ComicPage(int index, List<ComicPanel> panels) {
         this(index);
-        this.tiers = tiers;
-    }
-
-    public List<ComicTier> getTiers() {
-        return this.tiers;
-    }
-
-    public void setTiers(List<ComicTier> tiers) {
-        this.tiers = tiers;
+        this.panels = panels;
     }
 
     public int getIndex() {
-        return this.index;
+        return index;
     }
 
     public void setIndex(int index) {
         this.index = index;
     }
 
+    public List<ComicPanel> getPanels() {
+        return panels;
+    }
+
+    public void setPanels(List<ComicPanel> panels) {
+        this.panels = panels;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("ComicPage{");
-        sb.append("tiers=").append(tiers);
-        sb.append(", index=").append(index);
+        sb.append("index=").append(index);
+        sb.append(", panels=").append(panels);
         sb.append('}');
         return sb.toString();
     }

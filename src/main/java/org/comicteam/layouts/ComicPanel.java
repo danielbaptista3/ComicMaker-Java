@@ -2,10 +2,11 @@ package org.comicteam.layouts;
 
 import org.comicteam.models.ComicModel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComicPanel {
+public class ComicPanel implements Serializable {
     protected List<ComicModel> models;
     protected ComicLayout layout;
 

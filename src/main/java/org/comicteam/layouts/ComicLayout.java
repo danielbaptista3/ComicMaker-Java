@@ -1,6 +1,8 @@
 package org.comicteam.layouts;
 
-public class ComicLayout {
+import java.io.Serializable;
+
+public class ComicLayout implements Serializable {
     private Position position;
     private Size size;
 
@@ -10,7 +12,7 @@ public class ComicLayout {
     }
 
     public Position getPosition() {
-        return this.position;
+        return position;
     }
 
     public void setPosition(Position position) {
@@ -18,7 +20,7 @@ public class ComicLayout {
     }
 
     public Size getSize() {
-        return this.size;
+        return size;
     }
 
     public void setSize(Size size) {

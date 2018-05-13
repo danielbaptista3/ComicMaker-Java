@@ -15,7 +15,7 @@ public class ComicModel {
     }
 
     public Canvas getCanvas() {
-        return this.canvas;
+        return canvas;
     }
 
     public void setCanvas(Canvas canvas) {
@@ -23,7 +23,7 @@ public class ComicModel {
     }
 
     public ComicLayout getLayout() {
-        return this.layout;
+        return layout;
     }
 
     public void setLayout(ComicLayout layout) {
@@ -31,7 +31,7 @@ public class ComicModel {
     }
 
     public int getBackground() {
-        return this.background;
+        return background;
     }
 
     public void setBackground(int background) {

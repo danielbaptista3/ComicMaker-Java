@@ -2,7 +2,9 @@ package org.comicteam.models.ballons.pointers;
 
 import org.comicteam.layouts.ComicLayout;
 
-public abstract class BalloonPointer {
+import java.io.Serializable;
+
+public abstract class BalloonPointer implements Serializable {
     protected ComicLayout layout;
 
     public BalloonPointer(ComicLayout layout) {
