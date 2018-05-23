@@ -72,7 +72,11 @@ public class FXMLHelper {
         File file = chooser.showOpenDialog(node.getScene().getWindow());
 
         if (file != null) {
-            ComicBookHelper.openedBook = ComicBookHelper.open(file.getPath());
+            if (ComicBookHelper.isAComicBook(file.getPath())) {
+                ComicBookHelper.openedBook = ComicBookHelper.open(file.getPath());
+            } else {
+                return false;
+            }
             return true;
         } else {
             return false;

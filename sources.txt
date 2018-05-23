@@ -1,2 +1,1 @@
-"/home/francois/Documents/ProjetAnnuel/JavaPA/ComicMaker/src/org/comicteam/annotation/Maj.java"
-"/home/francois/Documents/ProjetAnnuel/JavaPA/ComicMaker/src/org/comicteam/annotation/MajProcessor.java"
+"/home/francois/Documents/ProjetAnnuel/JavaPA/ComicMaker/src/org/comicteam/annotation/Maj.java""/home/francois/Documents/ProjetAnnuel/JavaPA/ComicMaker/src/org/comicteam/annotation/MajProcessor.java"

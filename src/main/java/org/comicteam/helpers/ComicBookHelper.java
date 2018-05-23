@@ -60,4 +60,14 @@ public class ComicBookHelper {
             return false;
         }
     }
+
+    public static boolean isAComicBook(String fileName) {
+        try {
+            ComicBook book = open(fileName);
+        } catch (Exception e) {
+            return false;
+        }
+
+        return true;
+    }
 }
