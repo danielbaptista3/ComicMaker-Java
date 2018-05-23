@@ -5,14 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.comicteam.helpers.ComicBookHelper;
-import org.comicteam.helpers.MM;
 
-import java.awt.*;
 import java.io.IOException;
 
-public class Form extends Application {
-
+public class MainForm extends Application {
     public static void main(String[] args) {
         launch(args);
     }
@@ -22,19 +18,22 @@ public class Form extends Application {
         Parent root;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("test.fxml"));
+            root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
         } catch (IOException e) {
+            e.printStackTrace();
             return;
         }
 
-        ComicBook book = ComicBookHelper.open("Bulletin Météo.cm");
-
-        Scene scene  = new Scene(root, MM.toPx(book.getSize().getHorizontal()), MM.toPx(book.getSize().getVertical()));
+        Scene scene  = new Scene(root, 700, 500);
 
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-        primaryStage.setTitle(book.getName());
+        primaryStage.setTitle("ComicMaker");
 
         primaryStage.show();
+
+        primaryStage.setOnCloseRequest((e) ->
+            System.out.println("close")
+        );
     }
 }

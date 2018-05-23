@@ -11,6 +11,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class ComicBookHelper {
+    public static ComicBook openedBook;
+    public static boolean saved;
+
     public static ComicBook open(String fileName) {
         File file = new File(fileName);
         StringBuilder builder = new StringBuilder();
@@ -44,7 +47,7 @@ public class ComicBookHelper {
     }
 
     public static boolean save(ComicBook book) {
-        return save(book, ".");
+        return save(book, SettingsHelper.get("savePath"));
     }
 
     public static boolean save(ComicBook book, String folder) {

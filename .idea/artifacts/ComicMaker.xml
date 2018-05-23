@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="ComicMaker">
+    <output-path>$PROJECT_DIR$/out/artifacts/ComicMaker</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="org.comicteam.MainForm" />
+        <option name="description" value="Viewer and editor for comics" />
+        <option name="height" value="500" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="ComicMaker" />
+        <option name="vendor" value="comicteam" />
+        <option name="version" value="1.0" />
+        <option name="width" value="700" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="ComicMaker.jar">
+        <element id="module-output" name="ComicMaker" />
+      </element>
+    </root>
+  </artifact>
+</component>

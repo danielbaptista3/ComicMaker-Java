@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.MainController">
+   <children>
+      <ScrollPane prefHeight="500.0" prefWidth="300.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="file:/home/francois/Documents/ProjetAnnuel/JavaPA/ComicMaker/src/resources/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="newProjectButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#newProjectButtonMouseClick" prefHeight="50.0" prefWidth="200.0" text="Nouveau projet" textAlignment="CENTER" AnchorPane.bottomAnchor="240.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="openProjectButton" mnemonicParsing="false" onMouseClicked="#openProjectButtonMouseClick" prefHeight="50.0" prefWidth="200.0" text="Ouvrir projet" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="settingsButton" mnemonicParsing="false" onMouseClicked="#settingsButtonMouseClick" text="Paramètres" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
