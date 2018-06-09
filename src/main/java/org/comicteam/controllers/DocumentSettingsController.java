@@ -35,6 +35,7 @@ public class DocumentSettingsController {
     public void nameFieldKeyReleased() {
         if (!nameField.getText().isEmpty()) {
             ComicBookHelper.openedBook.setName(nameField.getText());
+            ComicBookHelper.saved = false;
         }
 
         FXMLHelper.setNameFieldBorder(nameField);
@@ -43,15 +44,18 @@ public class DocumentSettingsController {
     @FXML
     public void serieFieldKeyReleased() {
         ComicBookHelper.openedBook.setSerie(serieField.getText());
+        ComicBookHelper.saved = false;
     }
 
     @FXML
     public void authorsAreaKeyReleased() {
         ComicBookHelper.openedBook.setAuthors(Arrays.asList(authorsArea.getText().split("\n")));
+        ComicBookHelper.saved = false;
     }
 
     @FXML
     public void descriptionAreaKeyReleased() {
         ComicBookHelper.openedBook.setDescription(descriptionArea.getText());
+        ComicBookHelper.saved = false;
     }
 }

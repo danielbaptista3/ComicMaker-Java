@@ -4,10 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import org.comicteam.ComicBook;
-import org.comicteam.WorkingForm;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.layouts.Size;
@@ -32,7 +29,7 @@ public class NewProjectController {
 
     @FXML
     public void createProjectButtonClick() {
-        if (!FXMLHelper.nameFieldCorrect(nameField) || !FXMLHelper.sizeFieldCorrect(hSizeField) || !FXMLHelper.sizeFieldCorrect(vSizeField)) {
+        if (!FXMLHelper.nameFieldCorrect(nameField) || !FXMLHelper.integerFieldCorrect(hSizeField) || !FXMLHelper.integerFieldCorrect(vSizeField)) {
             nameFieldKeyReleased();
             hSizeFieldKeyReleased();
             vSizeFieldKeyReleased();
@@ -50,6 +47,7 @@ public class NewProjectController {
                         Integer.valueOf(vSizeField.getText())
                 )
         );
+        ComicBookHelper.saved = false;
 
         FXMLHelper.closeAllWindows(createProjectButton);
 

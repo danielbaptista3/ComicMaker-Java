@@ -1,5 +1,6 @@
 package org.comicteam.helpers;
 
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Border;
@@ -10,9 +11,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
-import org.comicteam.NewProjectForm;
-import org.comicteam.SettingsForm;
-import org.comicteam.WorkingForm;
+import org.comicteam.*;
 
 import java.io.File;
 
@@ -39,7 +38,7 @@ public class FXMLHelper {
         return !nameField.getText().isEmpty();
     }
 
-    public static boolean sizeFieldCorrect(TextField sizeField) {
+    public static boolean integerFieldCorrect(TextField sizeField) {
         return sizeField.getText().matches("[0-9]+");
     }
 
@@ -52,7 +51,7 @@ public class FXMLHelper {
     }
 
     public static void setSizeFieldBorder(TextField sizeField) {
-        if (!sizeFieldCorrect(sizeField)) {
+        if (!integerFieldCorrect(sizeField)) {
             sizeField.setBorder(redBorder);
         } else {
             sizeField.setBorder(defaultBorder);
@@ -65,8 +64,6 @@ public class FXMLHelper {
     }
 
     public static boolean openProject(Node node) {
-        //box confirm
-
         FileChooser chooser = new FileChooser();
         chooser.setInitialDirectory(new File(SettingsHelper.get("savePath")));
         File file = chooser.showOpenDialog(node.getScene().getWindow());
@@ -97,6 +94,11 @@ public class FXMLHelper {
         wf.start(new Stage(StageStyle.DECORATED));
     }
 
+    public static void openSavingWarningForm() {
+        SavingWarningForm swf = new SavingWarningForm();
+        swf.start(new Stage(StageStyle.DECORATED));
+    }
+
     public static void closeAllWindows(Node node) {
         Stage stage = (Stage) node.getScene().getWindow();
 
@@ -107,5 +109,9 @@ public class FXMLHelper {
         }
 
         stage.close();
+    }
+
+    public static void closeWindow(Node node) {
+        ((Stage) node.getScene().getWindow()).close();
     }
 }

@@ -36,10 +36,6 @@ public class ComicPage implements Serializable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("ComicPage{");
-        sb.append("index=").append(index);
-        sb.append(", panels=").append(panels);
-        sb.append('}');
-        return sb.toString();
+        return String.format("Page %s", index);
     }
 }

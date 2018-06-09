@@ -68,6 +68,8 @@ public class JSONifyHelper {
 
     private static JSONObject jsonModel(ComicModel model) {
         JSONObject o = new JSONObject();
+
+        o.put("name", model.getName());
         if (model.getLayout() != null) {
             o.put("Layout", jsonLayout(model.getLayout()));
         }

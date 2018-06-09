@@ -10,17 +10,11 @@ public class MainController {
 
     @FXML
     public void newProjectButtonMouseClick() {
-        //confirm box
-        //if !null
-
         FXMLHelper.openNewProjectForm();
     }
 
     @FXML
     public void openProjectButtonMouseClick() {
-        //confirm box
-        // if !null
-
         if (FXMLHelper.openProject(openProjectButton)) {
             FXMLHelper.closeAllWindows(openProjectButton);
             FXMLHelper.openWorkingForm();

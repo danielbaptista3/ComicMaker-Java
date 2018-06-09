@@ -30,6 +30,11 @@ public class DodoStop {
     public static ComicBook getBook() {
         List<ComicPage> pages = new ArrayList<>();
         pages.add(getPage());
+        pages.add(new ComicPage(2));
+        pages.add(new ComicPage(3));
+        pages.add(new ComicPage(4));
+        pages.add(new ComicPage(5));
+        pages.add(new ComicPage(6));
 
         return new ComicBook(
                 name,

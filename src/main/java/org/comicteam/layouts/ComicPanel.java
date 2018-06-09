@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ComicPanel implements Serializable {
-    protected List<ComicModel> models;
-    protected ComicLayout layout;
+    private List<ComicModel> models;
+    private ComicLayout layout;
 
     public ComicPanel(List<ComicModel> models, ComicLayout layout) {
         this(layout);
@@ -38,10 +38,6 @@ public class ComicPanel implements Serializable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("ComicPanel{");
-        sb.append("models=").append(models);
-        sb.append(", layout=").append(layout);
-        sb.append('}');
-        return sb.toString();
+        return "Panel";
     }
 }

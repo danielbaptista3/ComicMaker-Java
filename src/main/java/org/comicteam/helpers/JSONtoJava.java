@@ -78,6 +78,7 @@ public class JSONtoJava {
 
     private static ComicModel javaModel(JSONObject j) {
         return new ComicModel(
+                String.valueOf(j.get("name")),
                 null,
                 javaLayout((JSONObject) j.get("Layout")),
                 (int) ((long) j.get("background"))

@@ -4,14 +4,24 @@ import javafx.scene.canvas.Canvas;
 import org.comicteam.layouts.ComicLayout;
 
 public class ComicModel {
+    protected String name;
     protected Canvas canvas;
     protected ComicLayout layout;
     protected int background;
 
-    public ComicModel(Canvas canvas, ComicLayout layout, int background) {
+    public ComicModel(String name, Canvas canvas, ComicLayout layout, int background) {
+        this.name = name;
         this.canvas = canvas;
         this.layout = layout;
         this.background = background;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Canvas getCanvas() {
@@ -40,11 +50,6 @@ public class ComicModel {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("ComicModel{");
-        sb.append("canvas=").append(canvas);
-        sb.append(", layout=").append(layout);
-        sb.append(", background=").append(background);
-        sb.append('}');
-        return sb.toString();
+        return name;
     }
 }

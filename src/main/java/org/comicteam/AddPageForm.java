@@ -4,33 +4,30 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.comicteam.helpers.ComicBookHelper;
 
 import java.io.IOException;
 
-public class MainForm extends Application {
-    public static void main(String[] args) {
-        launch(args);
-    }
-
+public class AddPageForm extends Application {
     @Override
     public void start(Stage primaryStage) {
         Parent root;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
+            root = FXMLLoader.load(getClass().getResource("fxml/addPage.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
             return;
         }
 
-        Scene scene  = new Scene(root, 700, 500);
+        Scene scene  = new Scene(root, 350, 150);
 
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-        primaryStage.setTitle("ComicMaker");
+        primaryStage.setTitle("Ajouter une page");
+        primaryStage.initModality(Modality.APPLICATION_MODAL);
 
-        primaryStage.show();
+        primaryStage.showAndWait();
     }
 }

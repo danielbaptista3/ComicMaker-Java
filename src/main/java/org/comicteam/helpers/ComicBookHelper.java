@@ -12,7 +12,8 @@ import java.util.Scanner;
 
 public class ComicBookHelper {
     public static ComicBook openedBook;
-    public static boolean saved;
+    public static boolean saved = true;
+    public static int currentPage = 1;
 
     public static ComicBook open(String fileName) {
         File file = new File(fileName);
@@ -39,6 +40,7 @@ public class ComicBookHelper {
 
         try {
             o = (JSONObject) parser.parse(builder.toString());
+            saved = true;
             return JSONtoJava.javaBook(o);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -55,6 +57,7 @@ public class ComicBookHelper {
 
         try (FileWriter fw = new FileWriter(file)) {
             fw.write(JSONifyHelper.jsonBook(book).toJSONString());
+            saved = true;
             return true;
         } catch (IOException e) {
             return false;
