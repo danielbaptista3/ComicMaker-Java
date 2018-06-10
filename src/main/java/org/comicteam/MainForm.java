@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.comicteam.helpers.ClipartHelper;
 import org.comicteam.helpers.ComicBookHelper;
 
 import java.io.IOException;
@@ -24,6 +25,8 @@ public class MainForm extends Application {
             e.printStackTrace();
             return;
         }
+
+        //ClipartHelper.writeImage();
 
         Scene scene  = new Scene(root, 700, 500);
 
