@@ -3,10 +3,14 @@ package org.comicteam.helpers;
 import javafx.stage.Screen;
 
 public class MM {
-    public static int DPI = 96;
+    private static final double CONST = 25.4;
+    private static final double DPI = Screen.getPrimary().getDpi();
 
     public static int toPx(int mm) {
+        return (int) (mm * DPI / CONST);
+    }
 
-        return (int)((mm * Screen.getPrimary().getDpi()) / 25.4);
+    public static int toMM(int px) {
+        return (int) (px * CONST / DPI) + 1;
     }
 }

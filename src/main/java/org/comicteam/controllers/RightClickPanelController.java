@@ -5,6 +5,7 @@ import javafx.scene.control.TreeItem;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.comicteam.ClipartForm;
+import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.layouts.ComicPage;
 import org.comicteam.layouts.ComicPanel;
 
@@ -20,15 +21,11 @@ public class RightClickPanelController {
     @FXML
     public void addModelWithEditorButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();
-
-
     }
 
     @FXML
     public void addModelWithExternalDocumentButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();
-
-
     }
 
     @FXML
@@ -42,6 +39,9 @@ public class RightClickPanelController {
 
         parentPage.getPanels().remove(panelToDelete);
 
+        ComicBookHelper.saved = false;
+
         WorkingController.controller.redrawComponentsTree();
+        EditorController.controller.redrawEditorPane();
     }
 }

@@ -12,10 +12,10 @@
 
 <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.ClipartController">
    <children>
-      <ScrollBar orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <ScrollBar fx:id="resultsScrollBar" orientation="VERTICAL" value="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
       <TextField fx:id="keywordSearchField" layoutX="83.0" layoutY="66.0" prefWidth="400.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
       <Button fx:id="searchButton" layoutX="453.0" layoutY="69.0" mnemonicParsing="false" onMouseClicked="#searchButtonClick" prefWidth="170.0" text="Rechercher" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
-      <GridPane layoutX="163.0" layoutY="132.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <GridPane fx:id="resultsGridPane" layoutX="163.0" layoutY="132.0" onScroll="#resultsGridPaneScroll" prefHeight="350.0" prefWidth="581.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="50.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
@@ -27,7 +27,7 @@
          <children>
             <AnchorPane GridPane.columnIndex="1">
                <children>
-                  <ImageView fx:id="imageView01" fitHeight="175.0" fitWidth="300.0" layoutX="26.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ImageView fx:id="imageView01" fitHeight="175.0" fitWidth="300.0" layoutX="26.0" layoutY="13.0" onMouseClicked="#imageView01Click" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <viewport>
                         <Rectangle2D />
                      </viewport>
@@ -36,7 +36,7 @@
             </AnchorPane>
             <AnchorPane GridPane.rowIndex="1">
                <children>
-                  <ImageView fx:id="imageView10" fitHeight="175.0" fitWidth="300.0" layoutX="100.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ImageView fx:id="imageView10" fitHeight="175.0" fitWidth="300.0" layoutX="100.0" layoutY="13.0" onMouseClicked="#imageView10Click" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <viewport>
                         <Rectangle2D />
                      </viewport>
@@ -45,12 +45,12 @@
             </AnchorPane>
             <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ImageView fx:id="imageView11" fitHeight="175.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ImageView fx:id="imageView11" fitHeight="175.0" fitWidth="300.0" onMouseClicked="#imageView11Click" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
             <AnchorPane>
                <children>
-                  <ImageView fx:id="imageView00" fitHeight="175.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imageView00" fitHeight="175.0" fitWidth="300.0" onMouseClicked="#imageView00Click" pickOnBounds="true" preserveRatio="true">
                      <viewport>
                         <Rectangle2D />
                      </viewport>

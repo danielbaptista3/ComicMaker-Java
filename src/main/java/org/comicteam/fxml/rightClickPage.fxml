@@ -16,5 +16,15 @@
             <Font size="16.0" />
          </font>
       </Button>
+      <Button fx:id="upButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#upButtonClick" text="Up">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="downButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#downButtonClick" text="Down">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
    </children>
 </VBox>

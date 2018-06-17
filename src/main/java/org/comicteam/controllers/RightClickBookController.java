@@ -3,14 +3,21 @@ package org.comicteam.controllers;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.comicteam.AddPageForm;
+import org.comicteam.helpers.ComicBookHelper;
+import org.comicteam.layouts.ComicPage;
 
 public class RightClickBookController {
     @FXML
     public void addPageButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();
 
-        AddPageForm form = new AddPageForm();
-        form.start(new Stage(StageStyle.DECORATED));
+        ComicBookHelper.openedBook.getPages().add(
+                new ComicPage(
+                        ComicBookHelper.openedBook.getPages().size() + 1
+                )
+        );
+        ComicBookHelper.saved = false;
+
+        WorkingController.controller.redrawComponentsTree();
     }
 }

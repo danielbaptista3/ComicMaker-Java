@@ -5,6 +5,7 @@ import org.comicteam.layouts.Size;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ComicBook implements Serializable {
@@ -27,6 +28,23 @@ public class ComicBook implements Serializable {
         this.description = description;
         this.size = size;
         pages = new ArrayList<>();
+    }
+
+    public void sortPages() {
+        Collections.sort(pages);
+
+        int i = 0;
+
+        for (ComicPage page : pages) {
+            page.setIndex(i);
+            i++;
+        }
+    }
+
+    public void sortPanels() {
+        for (ComicPage page : pages) {
+            Collections.sort(page.getPanels());
+        }
     }
 
     public String getName() {

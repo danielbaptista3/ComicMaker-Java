@@ -17,7 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JSONtoJava {
+    private static int pageIndex;
+
     public static ComicBook javaBook(JSONObject j) {
+        pageIndex = -1;
+
         List<ComicPage> pages = new ArrayList<>();
 
         for (Object page : (List<Object>) j.get("pages")) {
@@ -41,8 +45,10 @@ public class JSONtoJava {
             panels.add(javaPanel((JSONObject) panel));
         }
 
+        pageIndex++;
+
         return new ComicPage(
-                (int)((long) j.get("index")),
+                pageIndex,
                 panels
         );
     }

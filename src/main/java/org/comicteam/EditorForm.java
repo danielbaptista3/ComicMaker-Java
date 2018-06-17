@@ -11,14 +11,13 @@ import org.comicteam.helpers.FXMLHelper;
 
 import java.io.IOException;
 
-public class WorkingForm extends Application {
-
+public class EditorForm extends Application {
     @Override
     public void start(Stage primaryStage) {
         Parent root;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("fxml/working.fxml"));
+            root = FXMLLoader.load(getClass().getResource("fxml/editor.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
             return;
@@ -26,14 +25,14 @@ public class WorkingForm extends Application {
 
         Scene scene  = new Scene(
                 root,
-                400,
+                Screen.getPrimary().getBounds().getWidth() - 300,
                 Screen.getPrimary().getBounds().getHeight()
         );
 
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.setTitle(ComicBookHelper.openedBook.getName());
-        primaryStage.setX(0);
+        primaryStage.setX(305);
 
         primaryStage.setOnCloseRequest((e) -> {
             if (!ComicBookHelper.saved) {

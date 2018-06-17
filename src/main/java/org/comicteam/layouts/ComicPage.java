@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComicPage implements Serializable {
+public class ComicPage implements Serializable, Comparable {
     private int index;
     private List<ComicPanel> panels;
 
@@ -36,6 +36,18 @@ public class ComicPage implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("Page %s", index);
+        return String.format("Page %s", index + 1);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (((ComicPage) o).index < index) {
+            return 1;
+        }
+        if (((ComicPage) o).index > index) {
+            return -1;
+        }
+
+        return 0;
     }
 }

@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComicPanel implements Serializable {
+public class ComicPanel implements Serializable, Comparable {
     private List<ComicModel> models;
     private ComicLayout layout;
 
@@ -39,5 +39,14 @@ public class ComicPanel implements Serializable {
     @Override
     public String toString() {
         return "Panel";
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (layout.getPosition().getVertical() < ((ComicPanel) o).layout.getPosition().getVertical()) {
+            return -1;
+        }
+
+        return 1;
     }
 }

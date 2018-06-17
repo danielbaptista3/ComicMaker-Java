@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class ComicBookHelper {
     public static ComicBook openedBook;
     public static boolean saved = true;
-    public static int currentPage = 1;
+    public static int currentPage = 0;
 
     public static ComicBook open(String fileName) {
         File file = new File(fileName);

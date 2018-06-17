@@ -3,40 +3,76 @@ package org.comicteam.helpers;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import javafx.scene.image.Image;
-import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONArray;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClipartHelper {
     private static final String CLIPART_URL = "http://openclipart.org/search/json";
     private static JSONObject requestObject;
+    private static JSONArray imagesJson;
+    private static List<Image> images;
 
-    private static void request(String keyword, int page) {
+    static {
+        images = new ArrayList<>();
+    }
+
+    public static void request(String keyword) {
         try {
-            String url = String.format("%s/?query=%s&amount=4&page=%s", CLIPART_URL, keyword, page);
-
+            String url = String.format("%s/?query=%s&sort=downloads", CLIPART_URL, keyword);
             requestObject = Unirest.get(url).asJson().getBody().getObject();
+
+            url = String.format("%s/?query=%s&sort=downloads&amount=%s", CLIPART_URL, keyword, getResultsCount());
+            requestObject = Unirest.get(url).asJson().getBody().getObject();
+
+            imagesJson = requestObject.getJSONArray("payload");
+            images = new ArrayList<>();
+
+            for (int i = 0; i < imagesJson.length(); i++)  {
+                images.add(getImage(i));
+                //System.out.println(i + 1 + "   " + getLoadedPagesCount());
+            }
         } catch (UnirestException e) {
             e.printStackTrace();
         }
     }
 
-    public static int getPagesCount() {
-        return requestObject.getJSONObject("info").getInt();
+    private static int getResultsCount() {
+        return requestObject.getJSONObject("info").getInt("results");
     }
 
-    public static Image getImage(String keyword, int page, int index) {
-        JSONArray images = request(keyword, page);
-        JSONObject jsonImage = images.getJSONObject(index);
+    public static int getLoadedPagesCount() {
+        return images.size() / 4;
+    }
 
-        //int width = jsonImage.getJSONObject("dimensions").getJSONObject("png_full_lossy").getInt("width");
-        //int height = jsonImage.getJSONObject("dimensions").getJSONObject("png_full_lossy").getInt("height");
+    public static Image getImageTopLeft(int page) {
+        return images.get(page * 4);
+    }
 
-        String url = jsonImage.getJSONObject("svg").getString("png_thumb");
+    public static Image getImageTopRight(int page) {
+        return images.get(page * 4 + 1);
+    }
+
+    public static Image getImageBottomLeft(int page) {
+        return images.get(page * 4 + 2);
+    }
+
+    public static Image getImageBottomRight(int page) {
+        return images.get(page * 4 + 3);
+    }
+
+    private static Image getImage(int index) {
+        if (imagesJson.length() <= index) {
+            return null;
+        }
+
+        String url = imagesJson.getJSONObject(index).getJSONObject("svg").getString("png_thumb");
 
         try (InputStream in = new URL(url).openStream()) {
             return new Image(in);

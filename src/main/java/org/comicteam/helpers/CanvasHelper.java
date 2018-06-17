@@ -1,30 +1,64 @@
 package org.comicteam.helpers;
 
+import javafx.scene.Node;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
+import org.comicteam.controllers.EditorController;
 import org.comicteam.layouts.ComicPanel;
+import org.comicteam.layouts.Position;
+import org.comicteam.layouts.Size;
+import org.comicteam.models.ComicModel;
 import org.comicteam.models.Text;
 import org.comicteam.models.ballons.Balloon;
 
-public class CanvasHelper {
-    public static Pane getPanel(ComicPanel panel) {
-        Pane pane = new Pane();
-        pane.setPrefWidth(MM.toPx(panel.getLayout().getSize().getHorizontal()));
-        pane.setPrefHeight(MM.toPx(panel.getLayout().getSize().getVertical()));
-        pane.setLayoutX(MM.toPx(panel.getLayout().getPosition().getHorizontal()));
-        pane.setLayoutY(MM.toPx(panel.getLayout().getPosition().getVertical()));
+import java.util.List;
 
-        pane.setBorder(new Border(
+public class CanvasHelper {
+    private static Border blackBorder;
+    private static Border blueBorder;
+
+    static {
+        blackBorder = new Border(
                 new BorderStroke(
                         Paint.valueOf("BLACK"),
                         BorderStrokeStyle.SOLID,
                         CornerRadii.EMPTY,
                         BorderWidths.DEFAULT
                 )
-        ));
+        );
+
+        blueBorder = new Border(
+                new BorderStroke(
+                        Paint.valueOf("BLUE"),
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        BorderWidths.DEFAULT
+                )
+        );
+    }
+
+    public static Pane getPanel(ComicPanel panel) {
+        Pane pane = new Pane();
+        pane.setPrefWidth(MM.toPx(panel.getLayout().getSize().getHorizontal()));
+        pane.setPrefHeight(MM.toPx(panel.getLayout().getSize().getVertical()));
+        pane.setLayoutX(MM.toPx(panel.getLayout().getPosition().getHorizontal()));
+        pane.setLayoutY(MM.toPx(panel.getLayout().getPosition().getVertical()));
+        pane.setBorder(blackBorder);
 
         return pane;
+    }
+
+    public static void selectPanel(List<Node> nodes, Pane panel) {
+        unselectAllPanels(nodes);
+        panel.setBorder(blueBorder);
+    }
+
+    public static void unselectAllPanels(List<Node> nodes) {
+        for (Node p : nodes) {
+            //((Pane) p).setBorder(blackBorder);
+        }
     }
 
     public static Pane getBalloon(Balloon balloon) {
@@ -115,4 +149,52 @@ public class CanvasHelper {
 
         return canvas;
     }
+
+    public static void movePanel(Node node, ComicPanel panel, int x, int y) {
+        node.setLayoutX(x);
+        node.setLayoutY(y);
+
+        panel.getLayout().setPosition(
+                new Position(
+                        MM.toMM(x),
+                        MM.toMM(y)
+                )
+        );
+    }
+
+/*    public static void moveModel(Node node, ComicModel model, int x, int y) {
+        node.setLayoutX(x);
+        node.setLayoutY(y);
+
+        model.getLayout().setPosition(
+                new Position(
+                        MM.toMM(x),
+                        MM.toMM(y)
+                )
+        );
+    }*/
+
+    public static void resizePanel(Node node, ComicPanel panel, int x, int y) {
+        ((Pane) node).setPrefWidth(x);
+        ((Pane) node).setPrefHeight(y);
+
+        panel.getLayout().setSize(
+                new Size(
+                        MM.toMM(x),
+                        MM.toMM(y)
+                )
+        );
+    }
+
+    /*public static void resizeModel(Node node, ComicModel model, int x, int y) {
+        ((Pane) node).setPrefWidth(x);
+        ((Pane) node).setPrefHeight(y);
+
+        model.getLayout().setSize(
+                new Size(
+                        MM.toMM(x),
+                        MM.toMM(y)
+                )
+        );
+    }*/
 }
