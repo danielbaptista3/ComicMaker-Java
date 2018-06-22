@@ -72,6 +72,7 @@ public class EditorController {
         double y = node.getLayoutY() + e.getY() - mouseY;
 
         CanvasHelper.movePanel(node, panel, x, y);
+        WorkingController.controller.alimentateMeasurePane(node);
     }
 
     public void moveModel(Node node, ComicModel model, MouseEvent e) {
@@ -82,10 +83,11 @@ public class EditorController {
         double x = node.getLayoutX() + e.getX();
         double y = node.getLayoutY() + e.getY();
 
-        System.out.println(x);
-        System.out.println(y);
+        /*System.out.println(x);
+        System.out.println(y);*/
 
         CanvasHelper.resizePanel(node, panel, x, y);
+        WorkingController.controller.alimentateMeasurePane(node);
     }
 
     public void resizeModel(Node node, ComicModel model, MouseEvent e) {

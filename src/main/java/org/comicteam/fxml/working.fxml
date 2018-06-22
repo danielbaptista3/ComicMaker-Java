@@ -62,7 +62,7 @@
                               <TextField layoutX="28.0" layoutY="15.0" prefWidth="75.0" fx:id="xField" />
                               <Label layoutX="5.0" layoutY="55.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Largeur : " AnchorPane.leftAnchor="5.0" />
                               <TextField fx:id="heightField" layoutX="87.0" layoutY="87.0" prefWidth="75.0" />
-                              <Button fx:id="okButton" layoutX="83.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#okButtonClick" text="OK" />
+                              <Button fx:id="measureButton" layoutX="72.0" layoutY="131.0" mnemonicParsing="false" text="OK" />
                            </children>
                         </AnchorPane>
                      </children>

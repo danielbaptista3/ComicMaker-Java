@@ -56,7 +56,7 @@ public class WorkingController {
     @FXML
     private TextField heightField;
     @FXML
-    private Button okButton;
+    private Button measureButton;
     @FXML
     private AnchorPane editorPane;
 
@@ -111,8 +111,15 @@ public class WorkingController {
         pageCountLabel.setText(String.format("%s", ComicBookHelper.openedBook.getPages().size()));
     }
 
+    public void alimentateMeasurePane(Node node) {
+        xField.setText(String.valueOf(node.getLayoutX()));
+        yField.setText(String.valueOf(node.getLayoutY()));
+        widthField.setText(String.valueOf(((Pane) node).getWidth()));
+        heightField.setText(String.valueOf(((Pane) node).getHeight()));
+    }
+
     @FXML
-    public void okButtonClick() {
+    public void measureButtonClick() {
         if (FXMLHelper.integerFieldCorrect(xField) && FXMLHelper.integerFieldCorrect(yField)
                 && FXMLHelper.integerFieldCorrect(widthField) && FXMLHelper.integerFieldCorrect(heightField)) {
             switch (getClassOfSelectedObject().getSimpleName()) {
