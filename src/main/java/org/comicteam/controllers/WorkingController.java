@@ -57,8 +57,6 @@ public class WorkingController {
     private TextField heightField;
     @FXML
     private Button okButton;
-    @FXML
-    private AnchorPane editorPane;
 
     public void initialize() {
         measurePane.setVisible(false);
