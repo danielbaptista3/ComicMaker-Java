@@ -57,14 +57,18 @@ public class WorkingController {
     private TextField heightField;
     @FXML
     private Button okButton;
+    @FXML
+    private AnchorPane editorPane;
 
     public void initialize() {
         measurePane.setVisible(false);
+        try {
+            editorPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("../fxml/editor.fxml")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         redrawComponentsTree();
-
-        EditorForm editor = new EditorForm();
-        editor.start(new Stage(StageStyle.DECORATED));
 
         if (ComicBookHelper.openedBook.getPages().size() > 1) {
             selectPage(ComicBookHelper.openedBook.getPages().get(0));
