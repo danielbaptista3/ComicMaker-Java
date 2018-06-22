@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,66 +10,56 @@
 
 <AnchorPane fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.WorkingController">
    <children>
-      <SplitPane dividerPositions="0.29797979797979796" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="menuButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#menuButtonClick" prefHeight="50.0" text="Menu">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TreeView fx:id="componentsTree" maxHeight="1.7976931348623157E308" onMouseClicked="#componentsTreeClick" />
+            <AnchorPane>
                <children>
-                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <Button fx:id="menuButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#menuButtonClick" prefHeight="50.0" text="Menu">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Button>
-                        <TreeView fx:id="componentsTree" maxHeight="1.7976931348623157E308" onMouseClicked="#componentsTreeClick" />
-                        <AnchorPane>
-                           <children>
-                              <Button fx:id="previousPageButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#previousPageClick" prefHeight="50.0" prefWidth="50.0" text="&lt;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <Label fx:id="currentPageLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="/" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
-                                 <font>
-                                    <Font size="25.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="pageCountLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="nextPageButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#nextPageClick" prefHeight="50.0" prefWidth="50.0" text="&gt;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane fx:id="measurePane" prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Label maxHeight="1.7976931348623157E308" text="X : " AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="20.0" />
-                              <TextField fx:id="widthField" layoutX="77.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="75.0" />
-                              <Label layoutX="114.0" layoutY="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Y : " />
-                              <TextField fx:id="yField" layoutX="135.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="75.0" />
-                              <Label layoutY="92.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Longueur : " AnchorPane.leftAnchor="5.0" />
-                              <TextField layoutX="28.0" layoutY="15.0" prefWidth="75.0" fx:id="xField" />
-                              <Label layoutX="5.0" layoutY="55.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Largeur : " AnchorPane.leftAnchor="5.0" />
-                              <TextField fx:id="heightField" layoutX="87.0" layoutY="87.0" prefWidth="75.0" />
-                              <Button fx:id="measureButton" layoutX="72.0" layoutY="131.0" mnemonicParsing="false" text="OK" />
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </VBox>
+                  <Button fx:id="previousPageButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#previousPageClick" prefHeight="50.0" prefWidth="50.0" text="&lt;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Label fx:id="currentPageLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="/" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pageCountLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="nextPageButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#nextPageClick" prefHeight="50.0" prefWidth="50.0" text="&gt;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
-          <AnchorPane fx:id="editorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" />
-        </items>
-      </SplitPane>
+            <AnchorPane fx:id="measurePane" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" text="X : " AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="20.0" />
+                  <TextField fx:id="widthField" layoutX="77.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="75.0" />
+                  <Label layoutX="114.0" layoutY="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Y : " />
+                  <TextField fx:id="yField" layoutX="135.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="75.0" />
+                  <Label layoutY="92.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Longueur : " AnchorPane.leftAnchor="5.0" />
+                  <TextField layoutX="28.0" layoutY="15.0" prefWidth="75.0" fx:id="xField" />
+                  <Label layoutX="5.0" layoutY="55.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Largeur : " AnchorPane.leftAnchor="5.0" />
+                  <TextField fx:id="heightField" layoutX="87.0" layoutY="87.0" prefWidth="75.0" />
+                  <Button fx:id="okButton" layoutX="83.0" layoutY="135.0" mnemonicParsing="false" text="OK" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

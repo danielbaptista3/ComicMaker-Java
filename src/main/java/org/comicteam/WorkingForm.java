@@ -26,7 +26,7 @@ public class WorkingForm extends Application {
 
         Scene scene  = new Scene(
                 root,
-                Screen.getPrimary().getBounds().getWidth(),
+                400,
                 Screen.getPrimary().getBounds().getHeight()
         );
 

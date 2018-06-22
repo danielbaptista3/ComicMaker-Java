@@ -9,6 +9,7 @@ import org.comicteam.controllers.EditorController;
 import org.comicteam.layouts.ComicPanel;
 import org.comicteam.layouts.Position;
 import org.comicteam.layouts.Size;
+import org.comicteam.models.ComicModel;
 import org.comicteam.models.Text;
 import org.comicteam.models.ballons.Balloon;
 
@@ -149,13 +150,14 @@ public class CanvasHelper {
         return canvas;
     }
 
-    public static void movePanel(Node node, ComicPanel panel, double x, double y) {
-        node.relocate(x, y);
+    public static void movePanel(Node node, ComicPanel panel, int x, int y) {
+        node.setLayoutX(x);
+        node.setLayoutY(y);
 
         panel.getLayout().setPosition(
                 new Position(
-                        MM.toMM((int) x),
-                        MM.toMM((int) y)
+                        MM.toMM(x),
+                        MM.toMM(y)
                 )
         );
     }
@@ -172,14 +174,14 @@ public class CanvasHelper {
         );
     }*/
 
-    public static void resizePanel(Node node, ComicPanel panel, double x, double y) {
+    public static void resizePanel(Node node, ComicPanel panel, int x, int y) {
         ((Pane) node).setPrefWidth(x);
         ((Pane) node).setPrefHeight(y);
 
         panel.getLayout().setSize(
                 new Size(
-                        MM.toMM((int) x),
-                        MM.toMM((int) y)
+                        MM.toMM(x),
+                        MM.toMM(y)
                 )
         );
     }

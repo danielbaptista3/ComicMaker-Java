@@ -8,7 +8,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
 import org.comicteam.helpers.CanvasHelper;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.MM;
@@ -16,9 +19,6 @@ import org.comicteam.layouts.*;
 import org.comicteam.models.ComicModel;
 
 public class EditorController {
-    private double mouseX;
-    private double mouseY;
-
     public static EditorController controller;
 
     @FXML
@@ -39,11 +39,6 @@ public class EditorController {
 
         for (ComicPanel panel : ComicBookHelper.openedBook.getPages().get(ComicBookHelper.currentPage).getPanels()) {
             Pane panelPane = CanvasHelper.getPanel(panel);
-
-            panelPane.setOnMouseClicked(e -> {
-                mouseX = e.getSceneX();
-                mouseY = e.getSceneY();
-            });
 
             panelPane.setOnMouseDragged((e) -> {
                 switch (e.getButton()) {
@@ -67,34 +62,49 @@ public class EditorController {
         redrawEditorPane();
     }
 
-    public void movePanel(Node node, ComicPanel panel, MouseEvent e) {
-        double x = node.getLayoutX() + e.getX() - mouseX;
-        double y = node.getLayoutY() + e.getY() - mouseY;
+    public boolean canMove(Node node, MouseEvent e) {
+        int leftX = (int) e.getSceneX();
+        int rightX = (int) (e.getSceneX() + ((Pane) node).getWidth());
 
-        CanvasHelper.movePanel(node, panel, x, y);
-        WorkingController.controller.alimentateMeasurePane(node);
+        int topY = (int) e.getSceneY();
+        int downY = (int) (e.getSceneY() + ((Pane) node).getHeight());
+
+        return leftX >= 0 && rightX <= editorPane.getWidth() && topY >= 0 && downY <= editorPane.getHeight();
+    }
+
+    public boolean canResize(MouseEvent e) {
+        return e.getSceneX() <= editorPane.getWidth() && e.getSceneY() <= editorPane.getHeight();
+    }
+
+    public void movePanel(Node node, ComicPanel panel, MouseEvent e) {
+        if (canMove(node, e)) {
+            CanvasHelper.movePanel(node, panel, (int) e.getSceneX(), (int) e.getSceneY());
+            WorkingController.controller.redrawComponentsTree();
+        }
     }
 
     public void moveModel(Node node, ComicModel model, MouseEvent e) {
-        //CanvasHelper.moveModel(node, model, (int) e.getSceneX(), (int) e.getSceneY());
+        if (canMove(node, e)) {
+            //CanvasHelper.moveModel(node, model, (int) e.getSceneX(), (int) e.getSceneY());
+        }
     }
 
     public void resizePanel(Node node, ComicPanel panel, MouseEvent e) {
-        double x = node.getLayoutX() + e.getX();
-        double y = node.getLayoutY() + e.getY();
+        if (canResize(e)) {
+            double newWidth = e.getSceneX() - node.getLayoutX();
+            double newHeight = e.getSceneY() - node.getLayoutY();
 
-        /*System.out.println(x);
-        System.out.println(y);*/
-
-        CanvasHelper.resizePanel(node, panel, x, y);
-        WorkingController.controller.alimentateMeasurePane(node);
+            CanvasHelper.resizePanel(node, panel, (int) newWidth, (int) newHeight);
+        }
     }
 
     public void resizeModel(Node node, ComicModel model, MouseEvent e) {
-        //double newWidth = e.getSceneX() - node.getLayoutX();
-        //double newHeight = e.getSceneY() - node.getLayoutY();
+        if (canResize(e)) {
+            double newWidth = e.getSceneX() - node.getLayoutX();
+            double newHeight = e.getSceneY() - node.getLayoutY();
 
-        //CanvasHelper.resizeModel(node, model, (int) newWidth, (int) newHeight);
+            //CanvasHelper.resizeModel(node, model, (int) newWidth, (int) newHeight);
+        }
     }
 
     public void addImage(Image image) {
