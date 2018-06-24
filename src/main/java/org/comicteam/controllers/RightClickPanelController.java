@@ -2,10 +2,13 @@ package org.comicteam.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TreeItem;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.comicteam.ClipartForm;
 import org.comicteam.helpers.ComicBookHelper;
+import org.comicteam.helpers.ExternalDocumentHelper;
+import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.layouts.ComicPage;
 import org.comicteam.layouts.ComicPanel;
 
@@ -26,6 +29,13 @@ public class RightClickPanelController {
     @FXML
     public void addModelWithExternalDocumentButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();
+
+        Image image = ExternalDocumentHelper.getImage(WorkingController.controller.componentsTree);
+
+        if (image != null) {
+            EditorController.controller.addImage(image);
+            WorkingController.controller.redrawComponentsTree();
+        }
     }
 
     @FXML

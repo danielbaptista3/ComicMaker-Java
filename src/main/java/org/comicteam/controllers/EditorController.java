@@ -14,9 +14,12 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 import org.comicteam.helpers.CanvasHelper;
 import org.comicteam.helpers.ComicBookHelper;
+import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.helpers.MM;
 import org.comicteam.layouts.*;
 import org.comicteam.models.ComicModel;
+
+import java.io.ObjectOutputStream;
 
 public class EditorController {
     public static EditorController controller;
@@ -40,21 +43,20 @@ public class EditorController {
         for (ComicPanel panel : ComicBookHelper.openedBook.getPages().get(ComicBookHelper.currentPage).getPanels()) {
             Pane panelPane = CanvasHelper.getPanel(panel);
 
-            panelPane.setOnMouseDragged((e) -> {
-                switch (e.getButton()) {
-                    case PRIMARY:
-                        movePanel(panelPane, panel, e);
-                        break;
-                    case SECONDARY:
-                        resizePanel(panelPane, panel, e);
-                        break;
-                }
+            setPaneMouseActions(panelPane, panel);
 
-                ComicBookHelper.saved = false;
-            });
+            for (ComicModel model : panel.getModels()) {
+                panelPane.getChildren().add(model.getCanvas());
+
+                setCanvasMouseActions(model.getCanvas(), model);
+            }
 
             editorPane.getChildren().add(panelPane);
         }
+    }
+
+    public Node getSelectedPanel() {
+        return editorPane.getChildren().get(FXMLHelper.getComicPageOfSelectedComicPanel().getPanels().indexOf(FXMLHelper.getSelectedComicPanel()));
     }
 
     public void showPage(ComicPage page) {
@@ -62,31 +64,92 @@ public class EditorController {
         redrawEditorPane();
     }
 
-    public boolean canMove(Node node, MouseEvent e) {
-        int leftX = (int) e.getSceneX();
-        int rightX = (int) (e.getSceneX() + ((Pane) node).getWidth());
+    public void setPaneMouseActions(Pane panelPane, ComicPanel panel) {
+        panelPane.setOnMouseEntered(e -> {
+            CanvasHelper.selectPanel(panelPane);
+            WorkingController.controller.alimentateMeasurePane(panel);
+        });
 
-        int topY = (int) e.getSceneY();
-        int downY = (int) (e.getSceneY() + ((Pane) node).getHeight());
+        panelPane.setOnMouseExited(e -> {
+            CanvasHelper.unselectAllPanels();
+        });
+
+        panelPane.setOnMouseDragged(e -> {
+            CanvasHelper.selectPanel(panelPane);
+
+            switch (e.getButton()) {
+                case PRIMARY:
+                    movePanel(panelPane, panel, e);
+                    break;
+                case SECONDARY:
+                    resizePanel(panelPane, panel, e);
+                    break;
+            }
+
+            ComicBookHelper.saved = false;
+        });
+    }
+
+    public void setCanvasMouseActions(Canvas canvas, ComicModel model) {
+        canvas.setOnMouseEntered(e -> {
+            WorkingController.controller.alimentateMeasureModel(model);
+        });
+
+        canvas.setOnMouseDragged(e -> {
+            switch (e.getButton()) {
+                case PRIMARY:
+                    moveModel(canvas, model, e);
+                    break;
+                case SECONDARY:
+                    resizeModel(canvas, model, e);
+                    break;
+            }
+        });
+    }
+
+    public boolean canMovePanel(Node node, MouseEvent e) {
+        int leftX = (int) (e.getSceneX() - ((Pane) node).getWidth() / 2);
+        int rightX = (int) (e.getSceneX() + ((Pane) node).getWidth() / 2);
+
+        int topY = (int) (e.getSceneY() - ((Pane) node).getHeight() / 2);
+        int downY = (int) (e.getSceneY() + ((Pane) node).getHeight() / 2);
 
         return leftX >= 0 && rightX <= editorPane.getWidth() && topY >= 0 && downY <= editorPane.getHeight();
     }
+
+    /*public boolean canMoveModel(Node node, MouseEvent e) {
+        int leftX = (int) (e.getSceneX() - ((Pane) node).getWidth() / 2);
+        int rightX = (int) (e.getSceneX() + ((Pane) node).getWidth() / 2);
+
+        int topY = (int) (e.getSceneY() - ((Pane) node).getHeight() / 2);
+        int downY = (int) (e.getSceneY() + ((Pane) node).getHeight() / 2);
+
+        return leftX >= 0 && rightX <= editorPane.getWidth() && topY >= 0 && downY <= editorPane.getHeight();
+    }*/
 
     public boolean canResize(MouseEvent e) {
         return e.getSceneX() <= editorPane.getWidth() && e.getSceneY() <= editorPane.getHeight();
     }
 
     public void movePanel(Node node, ComicPanel panel, MouseEvent e) {
-        if (canMove(node, e)) {
-            CanvasHelper.movePanel(node, panel, (int) e.getSceneX(), (int) e.getSceneY());
+        if (canMovePanel(node, e)) {
+            int x = (int) (e.getSceneX() - ((Pane) node).getWidth() / 2);
+            int y = (int) (e.getSceneY() - ((Pane) node).getHeight() / 2);
+
+            CanvasHelper.movePanel(node, panel, x, y);
+            WorkingController.controller.alimentateMeasurePane(panel);
             WorkingController.controller.redrawComponentsTree();
         }
     }
 
-    public void moveModel(Node node, ComicModel model, MouseEvent e) {
-        if (canMove(node, e)) {
-            //CanvasHelper.moveModel(node, model, (int) e.getSceneX(), (int) e.getSceneY());
-        }
+    public void moveModel(Canvas canvas, ComicModel model, MouseEvent e) {
+        //if (canMove(upper, node, e)) {
+            int x = (int) (e.getSceneX() - canvas.getBoundsInLocal().getWidth() / 2);
+            int y = (int) (e.getSceneY() - canvas.getBoundsInLocal().getHeight() / 2);
+
+            CanvasHelper.moveModel(canvas, model, x, y);
+            WorkingController.controller.alimentateMeasureModel(model);
+        //}
     }
 
     public void resizePanel(Node node, ComicPanel panel, MouseEvent e) {
@@ -95,21 +158,21 @@ public class EditorController {
             double newHeight = e.getSceneY() - node.getLayoutY();
 
             CanvasHelper.resizePanel(node, panel, (int) newWidth, (int) newHeight);
+            WorkingController.controller.alimentateMeasurePane(panel);
         }
     }
 
-    public void resizeModel(Node node, ComicModel model, MouseEvent e) {
-        if (canResize(e)) {
-            double newWidth = e.getSceneX() - node.getLayoutX();
-            double newHeight = e.getSceneY() - node.getLayoutY();
+    public void resizeModel(Canvas canvas, ComicModel model, MouseEvent e) {
+        //if (canResize(e)) {
+            double newWidth = e.getSceneX() - canvas.getLayoutX();
+            double newHeight = e.getSceneY() - canvas.getLayoutY();
 
-            //CanvasHelper.resizeModel(node, model, (int) newWidth, (int) newHeight);
-        }
+            CanvasHelper.resizeModel(canvas, model, (int) newWidth, (int) newHeight);
+            WorkingController.controller.alimentateMeasureModel(model);
+        //}
     }
 
     public void addImage(Image image) {
-        ImageView imageView = new ImageView(image);
-
         Canvas canvas = new Canvas(image.getWidth(), image.getHeight());
         canvas.getGraphicsContext2D().drawImage(image, 0, 0);
 
@@ -126,20 +189,10 @@ public class EditorController {
                 0
         );
 
-        ((ComicPanel) ((TreeItem) WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem()).getValue()).getModels().add(
-                model
-        );
+        setCanvasMouseActions(canvas, model);
 
-        imageView.setOnMouseDragged(e -> {
-            switch (e.getButton()) {
-                case PRIMARY:
-                    moveModel(imageView, model, e);
-                    break;
-                case SECONDARY:
-                    break;
-            }
-        });
+        FXMLHelper.getSelectedComicPanel().getModels().add(model);
 
-        editorPane.getChildren().add(canvas);
+        ((Pane) getSelectedPanel()).getChildren().add(canvas);
     }
 }

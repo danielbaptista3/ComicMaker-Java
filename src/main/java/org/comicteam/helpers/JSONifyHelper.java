@@ -35,7 +35,6 @@ public class JSONifyHelper {
 
     private static JSONObject jsonPage(ComicPage page) {
         JSONObject o = new JSONObject();
-        //o.put("index", page.getIndex());
         JSONArray panels = new JSONArray();
 
         for (ComicPanel panel : page.getPanels()) {
@@ -75,7 +74,7 @@ public class JSONifyHelper {
         }
         o.put("background", model.getBackground());
         if (model.getCanvas() != null) {
-            o.put("Canvas", model.getCanvas().getGraphicsContext2D());
+            o.put("Canvas", model.getCanvas().toString());
         }
 
         return o;

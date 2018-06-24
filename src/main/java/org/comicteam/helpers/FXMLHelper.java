@@ -3,6 +3,7 @@ package org.comicteam.helpers;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TreeItem;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.BorderStrokeStyle;
@@ -12,6 +13,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
 import org.comicteam.*;
+import org.comicteam.controllers.WorkingController;
+import org.comicteam.layouts.ComicPage;
+import org.comicteam.layouts.ComicPanel;
+import org.comicteam.models.ComicModel;
 
 import java.io.File;
 
@@ -63,13 +68,17 @@ public class FXMLHelper {
         np.start(new Stage(StageStyle.DECORATED));
     }
 
-    public static boolean openProject(Node node) {
+    public static File chooseFile(Node node) {
         FileChooser chooser = new FileChooser();
         chooser.setInitialDirectory(new File(SettingsHelper.get("savePath")));
-        File file = chooser.showOpenDialog(node.getScene().getWindow());
+        return chooser.showOpenDialog(node.getScene().getWindow());
+    }
+
+    public static boolean openProject(Node node) {
+        File file = chooseFile(node);
 
         if (file != null) {
-            if (ComicBookHelper.isAComicBook(file.getPath())) {
+            if (ComicBookHelper.isACorrectDescriptor(file.getPath())) {
                 ComicBookHelper.openedBook = ComicBookHelper.open(file.getPath());
             } else {
                 return false;
@@ -81,7 +90,7 @@ public class FXMLHelper {
     }
 
     public static void saveProject() {
-        ComicBookHelper.save(ComicBookHelper.openedBook);
+        ComicBookHelper.saveProject();
     }
 
     public static void openSettingsForm() {
@@ -113,5 +122,32 @@ public class FXMLHelper {
 
     public static void closeWindow(Node node) {
         ((Stage) node.getScene().getWindow()).close();
+    }
+
+    public static ComicPage getSelectedComicPage() {
+        return (ComicPage) ((TreeItem) WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem()).getValue();
+    }
+
+    public static ComicPanel getSelectedComicPanel() {
+        return (ComicPanel) ((TreeItem) WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem()).getValue();
+    }
+
+    public static ComicPage getComicPageOfSelectedComicPanel() {
+        TreeItem item = ((TreeItem) WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem());
+        int indexPage = item.getParent().getParent().getChildren().indexOf(item.getParent());
+
+        return (ComicPage) (((TreeItem) WorkingController.controller.componentsTree.getRoot().getChildren().get(indexPage)).getValue());
+    }
+
+    public static Class getClassOfSelectedObject() {
+        return ((TreeItem) WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem()).getValue().getClass();
+    }
+
+    public static ComicModel getSelectedModel() {
+        return (ComicModel) ((TreeItem) WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem()).getValue();
+    }
+
+    public static ComicPanel getPanelOfSelectedModel() {
+        return (ComicPanel) ((TreeItem) WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem()).getParent().getValue();
     }
 }

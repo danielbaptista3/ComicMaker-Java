@@ -8,6 +8,7 @@ import javafx.stage.StageStyle;
 import org.comicteam.AddPanelForm;
 import org.comicteam.helpers.CanvasHelper;
 import org.comicteam.helpers.ComicBookHelper;
+import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.layouts.*;
 
 public class RightClickPageController {
@@ -22,6 +23,7 @@ public class RightClickPageController {
         ComicBookHelper.saved = false;
 
         WorkingController.controller.redrawComponentsTree();
+        EditorController.controller.redrawEditorPane();
     }
 
     @FXML
@@ -52,13 +54,14 @@ public class RightClickPageController {
     public void upButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();
 
-        int index = ((ComicPage) ((TreeItem) WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem()).getValue()).getIndex();
+        int index = FXMLHelper.getSelectedComicPage().getIndex();
 
-        if (index > 1) {
-            ComicBookHelper.openedBook.getPages().get(index - 1).setIndex(index - 1);
-            ComicBookHelper.openedBook.getPages().get(index - 2).setIndex(index);
+        if (index > 0) {
+            ComicBookHelper.openedBook.getPages().get(index).setIndex(index - 1);
+            ComicBookHelper.openedBook.getPages().get(index - 1).setIndex(index);
 
             WorkingController.controller.redrawComponentsTree();
+            ComicBookHelper.saved = false;
         }
     }
 
@@ -66,12 +69,13 @@ public class RightClickPageController {
     public void downButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();
 
-        int index = ((ComicPage) ((TreeItem) WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem()).getValue()).getIndex();
+        int index = FXMLHelper.getSelectedComicPage().getIndex();
 
         if (index < ComicBookHelper.openedBook.getPages().size()) {
-            ComicBookHelper.openedBook.getPages().get(index - 1).setIndex(index + 1);
-            ComicBookHelper.openedBook.getPages().get(index).setIndex(index);
+            ComicBookHelper.openedBook.getPages().get(index).setIndex(index + 1);
+            ComicBookHelper.openedBook.getPages().get(index + 1).setIndex(index);
 
+            ComicBookHelper.saved = false;
             WorkingController.controller.redrawComponentsTree();
         }
     }

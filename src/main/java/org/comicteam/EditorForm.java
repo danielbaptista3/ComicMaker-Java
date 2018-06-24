@@ -6,8 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import org.comicteam.controllers.EditorController;
+import org.comicteam.controllers.SavingWarningController;
+import org.comicteam.controllers.WorkingController;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
+import org.comicteam.helpers.MM;
 
 import java.io.IOException;
 
@@ -25,18 +29,24 @@ public class EditorForm extends Application {
 
         Scene scene  = new Scene(
                 root,
-                Screen.getPrimary().getBounds().getWidth() - 300,
-                Screen.getPrimary().getBounds().getHeight()
+                MM.toPx(ComicBookHelper.openedBook.getSize().getHorizontal()),
+                MM.toPx(ComicBookHelper.openedBook.getSize().getVertical())
         );
 
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.setTitle(ComicBookHelper.openedBook.getName());
-        primaryStage.setX(305);
+        primaryStage.setX(400);
 
         primaryStage.setOnCloseRequest((e) -> {
             if (!ComicBookHelper.saved) {
                 FXMLHelper.openSavingWarningForm();
+
+                if (SavingWarningController.mustCancel) {
+                    e.consume();
+                }
+            } else {
+                FXMLHelper.closeWindow(WorkingController.controller.pane);
             }
         });
 

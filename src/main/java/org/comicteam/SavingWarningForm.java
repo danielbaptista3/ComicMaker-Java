@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.comicteam.controllers.SavingWarningController;
 
 import java.io.IOException;
 
@@ -28,6 +29,10 @@ public class SavingWarningForm extends Application {
         primaryStage.setResizable(false);
         primaryStage.setTitle("Warning enregistrement");
         primaryStage.initModality(Modality.APPLICATION_MODAL);
+
+        primaryStage.setOnCloseRequest(e -> {
+            SavingWarningController.controller.cancelButtonClick(null);
+        });
 
         primaryStage.showAndWait();
     }

@@ -44,7 +44,7 @@ public class FormController {
         }*/
 
         ComicBook bulletin = DodoStop.getBook();
-        ComicBookHelper.save(bulletin);
+        //ComicBookHelper.saveDescriptor(bulletin);
 
         book = ComicBookHelper.open("Bulletin Météo.cm");
 

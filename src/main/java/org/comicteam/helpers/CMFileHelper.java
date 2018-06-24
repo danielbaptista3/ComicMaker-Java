@@ -1,5 +1,5 @@
 package org.comicteam.helpers;
 
-public class PluginHelper {
+public class CMFileHelper {
 
 }

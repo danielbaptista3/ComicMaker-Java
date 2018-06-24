@@ -1,14 +1,19 @@
 package org.comicteam.helpers;
 
 import org.comicteam.ComicBook;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import org.comicteam.layouts.ComicPage;
+import org.comicteam.layouts.ComicPanel;
+import org.comicteam.models.ComicModel;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
+import java.io.*;
+import java.lang.reflect.Array;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipOutputStream;
 
 public class ComicBookHelper {
     public static ComicBook openedBook;
@@ -16,6 +21,25 @@ public class ComicBookHelper {
     public static int currentPage = 0;
 
     public static ComicBook open(String fileName) {
+        ZipFile zipFile = null;
+        try {
+            zipFile = new ZipFile(fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        Enumeration<? extends ZipEntry> entries = zipFile.entries();
+
+        while (entries.hasMoreElements()) {
+            //ZipEntry entry = entries.nextElement();
+            System.out.println(entries.nextElement().getName());
+        }
+
+        return null;
+    }
+
+/*    public static ComicBook open(String fileName) {
         File file = new File(fileName);
         StringBuilder builder = new StringBuilder();
 
@@ -46,28 +70,91 @@ public class ComicBookHelper {
             e.printStackTrace();
             return null;
         }
-    }
+    }*/
 
-    public static boolean save(ComicBook book) {
-        return save(book, SettingsHelper.get("savePath"));
-    }
+    public static void saveProject() {
+        File descriptor = saveDescriptor();
 
-    public static boolean save(ComicBook book, String folder) {
-        File file = new File(String.format("%s/%s.cm", folder, book.getName()));
+        if (descriptor != null) {
+            HashMap<String, ByteArrayOutputStream> canvass = saveAllCanvas();
 
-        try (FileWriter fw = new FileWriter(file)) {
-            fw.write(JSONifyHelper.jsonBook(book).toJSONString());
-            saved = true;
-            return true;
-        } catch (IOException e) {
-            return false;
+            if (canvass != null) {
+                if (putAllFilesOnZip(descriptor, canvass)) {
+                    saved = true;
+                }
+            }
         }
     }
 
-    public static boolean isAComicBook(String fileName) {
+    public static File saveDescriptor() {
+        File descriptor = null;
+
+        try {
+            descriptor = File.createTempFile("descriptor", "xml");
+
+            try (FileWriter fw = new FileWriter(descriptor)) {
+                fw.write(JSONifyHelper.jsonBook(openedBook).toJSONString());
+                saved = true;
+                return descriptor;
+            } catch (IOException e) {
+                return null;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return descriptor;
+    }
+
+    public static HashMap<String, ByteArrayOutputStream> saveAllCanvas() {
+        HashMap<String, ByteArrayOutputStream> canvass = new HashMap<>();
+
+        for (ComicPage page : openedBook.getPages()) {
+            for (ComicPanel panel : page.getPanels()) {
+                for (ComicModel model : panel.getModels()) {
+                    ByteArrayOutputStream canvas = CanvasHelper.writeCanvasFile(model.getCanvas());
+
+                    if (canvas == null) {
+                        return null;
+                    }
+
+                    canvass.put(model.getCanvas().toString(), canvas);
+                }
+            }
+        }
+
+        return canvass;
+    }
+
+    public static boolean isACorrectDescriptor(String fileName) {
         try {
             ComicBook book = open(fileName);
         } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+    public static boolean putAllFilesOnZip(File descriptor, HashMap<String, ByteArrayOutputStream> canvass) {
+        try {
+            File file = new File(String.format("%s/%s.cm", SettingsHelper.get("savePath"), openedBook.getName()));
+            ZipOutputStream input = new ZipOutputStream(new FileOutputStream(file));
+
+            ZipEntry entry = new ZipEntry("descriptor.xml");
+            input.putNextEntry(entry);
+
+            input.write(new FileInputStream(descriptor).readAllBytes());
+
+            for (String canvasName : canvass.keySet()) {
+                input.putNextEntry(new ZipEntry(canvasName));
+                input.write(canvass.get(canvasName).toByteArray());
+            }
+
+            input.close();
+        } catch (IOException e) {
+            e.printStackTrace();
             return false;
         }
 

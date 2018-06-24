@@ -44,7 +44,11 @@ public class ComicPanel implements Serializable, Comparable {
     @Override
     public int compareTo(Object o) {
         if (layout.getPosition().getVertical() < ((ComicPanel) o).layout.getPosition().getVertical()) {
-            return -1;
+            //if (layout.getPosition().getHorizontal() < ((ComicPanel) o).layout.getPosition().getHorizontal()) {
+                return -1;
+            /*} else {
+                return 1;
+            }*/
         }
 
         return 1;

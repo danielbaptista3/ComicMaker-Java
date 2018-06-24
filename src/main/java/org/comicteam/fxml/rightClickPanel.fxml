@@ -2,29 +2,12 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.RightClickPanelController">
    <children>
-      <Button fx:id="addClipartModelButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#addClipartModelButtonClick" text="Ajouter un modèle avec Clipart">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-      <Button fx:id="addModelWithEditorButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#addModelWithEditorButtonClick" text="Ajouter un modèle à partir de l'éditeur">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-      <Button fx:id="addModelWithExternalDocumentButton" mnemonicParsing="false" onMouseClicked="#addModelWithExternalDocumentButtonClick" text="Ajouter un modèle à partir d'un document externe">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-      <Button fx:id="deletePanelButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#deletePanelButtonClick" text="Supprimer la case">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
+      <Button fx:id="addClipartModelButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#addClipartModelButtonClick" text="Ajouter un modèle avec Clipart" />
+      <Button fx:id="addModelWithEditorButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#addModelWithEditorButtonClick" text="Ajouter un modèle à partir de l'éditeur" />
+      <Button fx:id="addModelWithExternalDocumentButton" mnemonicParsing="false" onMouseClicked="#addModelWithExternalDocumentButtonClick" text="Ajouter un modèle à partir d'un document externe" />
+      <Button fx:id="deletePanelButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#deletePanelButtonClick" text="Supprimer la case" />
    </children>
 </VBox>

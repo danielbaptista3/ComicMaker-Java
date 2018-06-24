@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import org.comicteam.controllers.WorkingController;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 
@@ -31,13 +32,15 @@ public class WorkingForm extends Application {
         );
 
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
+        primaryStage.setResizable(true);
         primaryStage.setTitle(ComicBookHelper.openedBook.getName());
         primaryStage.setX(0);
 
         primaryStage.setOnCloseRequest((e) -> {
             if (!ComicBookHelper.saved) {
                 FXMLHelper.openSavingWarningForm();
+            } else {
+                FXMLHelper.closeAllWindows(WorkingController.controller.pane);
             }
         });
 

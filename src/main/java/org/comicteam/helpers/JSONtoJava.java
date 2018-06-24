@@ -1,5 +1,7 @@
 package org.comicteam.helpers;
 
+import javafx.scene.canvas.Canvas;
+import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import org.comicteam.ComicBook;
 import org.comicteam.layouts.*;
@@ -13,6 +15,10 @@ import org.comicteam.models.ballons.pointers.BalloonPointer;
 import org.comicteam.models.ballons.pointers.SpeechBalloonPointer;
 import org.comicteam.models.ballons.pointers.ThoughtBalloonPointer;
 import org.json.simple.JSONObject;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,8 +65,8 @@ public class JSONtoJava {
         for (Object model : (List<Object>) j.get("models")) {
             JSONObject j2 = (JSONObject) model;
 
-            if (j2.containsKey("Model")) {
-                System.out.println("Model");
+            if (j2.containsKey("ComicModel")) {
+                System.out.println("ComicModel");
                 models.add(javaModel((JSONObject) model));
             } else if (j2.containsKey("SpeechBalloon")) {
                 System.out.println("SpeechBalloon");
@@ -83,9 +89,32 @@ public class JSONtoJava {
     }
 
     private static ComicModel javaModel(JSONObject j) {
+        j = (JSONObject) j.get("ComicModel");
+
+        ComicLayout layout = javaLayout((JSONObject) j.get("Layout"));
+        Canvas canvas = null;
+
+        if (j.containsKey("Canvas")) {
+            canvas = new Canvas(MM.toPx(layout.getSize().getHorizontal()), MM.toPx(layout.getSize().getVertical()));
+
+            String url = String.format("%s/%s", SettingsHelper.get("savePath"), j.get("Canvas"));
+
+            Image image = null;
+
+            try {
+                image = new Image(new FileInputStream(url));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            canvas.getGraphicsContext2D().drawImage(image, 0, 0);
+            canvas.setLayoutX(MM.toPx(layout.getPosition().getHorizontal()));
+            canvas.setLayoutY(MM.toPx(layout.getPosition().getVertical()));
+        }
+
         return new ComicModel(
                 String.valueOf(j.get("name")),
-                null,
+                canvas,
                 javaLayout((JSONObject) j.get("Layout")),
                 (int) ((long) j.get("background"))
         );

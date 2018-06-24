@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="150.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.SavingWarningController">
    <children>
       <Label layoutX="117.0" layoutY="43.0" text="Voulez-vous enregistrer le document ouvert ?" AnchorPane.topAnchor="40.0">
@@ -13,7 +12,8 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="yesButton" layoutX="238.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#yesButtonClick" prefHeight="40.0" prefWidth="100.0" text="Oui" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="80.0" />
-      <Button fx:id="noButton" layoutX="322.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#noButtonClick" prefHeight="40.0" prefWidth="100.0" text="Non" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="80.0" />
+      <Button fx:id="yesButton" layoutX="200.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#yesButtonClick" prefHeight="40.0" prefWidth="100.0" text="Oui" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="80.0" />
+      <Button fx:id="noButton" layoutX="250.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#noButtonClick" prefHeight="40.0" prefWidth="100.0" text="Non" AnchorPane.topAnchor="80.0" />
+      <Button fx:id="cancelButton" layoutX="359.0" layoutY="87.0" mnemonicParsing="false" onMouseClicked="#cancelButtonClick" prefHeight="40.0" prefWidth="100.0" text="Annuler" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="80.0" />
    </children>
 </AnchorPane>

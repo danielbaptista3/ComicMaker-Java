@@ -1,10 +1,19 @@
 package org.comicteam.helpers;
 
+import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Node;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.image.Image;
+import javafx.scene.image.PixelReader;
+import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
+import org.apache.batik.dom.svg.SVGOMDocument;
+import org.apache.batik.svggen.SVGBufferedImageOp;
+import org.apache.batik.svggen.SVGGeneratorContext;
+import org.apache.batik.svggen.SVGGraphics2D;
+import org.apache.batik.svggen.SVGPath;
 import org.comicteam.controllers.EditorController;
 import org.comicteam.layouts.ComicPanel;
 import org.comicteam.layouts.Position;
@@ -12,8 +21,20 @@ import org.comicteam.layouts.Size;
 import org.comicteam.models.ComicModel;
 import org.comicteam.models.Text;
 import org.comicteam.models.ballons.Balloon;
+import org.jfree.graphics2d.svg.SVGUtils;
 
+import javax.imageio.ImageIO;
+import javax.imageio.ImageReader;
+import javax.imageio.ImageWriter;
+import javax.imageio.stream.MemoryCacheImageOutputStream;
+import java.awt.image.BufferedImage;
+import java.awt.image.Raster;
+import java.awt.image.RenderedImage;
+import java.io.*;
+import java.nio.ByteBuffer;
 import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class CanvasHelper {
     private static Border blackBorder;
@@ -50,14 +71,14 @@ public class CanvasHelper {
         return pane;
     }
 
-    public static void selectPanel(List<Node> nodes, Pane panel) {
-        unselectAllPanels(nodes);
+    public static void selectPanel(Pane panel) {
+        unselectAllPanels();
         panel.setBorder(blueBorder);
     }
 
-    public static void unselectAllPanels(List<Node> nodes) {
-        for (Node p : nodes) {
-            //((Pane) p).setBorder(blackBorder);
+    public static void unselectAllPanels() {
+        for (Node p : EditorController.controller.editorPane.getChildren()) {
+            ((Pane) p).setBorder(blackBorder);
         }
     }
 
@@ -162,9 +183,9 @@ public class CanvasHelper {
         );
     }
 
-/*    public static void moveModel(Node node, ComicModel model, int x, int y) {
-        node.setLayoutX(x);
-        node.setLayoutY(y);
+    public static void moveModel(Canvas canvas, ComicModel model, int x, int y) {
+        canvas.setLayoutX(x);
+        canvas.setLayoutY(y);
 
         model.getLayout().setPosition(
                 new Position(
@@ -172,7 +193,7 @@ public class CanvasHelper {
                         MM.toMM(y)
                 )
         );
-    }*/
+    }
 
     public static void resizePanel(Node node, ComicPanel panel, int x, int y) {
         ((Pane) node).setPrefWidth(x);
@@ -186,9 +207,14 @@ public class CanvasHelper {
         );
     }
 
-    /*public static void resizeModel(Node node, ComicModel model, int x, int y) {
-        ((Pane) node).setPrefWidth(x);
-        ((Pane) node).setPrefHeight(y);
+    public static void resizeModel(Canvas canvas, ComicModel model, int x, int y) {
+        double scaleX = x / MM.toPx(model.getLayout().getSize().getHorizontal());
+        double scaleY = y / MM.toPx(model.getLayout().getSize().getVertical());
+
+        System.out.println(scaleX + "   " + scaleY);
+
+        canvas.setScaleX(scaleX);
+        canvas.setScaleY(scaleY);
 
         model.getLayout().setSize(
                 new Size(
@@ -196,5 +222,26 @@ public class CanvasHelper {
                         MM.toMM(y)
                 )
         );
-    }*/
+    }
+
+    public static ByteArrayOutputStream writeCanvasFile(Canvas canvas) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+        WritableImage wi = new WritableImage((int) canvas.getWidth(), (int) canvas.getHeight());
+        canvas.snapshot(null, wi);
+        RenderedImage ri = SwingFXUtils.fromFXImage(wi, null);
+
+        try {
+            ImageIO.write(
+                    ri,
+                    "png",
+                    baos
+            );
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        return baos;
+    }
 }

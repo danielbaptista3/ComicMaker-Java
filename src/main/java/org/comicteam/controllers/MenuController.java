@@ -74,8 +74,8 @@ public class MenuController {
     public void quitButtonClick() {
         if (!ComicBookHelper.saved) {
             FXMLHelper.openSavingWarningForm();
+        } else {
+            FXMLHelper.closeAllWindows(quitButton);
         }
-
-        FXMLHelper.closeAllWindows(quitButton);
     }
 }
