@@ -9,11 +9,6 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
-import org.apache.batik.dom.svg.SVGOMDocument;
-import org.apache.batik.svggen.SVGBufferedImageOp;
-import org.apache.batik.svggen.SVGGeneratorContext;
-import org.apache.batik.svggen.SVGGraphics2D;
-import org.apache.batik.svggen.SVGPath;
 import org.comicteam.controllers.EditorController;
 import org.comicteam.layouts.ComicPanel;
 import org.comicteam.layouts.Position;
@@ -21,7 +16,7 @@ import org.comicteam.layouts.Size;
 import org.comicteam.models.ComicModel;
 import org.comicteam.models.Text;
 import org.comicteam.models.ballons.Balloon;
-import org.jfree.graphics2d.svg.SVGUtils;
+//import org.jfree.graphics2d.svg.SVGUtils;
 
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
@@ -223,6 +218,8 @@ public class CanvasHelper {
                 )
         );
     }
+
+
 
     public static ByteArrayOutputStream writeCanvasFile(Canvas canvas) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();

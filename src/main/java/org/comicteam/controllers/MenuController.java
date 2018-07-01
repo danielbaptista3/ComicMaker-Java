@@ -2,6 +2,10 @@ package org.comicteam.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import org.comicteam.CMFile;
+import org.comicteam.PluginsForm;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 
@@ -25,7 +29,7 @@ public class MenuController {
 
     @FXML
     public void newProjectButtonClick() {
-        if (!ComicBookHelper.saved) {
+        if (!CMFile.cmfile.saved) {
             FXMLHelper.openSavingWarningForm();
         }
 
@@ -34,7 +38,7 @@ public class MenuController {
 
     @FXML
     public void openProjectButtonClick() {
-        if (!ComicBookHelper.saved) {
+        if (!CMFile.cmfile.saved) {
             FXMLHelper.openSavingWarningForm();
         }
 
@@ -61,7 +65,8 @@ public class MenuController {
 
     @FXML
     public void pluginsButtonClick() {
-
+        PluginsForm pf = new PluginsForm();
+        pf.start(new Stage(StageStyle.DECORATED));
     }
 
     @FXML
@@ -72,7 +77,7 @@ public class MenuController {
 
     @FXML
     public void quitButtonClick() {
-        if (!ComicBookHelper.saved) {
+        if (!CMFile.cmfile.saved) {
             FXMLHelper.openSavingWarningForm();
         } else {
             FXMLHelper.closeAllWindows(quitButton);

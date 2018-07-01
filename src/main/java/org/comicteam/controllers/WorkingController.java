@@ -11,6 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.comicteam.CMFile;
 import org.comicteam.EditorForm;
 import org.comicteam.helpers.CanvasHelper;
 import org.comicteam.helpers.ComicBookHelper;
@@ -61,21 +62,21 @@ public class WorkingController {
         EditorForm editor = new EditorForm();
         editor.start(new Stage(StageStyle.DECORATED));
 
-        if (ComicBookHelper.openedBook.getPages().size() > 0) {
-            selectPage(ComicBookHelper.openedBook.getPages().get(0));
+        if (CMFile.cmfile.book.getPages().size() > 0) {
+            selectPage(CMFile.cmfile.book.getPages().get(0));
         }
 
         controller = this;
     }
 
     public void redrawComponentsTree() {
-        componentsTree.setRoot(new TreeItem(ComicBookHelper.openedBook.getName()));
+        componentsTree.setRoot(new TreeItem(CMFile.cmfile.book.getName()));
         componentsTree.getRoot().setExpanded(true);
 
-        ComicBookHelper.openedBook.sortPages();
-        ComicBookHelper.openedBook.sortPanels();
+        CMFile.cmfile.book.sortPages();
+        CMFile.cmfile.book.sortPanels();
 
-        for (ComicPage page : ComicBookHelper.openedBook.getPages()) {
+        for (ComicPage page : CMFile.cmfile.book.getPages()) {
             TreeItem<Object> treePage = new TreeItem<>(page);
             componentsTree.getRoot().getChildren().add(treePage);
             componentsTree.getRoot().setExpanded(true);
@@ -94,12 +95,12 @@ public class WorkingController {
         componentsTree.refresh();
 
         if (!currentPageLabel.getText().equals("")) {
-            if (Integer.valueOf(currentPageLabel.getText()) > ComicBookHelper.openedBook.getPages().size()) {
-                currentPageLabel.setText(String.valueOf(ComicBookHelper.openedBook.getPages().size()));
+            if (Integer.valueOf(currentPageLabel.getText()) > CMFile.cmfile.book.getPages().size()) {
+                currentPageLabel.setText(String.valueOf(CMFile.cmfile.book.getPages().size()));
             }
         }
 
-        pageCountLabel.setText(String.format("%s", ComicBookHelper.openedBook.getPages().size()));
+        pageCountLabel.setText(String.format("%s", CMFile.cmfile.book.getPages().size()));
     }
 
     public void alimentateMeasurePane(ComicPanel panel) {
@@ -136,7 +137,7 @@ public class WorkingController {
                                     Integer.valueOf(heightField.getText())
                             )
                     );
-                    ComicBookHelper.saved = false;
+                    CMFile.cmfile.saved = false;
                     break;
             }
 
@@ -162,24 +163,24 @@ public class WorkingController {
 
     @FXML
     public void previousPageClick() {
-        if (ComicBookHelper.currentPage > 0) {
-            selectPage(ComicBookHelper.openedBook.getPages().get(ComicBookHelper.currentPage - 1));
+        if (CMFile.cmfile.currentPage > 0) {
+            selectPage(CMFile.cmfile.book.getPages().get(CMFile.cmfile.currentPage - 1));
         }
     }
 
     @FXML
     public void nextPageClick() {
-        if (ComicBookHelper.currentPage < ComicBookHelper.openedBook.getPages().size() - 1) {
-            selectPage(ComicBookHelper.openedBook.getPages().get(ComicBookHelper.currentPage + 1));
+        if (CMFile.cmfile.currentPage < CMFile.cmfile.book.getPages().size() - 1) {
+            selectPage(CMFile.cmfile.book.getPages().get(CMFile.cmfile.currentPage + 1));
         }
     }
 
     public void selectPage(ComicPage page) {
         EditorController.controller.showPage(page);
 
-        currentPageLabel.setText(String.valueOf(ComicBookHelper.currentPage + 1));
+        currentPageLabel.setText(String.valueOf(CMFile.cmfile.currentPage + 1));
         componentsTree.getSelectionModel().select(
-                componentsTree.getRoot().getChildren().get(ComicBookHelper.currentPage)
+                componentsTree.getRoot().getChildren().get(CMFile.cmfile.currentPage)
         );
     }
 

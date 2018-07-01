@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.AnchorPane;
+import org.comicteam.CMFile;
 import org.comicteam.helpers.ComicBookHelper;
 
 import java.io.IOException;
@@ -23,7 +24,7 @@ public class SettingsController {
         TreeItem<String> general = new TreeItem<>("Général");
         settingsCategoriesList.getRoot().getChildren().add(general);
 
-        if (ComicBookHelper.openedBook != null) {
+        if (CMFile.cmfile/*.book*/ != null) {
             TreeItem<String> document = new TreeItem<>("Document");
             settingsCategoriesList.getRoot().getChildren().add(document);
         }

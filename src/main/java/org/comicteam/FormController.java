@@ -43,10 +43,10 @@ public class FormController {
             System.out.println(e.getMessage());
         }*/
 
-        ComicBook bulletin = DodoStop.getBook();
+        //ComicBook bulletin = DodoStop.getBook();
         //ComicBookHelper.saveDescriptor(bulletin);
 
-        book = ComicBookHelper.open("Bulletin Météo.cm");
+        /*book = ComicBookHelper.open("Bulletin Météo.cm");
 
         for (ComicPanel panel : book.getPages().get(0).getPanels()) {
             Pane panePanel = CanvasHelper.getPanel(panel);
@@ -58,7 +58,7 @@ public class FormController {
             }
 
             pane.getChildren().add(panePanel);
-        }
+        }*/
     }
 
     /*public void showBalloon(Balloon balloon) {

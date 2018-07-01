@@ -29,17 +29,17 @@ public class EditorForm extends Application {
 
         Scene scene  = new Scene(
                 root,
-                MM.toPx(ComicBookHelper.openedBook.getSize().getHorizontal()),
-                MM.toPx(ComicBookHelper.openedBook.getSize().getVertical())
+                MM.toPx(CMFile.cmfile.book.getSize().getHorizontal()),
+                MM.toPx(CMFile.cmfile.book.getSize().getVertical())
         );
 
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-        primaryStage.setTitle(ComicBookHelper.openedBook.getName());
+        primaryStage.setTitle(CMFile.cmfile.book.getName());
         primaryStage.setX(400);
 
         primaryStage.setOnCloseRequest((e) -> {
-            if (!ComicBookHelper.saved) {
+            if (!CMFile.cmfile.saved) {
                 FXMLHelper.openSavingWarningForm();
 
                 if (SavingWarningController.mustCancel) {

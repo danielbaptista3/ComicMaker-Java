@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="MajProcessor">
-    <output-path>$PROJECT_DIR$/out/artifacts/MajProcessor</output-path>
-    <root id="archive" name="MajProcessor.jar">
-      <element id="dir-copy" path="$PROJECT_DIR$/target/classes/org/comicteam/annotation" />
-    </root>
-  </artifact>
-</component>

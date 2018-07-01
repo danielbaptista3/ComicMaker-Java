@@ -1,43 +1,29 @@
 package org.comicteam.helpers;
 
-import org.comicteam.ComicBook;
+import org.comicteam.CMFile;
 import org.comicteam.layouts.ComicPage;
 import org.comicteam.layouts.ComicPanel;
 import org.comicteam.models.ComicModel;
 
 import java.io.*;
-import java.lang.reflect.Array;
-import java.util.Collections;
-import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
 public class ComicBookHelper {
-    public static ComicBook openedBook;
-    public static boolean saved = true;
-    public static int currentPage = 0;
+    //public static ComicBook openedBook;
+    //public static boolean saved = true;
+    //public static int currentPage = 0;
 
-    public static ComicBook open(String fileName) {
-        ZipFile zipFile = null;
+    /*public static void open(String fileName) {
         try {
-            zipFile = new ZipFile(fileName);
-        } catch (IOException e) {
+            CMFile cm = new CMFile(fileName);
+        } catch (InvalidDescriptorException e) {
             e.printStackTrace();
-            return null;
+        } catch (DescriptorNotFoundException e) {
+            e.printStackTrace();
         }
-
-        Enumeration<? extends ZipEntry> entries = zipFile.entries();
-
-        while (entries.hasMoreElements()) {
-            //ZipEntry entry = entries.nextElement();
-            System.out.println(entries.nextElement().getName());
-        }
-
-        return null;
-    }
+    }*/
 
 /*    public static ComicBook open(String fileName) {
         File file = new File(fileName);
@@ -72,7 +58,7 @@ public class ComicBookHelper {
         }
     }*/
 
-    public static void saveProject() {
+    /*public static void saveProject() {
         File descriptor = saveDescriptor();
 
         if (descriptor != null) {
@@ -84,9 +70,9 @@ public class ComicBookHelper {
                 }
             }
         }
-    }
+    }*/
 
-    public static File saveDescriptor() {
+    /*public static File saveDescriptor() {
         File descriptor = null;
 
         try {
@@ -104,9 +90,9 @@ public class ComicBookHelper {
         }
 
         return descriptor;
-    }
+    }*/
 
-    public static HashMap<String, ByteArrayOutputStream> saveAllCanvas() {
+    /*public static HashMap<String, ByteArrayOutputStream> saveAllCanvas() {
         HashMap<String, ByteArrayOutputStream> canvass = new HashMap<>();
 
         for (ComicPage page : openedBook.getPages()) {
@@ -124,20 +110,9 @@ public class ComicBookHelper {
         }
 
         return canvass;
-    }
+    }*/
 
-    public static boolean isACorrectDescriptor(String fileName) {
-        try {
-            ComicBook book = open(fileName);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-    }
-
-    public static boolean putAllFilesOnZip(File descriptor, HashMap<String, ByteArrayOutputStream> canvass) {
+    /*public static boolean putAllFilesOnZip(File descriptor, HashMap<String, ByteArrayOutputStream> canvass) {
         try {
             File file = new File(String.format("%s/%s.cm", SettingsHelper.get("savePath"), openedBook.getName()));
             ZipOutputStream input = new ZipOutputStream(new FileOutputStream(file));
@@ -159,5 +134,5 @@ public class ComicBookHelper {
         }
 
         return true;
-    }
+    }*/
 }

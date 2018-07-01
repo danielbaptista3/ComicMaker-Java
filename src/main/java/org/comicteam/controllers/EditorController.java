@@ -12,6 +12,7 @@ import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
+import org.comicteam.CMFile;
 import org.comicteam.helpers.CanvasHelper;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
@@ -28,7 +29,7 @@ public class EditorController {
     public AnchorPane editorPane;
 
     public void initialize() {
-        if (ComicBookHelper.openedBook.getPages().size() > 0) {
+        if (CMFile.cmfile.book.getPages().size() > 0) {
             redrawEditorPane();
         }
 
@@ -38,9 +39,9 @@ public class EditorController {
     public void redrawEditorPane() {
         editorPane.getChildren().clear();
 
-        ComicBookHelper.openedBook.sortPanels();
+        CMFile.cmfile.book.sortPanels();
 
-        for (ComicPanel panel : ComicBookHelper.openedBook.getPages().get(ComicBookHelper.currentPage).getPanels()) {
+        for (ComicPanel panel : CMFile.cmfile.book.getPages().get(CMFile.cmfile.currentPage).getPanels()) {
             Pane panelPane = CanvasHelper.getPanel(panel);
 
             setPaneMouseActions(panelPane, panel);
@@ -60,7 +61,7 @@ public class EditorController {
     }
 
     public void showPage(ComicPage page) {
-        ComicBookHelper.currentPage = page.getIndex();
+        CMFile.cmfile.currentPage = page.getIndex();
         redrawEditorPane();
     }
 
@@ -86,7 +87,7 @@ public class EditorController {
                     break;
             }
 
-            ComicBookHelper.saved = false;
+            CMFile.cmfile.saved = false;
         });
     }
 

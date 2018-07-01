@@ -3,6 +3,7 @@ package org.comicteam.controllers;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.comicteam.CMFile;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.layouts.ComicPage;
 
@@ -11,12 +12,12 @@ public class RightClickBookController {
     public void addPageButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();
 
-        ComicBookHelper.openedBook.getPages().add(
+        CMFile.cmfile.book.getPages().add(
                 new ComicPage(
-                        ComicBookHelper.openedBook.getPages().size() + 1
+                        CMFile.cmfile.book.getPages().size() + 1
                 )
         );
-        ComicBookHelper.saved = false;
+        CMFile.cmfile.saved = false;
 
         WorkingController.controller.redrawComponentsTree();
     }

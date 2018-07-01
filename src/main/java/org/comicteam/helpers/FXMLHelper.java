@@ -14,11 +14,14 @@ import javafx.stage.StageStyle;
 import javafx.stage.Window;
 import org.comicteam.*;
 import org.comicteam.controllers.WorkingController;
+import org.comicteam.exceptions.DescriptorNotFoundException;
+import org.comicteam.exceptions.InvalidDescriptorException;
 import org.comicteam.layouts.ComicPage;
 import org.comicteam.layouts.ComicPanel;
 import org.comicteam.models.ComicModel;
 
 import java.io.File;
+import java.io.IOException;
 
 public class FXMLHelper {
     public static Border redBorder;
@@ -78,10 +81,16 @@ public class FXMLHelper {
         File file = chooseFile(node);
 
         if (file != null) {
-            if (ComicBookHelper.isACorrectDescriptor(file.getPath())) {
-                ComicBookHelper.openedBook = ComicBookHelper.open(file.getPath());
-            } else {
+            try {
+                CMFile cmfile = new CMFile(file.getPath());
+            } catch (InvalidDescriptorException e) {
+                e.printStackTrace();
                 return false;
+            } catch (DescriptorNotFoundException e) {
+                e.printStackTrace();
+                return false;
+            } catch (IOException e) {
+                e.printStackTrace();
             }
             return true;
         } else {
@@ -90,7 +99,7 @@ public class FXMLHelper {
     }
 
     public static void saveProject() {
-        ComicBookHelper.saveProject();
+        CMFile.cmfile.save();
     }
 
     public static void openSettingsForm() {

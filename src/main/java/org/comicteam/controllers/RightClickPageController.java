@@ -6,6 +6,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.comicteam.AddPanelForm;
+import org.comicteam.CMFile;
 import org.comicteam.helpers.CanvasHelper;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
@@ -16,11 +17,11 @@ public class RightClickPageController {
     public void deletePageButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();
 
-        ComicBookHelper.openedBook.getPages().remove(
+        CMFile.cmfile.book.getPages().remove(
                 ((TreeItem)WorkingController.controller.componentsTree.getSelectionModel().getSelectedItem()).getValue()
         );
 
-        ComicBookHelper.saved = false;
+        CMFile.cmfile.saved = false;
 
         WorkingController.controller.redrawComponentsTree();
         EditorController.controller.redrawEditorPane();
@@ -44,7 +45,7 @@ public class RightClickPageController {
                 panel
         );
 
-        ComicBookHelper.saved = false;
+        CMFile.cmfile.saved = false;
 
         WorkingController.controller.redrawComponentsTree();
         EditorController.controller.redrawEditorPane();
@@ -57,11 +58,11 @@ public class RightClickPageController {
         int index = FXMLHelper.getSelectedComicPage().getIndex();
 
         if (index > 0) {
-            ComicBookHelper.openedBook.getPages().get(index).setIndex(index - 1);
-            ComicBookHelper.openedBook.getPages().get(index - 1).setIndex(index);
+            CMFile.cmfile.book.getPages().get(index).setIndex(index - 1);
+            CMFile.cmfile.book.getPages().get(index - 1).setIndex(index);
 
             WorkingController.controller.redrawComponentsTree();
-            ComicBookHelper.saved = false;
+            CMFile.cmfile.saved = false;
         }
     }
 
@@ -71,11 +72,11 @@ public class RightClickPageController {
 
         int index = FXMLHelper.getSelectedComicPage().getIndex();
 
-        if (index < ComicBookHelper.openedBook.getPages().size()) {
-            ComicBookHelper.openedBook.getPages().get(index).setIndex(index + 1);
-            ComicBookHelper.openedBook.getPages().get(index + 1).setIndex(index);
+        if (index < CMFile.cmfile.book.getPages().size()) {
+            CMFile.cmfile.book.getPages().get(index).setIndex(index + 1);
+            CMFile.cmfile.book.getPages().get(index + 1).setIndex(index);
 
-            ComicBookHelper.saved = false;
+            CMFile.cmfile.saved = false;
             WorkingController.controller.redrawComponentsTree();
         }
     }

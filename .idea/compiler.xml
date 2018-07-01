@@ -2,10 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default">
-        <processor name="org.comicteam.annotation.MajProcessor" />
+      <profile default="true" name="Default" enabled="true">
+        <processor name="org.comicteam.annotations.TranslateProcessor" />
         <processorPath>
-          <entry name="$PROJECT_DIR$/src/main/java/org/comicteam/annotation" />
+          <entry name="$PROJECT_DIR$/out/artifacts/TranslateProcessor/TranslateProcessor.jar" />
         </processorPath>
       </profile>
     </annotationProcessing>

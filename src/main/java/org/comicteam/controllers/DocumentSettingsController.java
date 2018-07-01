@@ -3,6 +3,7 @@ package org.comicteam.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.comicteam.CMFile;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 
@@ -19,23 +20,23 @@ public class DocumentSettingsController {
     private TextArea descriptionArea;
 
     public void initialize() {
-        nameField.setText(ComicBookHelper.openedBook.getName());
-        serieField.setText(ComicBookHelper.openedBook.getSerie());
+        nameField.setText(CMFile.cmfile.book.getName());
+        serieField.setText(CMFile.cmfile.book.getSerie());
 
         StringBuilder builder = new StringBuilder();
-        for (String author : ComicBookHelper.openedBook.getAuthors()) {
+        for (String author : CMFile.cmfile.book.getAuthors()) {
             builder.append(author).append("\n");
         }
         authorsArea.setText(builder.toString());
 
-        descriptionArea.setText(ComicBookHelper.openedBook.getDescription());
+        descriptionArea.setText(CMFile.cmfile.book.getDescription());
     }
 
     @FXML
     public void nameFieldKeyReleased() {
         if (!nameField.getText().isEmpty()) {
-            ComicBookHelper.openedBook.setName(nameField.getText());
-            ComicBookHelper.saved = false;
+            CMFile.cmfile.book.setName(nameField.getText());
+            CMFile.cmfile.saved = false;
         }
 
         FXMLHelper.setNameFieldBorder(nameField);
@@ -43,19 +44,19 @@ public class DocumentSettingsController {
 
     @FXML
     public void serieFieldKeyReleased() {
-        ComicBookHelper.openedBook.setSerie(serieField.getText());
-        ComicBookHelper.saved = false;
+        CMFile.cmfile.book.setSerie(serieField.getText());
+        CMFile.cmfile.saved = false;
     }
 
     @FXML
     public void authorsAreaKeyReleased() {
-        ComicBookHelper.openedBook.setAuthors(Arrays.asList(authorsArea.getText().split("\n")));
-        ComicBookHelper.saved = false;
+        CMFile.cmfile.book.setAuthors(Arrays.asList(authorsArea.getText().split("\n")));
+        CMFile.cmfile.saved = false;
     }
 
     @FXML
     public void descriptionAreaKeyReleased() {
-        ComicBookHelper.openedBook.setDescription(descriptionArea.getText());
-        ComicBookHelper.saved = false;
+        CMFile.cmfile.book.setDescription(descriptionArea.getText());
+        CMFile.cmfile.saved = false;
     }
 }

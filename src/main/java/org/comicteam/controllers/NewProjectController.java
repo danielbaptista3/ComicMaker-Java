@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.comicteam.CMFile;
 import org.comicteam.ComicBook;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
@@ -37,7 +38,7 @@ public class NewProjectController {
             return;
         }
 
-        ComicBookHelper.openedBook = new ComicBook(
+        CMFile.cmfile.book = new ComicBook(
                 nameField.getText(),
                 serieField.getText(),
                 Arrays.asList(authorsArea.getText().split("\n")),
@@ -47,7 +48,7 @@ public class NewProjectController {
                         Integer.valueOf(vSizeField.getText())
                 )
         );
-        ComicBookHelper.saved = false;
+        CMFile.cmfile.saved = false;
 
         FXMLHelper.closeAllWindows(createProjectButton);
 

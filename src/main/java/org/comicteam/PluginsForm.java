@@ -5,33 +5,31 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.comicteam.annotations.Translate;
 
 import java.io.IOException;
 
-public class MainForm extends Application {
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-    @Translate
+public class PluginsForm extends Application {
     @Override
     public void start(Stage primaryStage) {
         Parent root;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
+            root = FXMLLoader.load(getClass().getResource("fxml/plugins.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
             return;
         }
 
-        Scene scene  = new Scene(root, 700, 500);
+        Scene scene  = new Scene(root, 800, 600);
 
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-        primaryStage.setTitle("ComicMaker");
+        primaryStage.setTitle("Plugins");
 
         primaryStage.show();
+
+        primaryStage.setOnCloseRequest(e -> {
+            //e.consume();
+        });
     }
 }

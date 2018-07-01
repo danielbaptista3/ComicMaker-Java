@@ -3,6 +3,7 @@ package org.comicteam.helpers;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.image.Image;
 import javafx.scene.text.Font;
+import org.comicteam.CMFile;
 import org.comicteam.ComicBook;
 import org.comicteam.layouts.*;
 import org.comicteam.models.Caption;
@@ -97,15 +98,17 @@ public class JSONtoJava {
         if (j.containsKey("Canvas")) {
             canvas = new Canvas(MM.toPx(layout.getSize().getHorizontal()), MM.toPx(layout.getSize().getVertical()));
 
-            String url = String.format("%s/%s", SettingsHelper.get("savePath"), j.get("Canvas"));
+            String name = j.get("Canvas").toString();
 
-            Image image = null;
+            /*Image image = null;
 
             try {
-                image = new Image(new FileInputStream(url));
+                image = new Image(CMFile.cmfile.getImage(name)));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-            }
+            }*/
+
+            Image image = CMFile.cmfile.getImage(name);
 
             canvas.getGraphicsContext2D().drawImage(image, 0, 0);
             canvas.setLayoutX(MM.toPx(layout.getPosition().getHorizontal()));

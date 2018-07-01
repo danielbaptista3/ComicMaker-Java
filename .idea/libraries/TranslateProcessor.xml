@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="TranslateProcessor">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/TranslateProcessor/TranslateProcessor.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

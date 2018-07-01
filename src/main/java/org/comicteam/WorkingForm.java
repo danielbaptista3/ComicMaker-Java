@@ -33,11 +33,11 @@ public class WorkingForm extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);
-        primaryStage.setTitle(ComicBookHelper.openedBook.getName());
+        primaryStage.setTitle(CMFile.cmfile.book.getName());
         primaryStage.setX(0);
 
         primaryStage.setOnCloseRequest((e) -> {
-            if (!ComicBookHelper.saved) {
+            if (!CMFile.cmfile.saved) {
                 FXMLHelper.openSavingWarningForm();
             } else {
                 FXMLHelper.closeAllWindows(WorkingController.controller.pane);
