@@ -9,6 +9,8 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import org.comicteam.annotations.Translate;
+import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.helpers.MM;
 import org.comicteam.layouts.ComicLayout;
@@ -25,12 +27,18 @@ public class ModelEditorController {
     @FXML
     private Pane drawingPane;
 
+    @Translate
     @FXML
-    private ToggleButton eraserButton;
+    public ToggleButton eraserButton;
+    @Translate
     @FXML
-    private ToggleButton penButton;
+    public ToggleButton penButton;
+    @Translate
     @FXML
-    private ToggleButton lineButton;
+    public ToggleButton lineButton;
+    @Translate
+    @FXML
+    public Label modelNameLabel;
 
     @FXML
     private Slider eraserSlider;
@@ -46,14 +54,16 @@ public class ModelEditorController {
 
     private Canvas c;
 
-    double x, y;
+    //double x, y;
 
-    @FXML
-    private Button saveButton;
     @FXML
     private TextField modelNameField;
+    //@FXML
+    //private Button saveButton;
 
     public void initialize() {
+        TranslateProcessor.translate(ModelEditorController.class, this);
+
         toggles = new ToggleGroup();
         penButton.setSelected(true);
         toggles.getToggles().add(eraserButton);
@@ -78,8 +88,8 @@ public class ModelEditorController {
             double x1 = e.getSceneX() - drawingPane.getLayoutX();
             double y1 = e.getSceneY() - drawingPane.getLayoutY();
 
-            double x = x1 + e.getX();
-            double y = y1 + e.getY();
+            //double x = x1 + e.getX();
+            //double y = y1 + e.getY();
 
             if (toggles.getSelectedToggle() == eraserButton) {
                 c.getGraphicsContext2D().clearRect(x1, y1, eraserSlider.getValue(), eraserSlider.getValue());

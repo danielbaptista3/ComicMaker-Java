@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="English">
+    <output-path>$PROJECT_DIR$/out/artifacts/English</output-path>
+    <root id="archive" name="English.jar">
+      <element id="directory" name="org">
+        <element id="directory" name="comicteam">
+          <element id="directory" name="languages">
+            <element id="file-copy" path="$PROJECT_DIR$/target/classes/org/comicteam/languages/English.class" />
+          </element>
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/org/comicteam/languages/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

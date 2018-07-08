@@ -1,25 +1,24 @@
 package org.comicteam.annotations;
 
-import javax.annotation.processing.AbstractProcessor;
-import javax.annotation.processing.RoundEnvironment;
-import javax.annotation.processing.SupportedAnnotationTypes;
-import javax.annotation.processing.SupportedSourceVersion;
-import javax.lang.model.SourceVersion;
-import javax.lang.model.element.TypeElement;
-import java.util.Set;
+import javafx.scene.control.Labeled;
+import org.comicteam.helpers.LanguageHelper;
 
-@SupportedAnnotationTypes("org.comicteam.annotations.Translate")
-@SupportedSourceVersion(SourceVersion.RELEASE_9)
-public class TranslateProcessor extends AbstractProcessor {
+import java.lang.reflect.Field;
 
-    @Override
-    public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-        System.out.println("Début du traitement Translate");
+public class TranslateProcessor {
 
-        for (TypeElement o : annotations) {
-            System.out.println(o.getSimpleName());
+    public static void translate(Class c, Object o) {
+        for (Field f : c.getFields()) {
+            if (f.isAnnotationPresent(Translate.class)) {
+                try {
+                    Labeled n = (Labeled) f.get(o);
+                    n.setText(LanguageHelper.getTranslation(f.getName()));
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (NoSuchFieldException e) {
+                    e.printStackTrace();
+                }
+            }
         }
-
-        return true;
     }
 }

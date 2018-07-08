@@ -1,6 +1,7 @@
 package org.comicteam.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -8,9 +9,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import org.comicteam.annotations.Translate;
+import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.ClipartHelper;
 
 public class ClipartController {
+    @Translate
+    @FXML
+    public Button searchButton;
+
     @FXML
     private TextField keywordSearchField;
     @FXML
@@ -33,6 +40,7 @@ public class ClipartController {
     //private SVGPath svgPath;
 
     public void initialize() {
+        TranslateProcessor.translate(ClipartController.class, this);
         resultsScrollBar.setMax(0);
     }
 

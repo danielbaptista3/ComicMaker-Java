@@ -6,9 +6,9 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class PluginHelper {
-    public List<File> getInstalledPlugins() {
+    /*public List<File> getInstalledPlugins() {
         Path path = Paths.get("~/.comicmaker/plugins");
 
         path.getFileSystem().
-    }
+    }*/
 }

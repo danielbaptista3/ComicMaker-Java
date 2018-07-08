@@ -9,26 +9,26 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.NewProjectController">
    <children>
-      <Label focusTraversable="false" layoutX="67.0" layoutY="40.0" text="Nom :" AnchorPane.leftAnchor="20.0">
+      <Label fx:id="nameLabel" focusTraversable="false" layoutX="67.0" layoutY="40.0" text="Nom :" AnchorPane.leftAnchor="20.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
       <TextField fx:id="nameField" layoutX="111.0" layoutY="40.0" onKeyReleased="#nameFieldKeyReleased" prefHeight="26.0" prefWidth="450.0" AnchorPane.rightAnchor="50.0" />
       <Label layoutX="552.0" layoutY="45.0" text="*" />
-      <Label focusTraversable="false" layoutX="67.0" layoutY="80.0" text="Série :" AnchorPane.leftAnchor="20.0">
+      <Label fx:id="serieLabel" focusTraversable="false" layoutX="67.0" layoutY="80.0" text="Série :" AnchorPane.leftAnchor="20.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
       <TextField fx:id="serieField" layoutX="111.0" layoutY="80.0" prefHeight="26.0" prefWidth="450.0" AnchorPane.rightAnchor="50.0" />
-      <Label focusTraversable="false" layoutX="67.0" layoutY="120.0" text="Auteurs :" AnchorPane.leftAnchor="20.0">
+      <Label fx:id="authorsLabel" focusTraversable="false" layoutX="67.0" layoutY="120.0" text="Auteurs :" AnchorPane.leftAnchor="20.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
       <TextArea fx:id="authorsArea" layoutY="120.0" prefHeight="100.0" prefWidth="420.0" AnchorPane.rightAnchor="50.0" />
-      <Label focusTraversable="false" layoutX="20.0" layoutY="240.0" text="Description :" AnchorPane.leftAnchor="20.0">
+      <Label fx:id="descriptionLabel" focusTraversable="false" layoutX="20.0" layoutY="240.0" text="Description :" AnchorPane.leftAnchor="20.0">
          <font>
             <Font size="20.0" />
          </font>

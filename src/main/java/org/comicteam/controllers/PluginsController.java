@@ -26,7 +26,7 @@ public class PluginsController {
     public void installedRadioAction() {
         pluginsList.getItems().clear();
 
-        pluginsList.getItems().
+        //pluginsList.getItems().
     }
 
     @FXML

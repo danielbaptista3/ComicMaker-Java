@@ -1,18 +1,41 @@
 package org.comicteam.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TreeItem;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.comicteam.AddPanelForm;
 import org.comicteam.CMFile;
+import org.comicteam.annotations.Translate;
+import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.CanvasHelper;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.layouts.*;
 
 public class RightClickPageController {
+    public static RightClickPageController controller;
+
+    @Translate
+    @FXML
+    public Button deletePageButton;
+    @Translate
+    @FXML
+    public Button addPanelButton;
+    @Translate
+    @FXML
+    public Button upButton;
+    @Translate
+    @FXML
+    public Button downButton;
+
+    public void initialize() {
+        TranslateProcessor.translate(RightClickPageController.class, this);
+        controller = this;
+    }
+
     @FXML
     public void deletePageButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();

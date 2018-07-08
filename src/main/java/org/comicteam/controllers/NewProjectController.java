@@ -2,10 +2,13 @@ package org.comicteam.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import org.comicteam.CMFile;
 import org.comicteam.ComicBook;
+import org.comicteam.annotations.Translate;
+import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.layouts.Size;
@@ -13,6 +16,19 @@ import org.comicteam.layouts.Size;
 import java.util.Arrays;
 
 public class NewProjectController {
+    @Translate
+    @FXML
+    public Label nameLabel;
+    @Translate
+    @FXML
+    public Label serieLabel;
+    @Translate
+    @FXML
+    public Label authorsLabel;
+    @Translate
+    @FXML
+    public Label descriptionLabel;
+
     @FXML
     private TextField nameField;
     @FXML
@@ -25,8 +41,13 @@ public class NewProjectController {
     private TextField hSizeField;
     @FXML
     private TextField vSizeField;
+    @Translate
     @FXML
     private Button createProjectButton;
+
+    public void initialize() {
+        TranslateProcessor.translate(NewProjectController.class, this);
+    }
 
     @FXML
     public void createProjectButtonClick() {

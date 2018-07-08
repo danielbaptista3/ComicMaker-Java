@@ -6,26 +6,43 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.comicteam.CMFile;
 import org.comicteam.PluginsForm;
+import org.comicteam.annotations.Translate;
+import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 
 public class MenuController {
+    public static MenuController controller;
+
+    @Translate
     @FXML
-    private Button newProjectButton;
+    public Button newProjectButton;
+    @Translate
     @FXML
-    private Button openProjectButton;
+    public Button openProjectButton;
+    @Translate
     @FXML
-    private Button saveProjectButton;
+    public Button saveProjectButton;
+    @Translate
     @FXML
-    private Button exportProjectButton;
+    public Button exportProjectButton;
+    @Translate
     @FXML
-    private Button settingsButton;
+    public Button settingsButton;
+    @Translate
     @FXML
-    private Button pluginsButton;
+    public Button pluginsButton;
+    @Translate
     @FXML
-    private Button printButton;
+    public Button printButton;
+    @Translate
     @FXML
-    private Button quitButton;
+    public Button quitButton;
+
+    public void initialize() {
+        TranslateProcessor.translate(MenuController.class, this);
+        controller = this;
+    }
 
     @FXML
     public void newProjectButtonClick() {

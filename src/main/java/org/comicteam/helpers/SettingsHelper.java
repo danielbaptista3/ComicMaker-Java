@@ -35,7 +35,7 @@ public class SettingsHelper {
 
         if (get("language") == null) {
             try {
-                set("language", "Français");
+                set("language", "French");
             } catch (IOException e) {
                 e.printStackTrace();
             }

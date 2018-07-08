@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.comicteam.CMFile;
 import org.comicteam.EditorForm;
+import org.comicteam.annotations.Translate;
+import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.CanvasHelper;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
@@ -27,6 +29,13 @@ import java.io.IOException;
 public class WorkingController {
     private boolean menuOpened;
     public static WorkingController controller;
+
+    @Translate
+    @FXML
+    public Label widthLabel;
+    @Translate
+    @FXML
+    public Label heightLabel;
 
     @FXML
     public AnchorPane pane;
@@ -55,6 +64,7 @@ public class WorkingController {
     private Button measureButton;
 
     public void initialize() {
+        TranslateProcessor.translate(WorkingController.class, this);
         measurePane.setVisible(false);
 
         redrawComponentsTree();

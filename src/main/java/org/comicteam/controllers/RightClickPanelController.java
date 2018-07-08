@@ -1,6 +1,7 @@
 package org.comicteam.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TreeItem;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -8,6 +9,8 @@ import javafx.stage.StageStyle;
 import org.comicteam.CMFile;
 import org.comicteam.ClipartForm;
 import org.comicteam.ModelEditorForm;
+import org.comicteam.annotations.Translate;
+import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.ExternalDocumentHelper;
 import org.comicteam.helpers.FXMLHelper;
@@ -15,6 +18,26 @@ import org.comicteam.layouts.ComicPage;
 import org.comicteam.layouts.ComicPanel;
 
 public class RightClickPanelController {
+    public static RightClickPanelController controller;
+
+    @Translate
+    @FXML
+    public Button addClipartModelButton;
+    @Translate
+    @FXML
+    public Button addModelWithEditorButton;
+    @Translate
+    @FXML
+    public Button addModelWithExternalDocumentButton;
+    @Translate
+    @FXML
+    public Button deletePanelButton;
+
+    public void initialize() {
+        TranslateProcessor.translate(RightClickPanelController.class, this);
+        controller = this;
+    }
+
     @FXML
     public void addClipartModelButtonClick() {
         WorkingController.controller.hideComponentsTreeRightClick();

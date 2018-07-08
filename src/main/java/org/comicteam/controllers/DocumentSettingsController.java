@@ -1,15 +1,31 @@
 package org.comicteam.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import org.comicteam.CMFile;
+import org.comicteam.annotations.Translate;
+import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 
 import java.util.Arrays;
 
 public class DocumentSettingsController {
+    @Translate
+    @FXML
+    public Label nameLabel;
+    @Translate
+    @FXML
+    public Label serieLabel;
+    @Translate
+    @FXML
+    public Label authorsLabel;
+    @Translate
+    @FXML
+    public Label descriptionLabel;
+
     @FXML
     private TextField nameField;
     @FXML
@@ -20,6 +36,8 @@ public class DocumentSettingsController {
     private TextArea descriptionArea;
 
     public void initialize() {
+        TranslateProcessor.translate(DocumentSettingsController.class, this);
+
         nameField.setText(CMFile.cmfile.book.getName());
         serieField.setText(CMFile.cmfile.book.getSerie());
 

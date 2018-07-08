@@ -2,11 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true">
+      <profile default="true" name="Default">
         <processor name="org.comicteam.annotations.TranslateProcessor" />
-        <processorPath>
+        <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/out/artifacts/TranslateProcessor/TranslateProcessor.jar" />
         </processorPath>
+      </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ComicMaker" />
       </profile>
     </annotationProcessing>
   </component>

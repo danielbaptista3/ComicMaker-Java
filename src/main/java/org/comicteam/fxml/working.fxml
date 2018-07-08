@@ -52,9 +52,9 @@
                   <TextField fx:id="widthField" layoutX="77.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="75.0" />
                   <Label layoutX="114.0" layoutY="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Y : " />
                   <TextField fx:id="yField" layoutX="135.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="75.0" />
-                  <Label layoutY="92.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Longueur : " AnchorPane.leftAnchor="5.0" />
+                  <Label fx:id="widthLabel" layoutY="92.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Longueur : " AnchorPane.leftAnchor="5.0" />
                   <TextField layoutX="28.0" layoutY="15.0" prefWidth="75.0" fx:id="xField" />
-                  <Label layoutX="5.0" layoutY="55.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Largeur : " AnchorPane.leftAnchor="5.0" />
+                  <Label fx:id="heightLabel" layoutX="5.0" layoutY="55.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Largeur : " AnchorPane.leftAnchor="5.0" />
                   <TextField fx:id="heightField" layoutX="87.0" layoutY="87.0" prefWidth="75.0" />
                   <Button fx:id="measureButton" layoutX="83.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#measureButtonClick" text="OK" />
                </children>
