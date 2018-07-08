@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="0.0">
                <image>
-                  <Image url="file:/home/francois/Documents/ProjetAnnuel/JavaPA/ComicMaker/src/resources/logo.png" />
+                  <Image url="@../resources/logo.png" />
                </image>
             </ImageView>
             <Button fx:id="newProjectButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#newProjectButtonMouseClick" prefHeight="50.0" prefWidth="200.0" text="Nouveau projet" textAlignment="CENTER" AnchorPane.bottomAnchor="240.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">

@@ -43,7 +43,7 @@ public class NewProjectController {
     private TextField vSizeField;
     @Translate
     @FXML
-    private Button createProjectButton;
+    public Button createProjectButton;
 
     public void initialize() {
         TranslateProcessor.translate(NewProjectController.class, this);

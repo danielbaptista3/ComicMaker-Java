@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="150.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.SavingWarningController">
    <children>
-      <Label layoutX="117.0" layoutY="43.0" text="Voulez-vous enregistrer le document ouvert ?" AnchorPane.topAnchor="40.0">
+      <Label fx:id="questionLabel" layoutX="117.0" layoutY="43.0" text="Voulez-vous enregistrer le document ouvert ?" AnchorPane.topAnchor="40.0">
          <font>
             <Font size="16.0" />
          </font>

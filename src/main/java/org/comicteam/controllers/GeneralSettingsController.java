@@ -1,14 +1,12 @@
 package org.comicteam.controllers;
 
-import com.sun.tools.javac.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.FileChooser;
-import org.comicteam.annotations.Language;
+import org.comicteam.plugins.languages.Languable;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.LanguageHelper;
@@ -38,10 +36,10 @@ public class GeneralSettingsController {
 
         savePathField.setText(SettingsHelper.get("savePath"));
 
-        List<Class<?>> languages = LanguageHelper.getLanguagesAvailables();
+        List<Languable> languages = LanguageHelper.getLanguagesAvailables();
 
-        for (Class c : languages) {
-            languagesCombo.getItems().add(c.getSimpleName());
+        for (Languable l : languages) {
+            languagesCombo.getItems().add(l.getName());
         }
 
         languagesCombo.setValue(SettingsHelper.get("language"));

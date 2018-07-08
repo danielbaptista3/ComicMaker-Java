@@ -21,7 +21,7 @@ public class SettingsController {
     public void initialize() {
         settingsCategoriesList.setRoot(new TreeItem<>("Root"));
 
-        TreeItem<String> general = new TreeItem<>("Général");
+        TreeItem<String> general = new TreeItem<>("General");
         settingsCategoriesList.getRoot().getChildren().add(general);
 
         if (CMFile.cmfile/*.book*/ != null) {
@@ -37,7 +37,7 @@ public class SettingsController {
 
                     switch (newValue.getValue()) {
                         default:
-                        case "Général":
+                        case "General":
                             fxmlFilename = "../fxml/generalsettings.fxml";
                             break;
                         case "Document":

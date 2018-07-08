@@ -1,34 +1,40 @@
 package org.comicteam.helpers;
 
-import org.apache.commons.codec.language.bm.Lang;
-import org.comicteam.languages.French;
-import org.comicteam.languages.Language;
+import org.comicteam.plugins.languages.Languable;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LanguageHelper {
-    private static List<Class<?>> languages;
+    private static List<Languable> languages;
 
     static {
         languages = new ArrayList<>();
-        languages.add(French.class);
+        //addLanguage(French.class);
+        //addLanguage(English.class);
     }
 
-    public static List<Class<?>> getLanguagesAvailables() {
+    public static List<Languable> getLanguagesAvailables() {
         return languages;
     }
 
     public static void addLanguage(Class c) {
-        languages.add(c);
+        try {
+            Languable l = (Languable) c.newInstance();
+            languages.add(l);
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 
-    public static Class<?> getCurrentLanguage() {
+    public static Languable getCurrentLanguage() {
         String sLanguage = SettingsHelper.get("language");
 
-        for (Class c : languages) {
-            if (c.getSimpleName().equals(sLanguage)) {
-                return c;
+        for (Languable l : languages) {
+            if (l.getName().equals(sLanguage)) {
+                return l;
             }
         }
 
@@ -36,6 +42,6 @@ public class LanguageHelper {
     }
 
     public static String getTranslation(String name) throws NoSuchFieldException, IllegalAccessException {
-        return (String) getCurrentLanguage().getField(name).get(null);
+        return getCurrentLanguage().getTranslation(name);
     }
 }
