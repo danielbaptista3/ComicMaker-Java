@@ -3,15 +3,9 @@ package org.comicteam.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TreeItem;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import org.comicteam.AddPanelForm;
 import org.comicteam.CMFile;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
-import org.comicteam.helpers.CanvasHelper;
-import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.layouts.*;
 

@@ -11,9 +11,7 @@ import org.comicteam.ClipartForm;
 import org.comicteam.ModelEditorForm;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
-import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.ExternalDocumentHelper;
-import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.layouts.ComicPage;
 import org.comicteam.layouts.ComicPanel;
 

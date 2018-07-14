@@ -8,9 +8,9 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.AnchorPane;
 import org.comicteam.CMFile;
-import org.comicteam.helpers.ComicBookHelper;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class SettingsController {
     @FXML
@@ -46,7 +46,8 @@ public class SettingsController {
                     }
 
                     try {
-                        rightPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource(fxmlFilename)));
+                        Node node = FXMLLoader.load(getClass().getResource(fxmlFilename));
+                        rightPane.getChildren().setAll(node);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

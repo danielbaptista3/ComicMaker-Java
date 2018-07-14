@@ -7,7 +7,6 @@ import javafx.scene.control.TextField;
 import org.comicteam.CMFile;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
-import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 
 import java.util.Arrays;

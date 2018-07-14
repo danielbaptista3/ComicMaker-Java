@@ -9,6 +9,7 @@ import org.comicteam.helpers.JSONtoJava;
 import org.comicteam.helpers.SettingsHelper;
 import org.comicteam.layouts.ComicPage;
 import org.comicteam.layouts.ComicPanel;
+import org.comicteam.layouts.Size;
 import org.comicteam.models.ComicModel;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -17,9 +18,9 @@ import org.json.simple.parser.ParseException;
 import java.io.*;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class CMFile {
@@ -29,6 +30,11 @@ public class CMFile {
     public ComicBook book;
     public boolean saved = true;
     public int currentPage = 0;
+
+    public CMFile(String name, String serie, List<String> authors, String description, Size size) {
+        book = new ComicBook(name, serie, authors, description, size);
+        saved = true;
+    }
 
     public CMFile(String fileName) throws InvalidDescriptorException, DescriptorNotFoundException, IOException {
         cmfile = this;

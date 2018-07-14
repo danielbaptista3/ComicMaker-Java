@@ -4,12 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
-import org.comicteam.controllers.EditorController;
 import org.comicteam.controllers.SavingWarningController;
 import org.comicteam.controllers.WorkingController;
-import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.helpers.MM;
 

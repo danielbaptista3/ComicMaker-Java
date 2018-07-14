@@ -2,12 +2,9 @@ package org.comicteam.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import org.comicteam.CMFile;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
-import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.layouts.ComicPage;
 
 public class RightClickBookController {

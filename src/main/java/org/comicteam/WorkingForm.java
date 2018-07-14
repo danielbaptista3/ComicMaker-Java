@@ -7,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.comicteam.controllers.WorkingController;
-import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 
 import java.io.IOException;

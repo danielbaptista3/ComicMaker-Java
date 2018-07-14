@@ -2,7 +2,6 @@ package org.comicteam.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -16,7 +15,6 @@ import org.comicteam.EditorForm;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.CanvasHelper;
-import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.layouts.ComicPage;
 import org.comicteam.layouts.ComicPanel;

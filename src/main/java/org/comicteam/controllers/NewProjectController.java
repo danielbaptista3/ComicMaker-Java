@@ -6,10 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import org.comicteam.CMFile;
-import org.comicteam.ComicBook;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
-import org.comicteam.helpers.ComicBookHelper;
 import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.layouts.Size;
 
@@ -59,7 +57,7 @@ public class NewProjectController {
             return;
         }
 
-        CMFile.cmfile.book = new ComicBook(
+        CMFile.cmfile = new CMFile(
                 nameField.getText(),
                 serieField.getText(),
                 Arrays.asList(authorsArea.getText().split("\n")),
@@ -69,7 +67,6 @@ public class NewProjectController {
                         Integer.valueOf(vSizeField.getText())
                 )
         );
-        CMFile.cmfile.saved = false;
 
         FXMLHelper.closeAllWindows(createProjectButton);
 

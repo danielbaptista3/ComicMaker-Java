@@ -1,6 +1,7 @@
 package org.comicteam.plugins.languages;
 
 import org.comicteam.annotations.Language;
+import org.comicteam.helpers.UpdateHelper;
 
 @Language
 public class Spanish extends org.comicteam.plugins.languages.Language {
@@ -37,6 +38,7 @@ public class Spanish extends org.comicteam.plugins.languages.Language {
     private final String pluginsButton = "Plugins";
     private final String printButton = "Imprimir";
     private final String quitButton = "Saliendo";
+    private final String updateButton = "Nuevo update";
 
     //ModelEditor
     private final String eraserButton = "Borrador";
@@ -54,7 +56,7 @@ public class Spanish extends org.comicteam.plugins.languages.Language {
     private final String downButton = "Descenso";
 
     //RightClickPanel
-    private final String addClipartModelButton = "Ajouter un modèle avec Clipart";
+    private final String addClipartModelButton = "Añadir una plantilla con Clipart";
     private final String addModelWithEditorButton = "Añadir una plantilla desde el editor";
     private final String addModelWithExternalDocumentButton = "Añadir una plantilla de un documento externo";
     private final String deletePanelButton = "Suprimir la caja";
@@ -71,6 +73,10 @@ public class Spanish extends org.comicteam.plugins.languages.Language {
     private final String yesButton = "Sí";
     private final String noButton = "No";
     private final String cancelButton = "Cancelar";
+
+    //Plugins
+    private final String addPluginButton = "Añadir un plugin";
+    private final String deletePluginButton = "Eliminar";
 
     @Override
     public String getTranslation(String name) throws NoSuchFieldException, IllegalAccessException {

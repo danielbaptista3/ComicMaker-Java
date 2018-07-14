@@ -3,10 +3,7 @@ package org.comicteam.helpers;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Node;
 import javafx.scene.canvas.Canvas;
-import javafx.scene.image.Image;
-import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
 import org.comicteam.controllers.EditorController;
@@ -16,20 +13,10 @@ import org.comicteam.layouts.Size;
 import org.comicteam.models.ComicModel;
 import org.comicteam.models.Text;
 import org.comicteam.models.ballons.Balloon;
-//import org.jfree.graphics2d.svg.SVGUtils;
 
 import javax.imageio.ImageIO;
-import javax.imageio.ImageReader;
-import javax.imageio.ImageWriter;
-import javax.imageio.stream.MemoryCacheImageOutputStream;
-import java.awt.image.BufferedImage;
-import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.io.*;
-import java.nio.ByteBuffer;
-import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Stream;
 
 public class CanvasHelper {
     private static Border blackBorder;

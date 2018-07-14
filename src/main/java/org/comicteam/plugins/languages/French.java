@@ -1,6 +1,7 @@
 package org.comicteam.plugins.languages;
 
 import org.comicteam.annotations.Language;
+import org.comicteam.helpers.UpdateHelper;
 
 @Language
 public class French extends org.comicteam.plugins.languages.Language {
@@ -37,6 +38,7 @@ public class French extends org.comicteam.plugins.languages.Language {
     private final String pluginsButton = "Plugins";
     private final String printButton = "Imprimer";
     private final String quitButton = "Quitter";
+    private final String updateButton = "Nouvelle mise à jour !";
 
     //ModelEditor
     private final String eraserButton = "Gomme";
@@ -71,6 +73,10 @@ public class French extends org.comicteam.plugins.languages.Language {
     private final String yesButton = "Oui";
     private final String noButton = "Non";
     private final String cancelButton = "Annuler";
+
+    //Plugins
+    private final String addPluginButton = "Ajouter un plugin";
+    private final String deletePluginButton = "Supprimer";
 
     @Override
     public String getTranslation(String name) throws NoSuchFieldException, IllegalAccessException {

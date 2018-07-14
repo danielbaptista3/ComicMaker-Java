@@ -10,8 +10,6 @@ public class LanguageHelper {
 
     static {
         languages = new ArrayList<>();
-        //addLanguage(French.class);
-        //addLanguage(English.class);
     }
 
     public static List<Languable> getLanguagesAvailables() {
@@ -39,6 +37,10 @@ public class LanguageHelper {
         }
 
         return null;
+    }
+
+    public static void clearLanguages() {
+        languages.clear();
     }
 
     public static String getTranslation(String name) throws NoSuchFieldException, IllegalAccessException {

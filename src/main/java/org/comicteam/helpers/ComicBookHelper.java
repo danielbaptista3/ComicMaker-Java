@@ -1,15 +1,5 @@
 package org.comicteam.helpers;
 
-import org.comicteam.CMFile;
-import org.comicteam.layouts.ComicPage;
-import org.comicteam.layouts.ComicPanel;
-import org.comicteam.models.ComicModel;
-
-import java.io.*;
-import java.util.HashMap;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
-
 public class ComicBookHelper {
     //public static ComicBook openedBook;
     //public static boolean saved = true;

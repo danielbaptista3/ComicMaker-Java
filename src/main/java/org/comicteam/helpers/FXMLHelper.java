@@ -1,6 +1,5 @@
 package org.comicteam.helpers;
 
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TreeItem;
