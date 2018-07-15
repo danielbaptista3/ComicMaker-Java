@@ -1,6 +1,6 @@
 package org.comicteam.plugins;
 
-public class Plugin implements Pluginable {
+public abstract class Plugin implements Pluginable {
     private String name;
     private String version;
     private String description;
@@ -25,6 +25,9 @@ public class Plugin implements Pluginable {
     public String getDescription() {
         return description;
     }
+
+    @Override
+    public abstract void action();
 
     @Override
     public String toString() {

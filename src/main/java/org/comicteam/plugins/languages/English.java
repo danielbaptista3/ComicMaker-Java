@@ -1,7 +1,6 @@
 package org.comicteam.plugins.languages;
 
 import org.comicteam.annotations.Language;
-import org.comicteam.helpers.UpdateHelper;
 
 @Language
 public class English extends org.comicteam.plugins.languages.Language {
@@ -81,5 +80,10 @@ public class English extends org.comicteam.plugins.languages.Language {
     @Override
     public String getTranslation(String name) throws NoSuchFieldException, IllegalAccessException {
         return (String) getClass().getDeclaredField(name).get(this);
+    }
+
+    @Override
+    public void action() {
+
     }
 }

@@ -4,4 +4,6 @@ public interface Pluginable {
     String getName();
     String getVersion();
     String getDescription();
+
+    void action();
 }

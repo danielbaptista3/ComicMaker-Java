@@ -45,6 +45,16 @@ public class PluginsController {
             }
         }
 
+        for (Class<?> c : PluginHelper.plugins) {
+            try {
+                pluginsList.getItems().add(c.newInstance());
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
+
         if (pluginsList.getItems().size() > 0) {
             pluginsList.getSelectionModel().select(0);
             Plugin p = (Plugin) pluginsList.getSelectionModel().getSelectedItem();

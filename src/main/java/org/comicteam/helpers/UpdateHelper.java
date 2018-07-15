@@ -40,7 +40,6 @@ public class UpdateHelper {
 
         try (InputStream in = new URL(url).openStream()) {
             String path = MainForm.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-            System.out.println(path);
             FileOutputStream fos = new FileOutputStream("/home/francois/Bureau/comicmaker.jar");
 
             fos.write(in.readAllBytes());
