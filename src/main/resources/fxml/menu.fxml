@@ -9,32 +9,32 @@
    <children>
       <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="newProjectButton" mnemonicParsing="false" onMouseClicked="#newProjectButtonClick" prefHeight="50.0" text="Nouveau projet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button fx:id="newProjectButton" mnemonicParsing="false" onAction="#newProjectButtonClick" prefHeight="50.0" text="Nouveau projet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="openProjectButton" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#openProjectButtonClick" prefHeight="50.0" text="Ouvrir projet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button fx:id="openProjectButton" layoutY="50.0" mnemonicParsing="false" onAction="#openProjectButtonClick" prefHeight="50.0" text="Ouvrir projet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="saveProjectButton" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#saveProjectButtonClick" prefHeight="50.0" text="Sauvegarder projet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button fx:id="saveProjectButton" layoutY="100.0" mnemonicParsing="false" onAction="#saveProjectButtonClick" prefHeight="50.0" text="Sauvegarder projet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="settingsButton" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#settingsButtonClick" prefHeight="50.0" text="Paramètres" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button fx:id="settingsButton" layoutY="150.0" mnemonicParsing="false" onAction="#settingsButtonClick" prefHeight="50.0" text="Paramètres" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="pluginsButton" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#pluginsButtonClick" prefHeight="50.0" text="Plugins" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button fx:id="pluginsButton" layoutY="200.0" mnemonicParsing="false" onAction="#pluginsButtonClick" prefHeight="50.0" text="Plugins" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="quitButton" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#quitButtonClick" prefHeight="50.0" text="Quitter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button fx:id="quitButton" layoutY="250.0" mnemonicParsing="false" onAction="#quitButtonClick" prefHeight="50.0" text="Quitter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font size="16.0" />
                </font>
@@ -43,7 +43,7 @@
       </AnchorPane>
       <AnchorPane layoutY="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="updateButton" mnemonicParsing="false" onMouseClicked="#updateButtonClick" prefHeight="50.0" text="No update" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonClick" prefHeight="50.0" text="No update" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font size="20.0" />
                </font>

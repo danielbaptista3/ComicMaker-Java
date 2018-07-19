@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.stage.DirectoryChooser;
 import org.comicteam.plugins.languages.Languable;
 import org.comicteam.annotations.Translate;
@@ -44,13 +45,25 @@ public class GeneralSettingsController {
 
         languagesCombo.setValue(SettingsHelper.get("language"));
 
-        languagesCombo.setOnAction((e) -> languagesComboAction());
+        languagesCombo.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.ENTER) {
+                languagesCombo.show();
+            }
+        });
+
+        languagesCombo.setOnAction(e -> {
+            languagesComboAction();
+        });
     }
 
     @FXML
     public void directoryChooserButtonClick() {
         DirectoryChooser chooser = new DirectoryChooser();
         File file = chooser.showDialog(directoryChooserButton.getScene().getWindow());
+
+        if (file == null) {
+            return;
+        }
 
         try {
             SettingsHelper.set("savePath", file.getPath());

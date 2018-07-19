@@ -20,7 +20,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="directoryChooserButton" layoutX="365.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#directoryChooserButtonClick" text="..." />
+      <Button fx:id="directoryChooserButton" layoutX="365.0" layoutY="57.0" mnemonicParsing="false" onAction="#directoryChooserButtonClick" text="..." />
       <TextField fx:id="savePathField" editable="false" focusTraversable="false" layoutX="16.0" layoutY="94.0" prefHeight="26.0" prefWidth="421.0" />
    </children>
 </AnchorPane>

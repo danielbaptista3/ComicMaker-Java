@@ -100,14 +100,6 @@ public class JSONtoJava {
 
             String name = j.get("Canvas").toString();
 
-            /*Image image = null;
-
-            try {
-                image = new Image(CMFile.cmfile.getImage(name)));
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }*/
-
             Image image = CMFile.cmfile.getImage(name);
 
             canvas.getGraphicsContext2D().drawImage(image, 0, 0);

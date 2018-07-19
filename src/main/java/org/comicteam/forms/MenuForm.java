@@ -1,35 +1,35 @@
-package org.comicteam;
+package org.comicteam.forms;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PluginsForm extends Application {
+public class MenuForm extends Application {
+
     @Override
     public void start(Stage primaryStage) {
         Parent root;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("fxml/plugins.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
             return;
         }
 
-        Scene scene  = new Scene(root, 800, 600);
+        Scene scene  = new Scene(root, 500, 500);
 
+        primaryStage.setX(50);
+        primaryStage.setY(100);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-        primaryStage.setTitle("Plugins");
+        primaryStage.initModality(Modality.APPLICATION_MODAL);
 
-        primaryStage.show();
-
-        primaryStage.setOnCloseRequest(e -> {
-            //e.consume();
-        });
+        primaryStage.showAndWait();
     }
 }

@@ -30,6 +30,10 @@ public class RightClickBookController {
         );
         CMFile.cmfile.saved = false;
 
+        if (CMFile.cmfile.book.getPages().size() == 1) {
+            WorkingController.controller.currentPageLabel.setText("1");
+        }
+
         WorkingController.controller.redrawComponentsTree();
     }
 }

@@ -1,9 +1,10 @@
-package org.comicteam;
+package org.comicteam.forms;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.comicteam.controllers.SavingWarningController;
@@ -17,7 +18,7 @@ public class SavingWarningForm extends Application {
         Parent root;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("fxml/savingwarning.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/fxml/savingwarning.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
             return;
@@ -33,6 +34,8 @@ public class SavingWarningForm extends Application {
         primaryStage.setOnCloseRequest(e -> {
             SavingWarningController.controller.cancelButtonClick(null);
         });
+
+        primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/images/logo.png"))));
 
         primaryStage.showAndWait();
     }

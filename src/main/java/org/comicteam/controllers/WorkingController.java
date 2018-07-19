@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.comicteam.CMFile;
-import org.comicteam.EditorForm;
+import org.comicteam.forms.EditorForm;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.CanvasHelper;
@@ -40,7 +40,7 @@ public class WorkingController {
     @FXML
     public TreeView componentsTree;
     @FXML
-    private Label currentPageLabel;
+    public Label currentPageLabel;
     @FXML
     private Label pageCountLabel;
     @FXML
@@ -157,7 +157,7 @@ public class WorkingController {
     public void menuButtonClick() {
         if (!menuOpened) {
             try {
-                menuPane = FXMLLoader.load(getClass().getResource("../fxml/menu.fxml"));
+                menuPane = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
                 pane.getChildren().add(menuPane);
                 menuOpened = true;
             } catch (IOException e) {
@@ -244,7 +244,7 @@ public class WorkingController {
         try {
             hideComponentsTreeRightClick();
 
-            rightClickBox = FXMLLoader.load(getClass().getResource(String.format("../fxml/%s.fxml", fxml)));
+            rightClickBox = FXMLLoader.load(getClass().getResource(String.format("/fxml/%s.fxml", fxml)));
             rightClickBox.setLayoutX(0);
             rightClickBox.setLayoutY(y + 50);
 

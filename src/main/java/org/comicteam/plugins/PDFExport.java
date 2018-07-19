@@ -1,14 +1,13 @@
 package org.comicteam.plugins;
 
 import javafx.embed.swing.SwingFXUtils;
-import javafx.print.PrinterJob;
+import javafx.print.*;
 import javafx.scene.control.Button;
 import javafx.scene.image.WritableImage;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
-import org.apache.pdfbox.printing.PDFPrintable;
 import org.comicteam.CMFile;
 import org.comicteam.controllers.EditorController;
 import org.comicteam.controllers.MenuController;
@@ -17,12 +16,10 @@ import org.comicteam.helpers.SettingsHelper;
 import org.comicteam.layouts.ComicPage;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintStream;
 
 public class PDFExport extends Plugin {
 
@@ -43,11 +40,11 @@ public class PDFExport extends Plugin {
             MenuController.controller.pluginsBox.getChildren().add(print);
         }
 
-        pdf.setOnMouseClicked(e -> {
+        pdf.setOnAction(e -> {
             writePDDocument();
         });
 
-        print.setOnMouseClicked(e -> {
+        print.setOnAction(e -> {
             printPDDocument(print);
         });
     }
@@ -111,12 +108,27 @@ public class PDFExport extends Plugin {
 
     public void printPDDocument(Button print) {
         int currentPage = CMFile.cmfile.currentPage;
-        PrinterJob job = PrinterJob.createPrinterJob();
+        Printer printer = Printer.getDefaultPrinter();
+        PrinterJob job = PrinterJob.createPrinterJob(printer);
 
-        for (ComicPage page : CMFile.cmfile.book.getPages()) {
-            WorkingController.controller.selectPage(page);
-            job.printPage(EditorController.controller.editorPane);
+        if (job == null) {
+            System.out.println("Printer not found");
+            return;
         }
+
+        /*for (ComicPage page : CMFile.cmfile.book.getPages()) {PageLayout
+            WorkingController.controller.selectPage(page);
+
+            job.showPrintDialog(print.getScene().getWindow())//.printPage(EditorController.controller.editorPane);
+        }*/
+
+        PageLayout pl = printer.createPageLayout(Paper.A4, PageOrientation.PORTRAIT, 0, 0, 0, 0);
+
+        job.printPage(pl, EditorController.controller.editorPane);
+
+        //job.showPrintDialog(print.getScene().getWindow());
+
+        job.endJob();
 
         WorkingController.controller.selectPage(CMFile.cmfile.book.getPages().get(currentPage));
     }

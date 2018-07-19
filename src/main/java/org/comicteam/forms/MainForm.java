@@ -1,15 +1,13 @@
-package org.comicteam;
+package org.comicteam.forms;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.print.Printer;
-import javafx.print.PrinterJob;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.comicteam.helpers.PluginHelper;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class MainForm extends Application {
@@ -24,7 +22,7 @@ public class MainForm extends Application {
         Parent root;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
             return;
@@ -35,6 +33,8 @@ public class MainForm extends Application {
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.setTitle("ComicMaker");
+
+        primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/images/logo.png"))));
 
         primaryStage.show();
     }

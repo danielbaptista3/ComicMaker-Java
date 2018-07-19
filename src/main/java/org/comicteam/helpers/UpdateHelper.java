@@ -2,7 +2,8 @@ package org.comicteam.helpers;
 
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import org.comicteam.MainForm;
+import org.comicteam.forms.MainForm;
+import org.comicteam.controllers.WorkingController;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -40,7 +41,7 @@ public class UpdateHelper {
 
         try (InputStream in = new URL(url).openStream()) {
             String path = MainForm.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-            FileOutputStream fos = new FileOutputStream("/home/francois/Bureau/comicmaker.jar");
+            FileOutputStream fos = new FileOutputStream(path);
 
             fos.write(in.readAllBytes());
         } catch (MalformedURLException e) {
@@ -48,5 +49,7 @@ public class UpdateHelper {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        FXMLHelper.closeAllWindows(WorkingController.controller.pane);
     }
 }

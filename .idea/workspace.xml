@@ -6,23 +6,55 @@
   </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="PDFExport" />
+      <artifact name="ComicMaker" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4443bee3-cc38-4a1f-8e9c-dad93ae398db" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ComicMaker.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ComicMaker.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/MainForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/ClipartForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/ClipartForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/EditorForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/EditorForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/FormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/FormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/MainForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/MenuForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/MenuForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/ModelEditorForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/ModelEditorForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/NewProjectForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/NewProjectForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/PluginsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/PluginsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/SavingWarningForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/SavingWarningForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/SettingsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/SettingsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/WorkingForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/forms/WorkingForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/EditorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/GeneralSettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/GeneralSettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/PluginsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/PluginsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickBookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/WorkingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/WorkingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/clipart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/clipart.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/documentsettings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/documentsettings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/editor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/editor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/generalsettings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/generalsettings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/modeleditor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/modeleditor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/newproject.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/newproject.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/plugins.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/plugins.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/rightClickBook.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/rightClickBook.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/rightClickModel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/rightClickModel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/rightClickPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/rightClickPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/rightClickPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/rightClickPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/savingwarning.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/savingwarning.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/settings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/test.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/working.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/working.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/FXMLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/FXMLHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/JSONtoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/JSONtoJava.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/UpdateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/UpdateHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/Plugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/Plugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/Pluginable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/Pluginable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/English.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/English.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/French.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/French.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/Spanish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/Spanish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/PDFExport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/PDFExport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/comicteam/resources/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/logo.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,86 +87,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PluginHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="157" selection-start-line="157" selection-end-line="157" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/PluginsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-450">
-              <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/MainForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PDFExport.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/PDFExport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="112" column="8" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="French.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/French.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-330">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Plugin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/Plugin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -150,11 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>this</find>
-      <find>splash</find>
-      <find>= null;</find>
-      <find>layout</find>
-      <find>font</find>
       <find>Font</find>
       <find>new ComicPage</find>
       <find>150</find>
@@ -180,10 +128,16 @@
       <find>WritableImage</find>
       <find>println</find>
       <find>pluginsBox</find>
+      <find>FXMLLoader</find>
+      <find>System.out</find>
+      <find>setOn</find>
+      <find>setOnMouseCli</find>
+      <find>CurrentPage</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/java/org/comicteam/controllers</dir>
       <dir>$PROJECT_DIR$/src/main/java/org/comicteam/fxml</dir>
+      <dir>$PROJECT_DIR$/src/main/java</dir>
       <dir>$PROJECT_DIR$/src/main/java/org/comicteam</dir>
     </dirStrings>
   </component>
@@ -200,21 +154,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/PluginsForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/annotations/Translate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/SettingsHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/ModelEditorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickModelController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/ClipartController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/annotations/TranslateProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/annotations/Language.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/SavingWarningController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/fxml/main.fxml" />
-        <option value="$PROJECT_DIR$/target/classes/org/comicteam/fxml/main.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/Pluginable.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/Languable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/GeneralSettingsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/Plugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/languages/Languable.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/languages/Language.java" />
@@ -229,28 +169,42 @@
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/FXMLHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/ModelHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/DocumentSettingsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickBookController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickPageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickPanelController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/WorkingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/APIHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/SettingsForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/SettingsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/LanguageHelper.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/UpdateHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/Pluginable.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/Plugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/French.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/Spanish.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/English.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/PDFyyExport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MenuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/PDFyExport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/MenuForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/SettingsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/FormController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/UpdateHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/helpers/JSONtoJava.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/GeneralSettingsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/SettingsForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/SavingWarningForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/NewProjectForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/EditorForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/ModelEditorForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/ClipartForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/WorkingForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/PluginsForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/MainForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/PluginsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/forms/MainForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/comicteam/plugins/PDFExport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/PluginsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/WorkingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickBookController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/comicteam/controllers/EditorController.java" />
       </list>
     </option>
   </component>
@@ -287,10 +241,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-87" />
-    <option name="y" value="32" />
-    <option name="width" value="1590" />
-    <option name="height" value="872" />
+    <option name="x" value="350" />
+    <option name="y" value="25" />
+    <option name="width" value="1200" />
+    <option name="height" value="875" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -302,7 +256,6 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,40 +300,13 @@
             </path>
             <path>
               <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="comicteam" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="comicteam" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ComicMaker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="comicteam" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="languages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comicmaker" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,7 +317,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/comicteam" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/org/comicteam/plugins/languages/META-INF/MANIFEST.MF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -405,11 +331,11 @@
       <recent name="org.comicteam" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/org/comicteam/fxml" />
+      <recent name="$PROJECT_DIR$/src/main/resources/images" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/java/org/comicteam" />
-      <recent name="$PROJECT_DIR$/src/resources" />
-      <recent name="$PROJECT_DIR$/src/resources/org.comicteam" />
+      <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/comicteam/fxml" />
+      <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -428,8 +354,8 @@
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="MainForm" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="org.comicteam.MainForm" />
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.comicteam.Main" />
       <module name="ComicMaker" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
@@ -593,11 +519,15 @@
       <workItem from="1531559694119" duration="26405000" />
       <workItem from="1531638527610" duration="2925000" />
       <workItem from="1531645777241" duration="16632000" />
+      <workItem from="1531757930478" duration="10193000" />
+      <workItem from="1531844309540" duration="13249000" />
+      <workItem from="1531929384084" duration="9544000" />
+      <workItem from="1531983640915" duration="21503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="808133000" />
+    <option name="totallyTimeSpent" value="862622000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -610,11 +540,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1600" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32872927" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32596686" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.32458565" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -622,11 +551,11 @@
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.32947233" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32872927" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.30524862" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.3038674" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32872927" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.34749034" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.22715573" />
       <window_info anchor="right" id="Database" order="3" weight="0.32947233" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.35497236" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -680,7 +609,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/EditorController.java</url>
-          <line>49</line>
+          <line>53</line>
           <properties />
           <option name="timeStamp" value="87" />
         </line-breakpoint>
@@ -698,21 +627,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/PluginsController.java</url>
-          <line>94</line>
+          <line>101</line>
           <properties />
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java</url>
-          <line>175</line>
+          <line>169</line>
           <properties />
           <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MenuController.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java</url>
@@ -722,15 +645,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/PDFExport.java</url>
-          <line>33</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="108" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MenuController.java</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="109" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="110" />
@@ -798,287 +715,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/ModelHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/annotations/Language.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/annotations/LanguageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/annotations/Translate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/ClipartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/DocumentSettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/ModelEditorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/NewProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickBookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickModelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickPanelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/SavingWarningController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/exceptions/DescriptorNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/exceptions/InvalidDescriptorException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/ComicModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/models/Caption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/CMFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/annotations/TranslateProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/ClipartHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/fxml/main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/AddPanelForm.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/fxml/clipart.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/SettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="43" column="75" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/SettingsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/GeneralSettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/FXMLHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="104" column="34" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/SettingsHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/ClipartForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/PluginsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/LanguageHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="54" lean-forward="true" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../Software/jdk-9.0.1/lib/src.zip!/javafx.base/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../Software/jdk-9.0.1/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="1670" selection-start-line="1670" selection-end-line="1670" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/WorkingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2445">
-          <caret line="185" column="16" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/CanvasHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="213" column="8" selection-start-line="213" selection-start-column="8" selection-end-line="213" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/EditorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1110,20 +750,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/UpdateHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/English.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-885">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/French.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/CanvasHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/Plugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/generalsettings.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/annotations/Language.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/annotations/LanguageProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/annotations/Translate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/annotations/TranslateProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/UpdateHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/DocumentSettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickModelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickPanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/SavingWarningController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1132,49 +885,237 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../Software/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/print/PageLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="78" column="19" lean-forward="true" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/ModelEditorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="144" column="25" lean-forward="true" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/ClipartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="101" column="54" lean-forward="true" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/JSONtoJava.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+          <caret line="117" column="60" lean-forward="true" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/GeneralSettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="48" column="47" lean-forward="true" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/English.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/SettingsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-885">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/MainForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        <state relative-caret-position="-120">
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/languages/French.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/PluginHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="100">
+          <caret line="121" column="37" lean-forward="true" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/Plugin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/exceptions/DescriptorNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/CMFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="134" column="32" lean-forward="true" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/FormController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/SettingsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/ClipartForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/EditorForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/MenuForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/ModelEditorForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/NewProjectForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/PluginsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/SavingWarningForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/WorkingForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../Software/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="297" selection-start-line="297" selection-end-line="297" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/forms/MainForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/PluginsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450">
-          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+        <state relative-caret-position="241">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/WorkingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/RightClickBookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/EditorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/helpers/FXMLHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/controllers/NewProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1183,8 +1124,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/comicteam/plugins/PDFExport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="112" column="8" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+        <state relative-caret-position="15">
+          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1197,7 +1138,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>PDFExport</last-edited>
+          <last-edited>ComicMaker</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1214,7 +1155,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.30209482" />
+                <option value="0.1869266" />
               </list>
             </option>
           </splitter-proportions>
@@ -1226,7 +1167,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.30209482" />
+                <option value="0.1869266" />
               </list>
             </option>
           </splitter-proportions>
@@ -1238,7 +1179,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.30209482" />
+                <option value="0.1869266" />
               </list>
             </option>
           </splitter-proportions>
@@ -1250,7 +1191,8 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.30209482" />
+                <option value="0.1869266" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1274,7 +1216,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.30209482" />
+                <option value="0.1869266" />
               </list>
             </option>
           </splitter-proportions>

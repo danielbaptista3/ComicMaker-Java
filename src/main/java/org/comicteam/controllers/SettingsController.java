@@ -10,7 +10,6 @@ import javafx.scene.layout.AnchorPane;
 import org.comicteam.CMFile;
 
 import java.io.IOException;
-import java.net.URL;
 
 public class SettingsController {
     @FXML
@@ -38,10 +37,10 @@ public class SettingsController {
                     switch (newValue.getValue()) {
                         default:
                         case "General":
-                            fxmlFilename = "../fxml/generalsettings.fxml";
+                            fxmlFilename = "/fxml/generalsettings.fxml";
                             break;
                         case "Document":
-                            fxmlFilename = "../fxml/documentsettings.fxml";
+                            fxmlFilename = "/fxml/documentsettings.fxml";
                             break;
                     }
 

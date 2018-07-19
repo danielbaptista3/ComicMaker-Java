@@ -136,12 +136,10 @@ public class PluginHelper {
         hasDefaultLanguage();
 
         for (Class c : languages) {
-            System.out.println(c.getSimpleName());
             LanguageHelper.addLanguage(c);
         }
 
         for (Class c : plugins) {
-            System.out.println(c.getSimpleName());
             try {
                 Plugin p = (Plugin) c.newInstance();
                 p.action();
@@ -150,11 +148,7 @@ public class PluginHelper {
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
-
         }
-
-        //load plugins
-        //for
     }
 
     public static void addPlugin(Path path) {

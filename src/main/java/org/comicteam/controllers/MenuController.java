@@ -1,29 +1,17 @@
 package org.comicteam.controllers;
 
-import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.image.WritableImage;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 import org.comicteam.CMFile;
-import org.comicteam.PluginsForm;
+import org.comicteam.forms.PluginsForm;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.FXMLHelper;
 import org.comicteam.helpers.PluginHelper;
-import org.comicteam.helpers.SettingsHelper;
 import org.comicteam.helpers.UpdateHelper;
-import org.comicteam.layouts.ComicPage;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.*;
 
 public class MenuController {
     public static MenuController controller;

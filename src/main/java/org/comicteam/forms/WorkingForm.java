@@ -1,11 +1,13 @@
-package org.comicteam;
+package org.comicteam.forms;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import org.comicteam.CMFile;
 import org.comicteam.controllers.WorkingController;
 import org.comicteam.helpers.FXMLHelper;
 
@@ -18,7 +20,7 @@ public class WorkingForm extends Application {
         Parent root;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("fxml/working.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/fxml/working.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
             return;
@@ -35,13 +37,15 @@ public class WorkingForm extends Application {
         primaryStage.setTitle(CMFile.cmfile.book.getName());
         primaryStage.setX(0);
 
-        primaryStage.setOnCloseRequest((e) -> {
+        primaryStage.setOnCloseRequest(e -> {
             if (!CMFile.cmfile.saved) {
                 FXMLHelper.openSavingWarningForm();
             } else {
                 FXMLHelper.closeAllWindows(WorkingController.controller.pane);
             }
         });
+
+        primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/images/logo.png"))));
 
         primaryStage.show();
     }

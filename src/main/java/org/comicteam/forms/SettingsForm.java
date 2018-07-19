@@ -1,9 +1,10 @@
-package org.comicteam;
+package org.comicteam.forms;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -16,7 +17,7 @@ public class SettingsForm extends Application {
         Parent root;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("fxml/settings.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/fxml/settings.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
             return;
@@ -28,6 +29,8 @@ public class SettingsForm extends Application {
         primaryStage.setResizable(false);
         primaryStage.setTitle("Paramètres");
         primaryStage.initModality(Modality.APPLICATION_MODAL);
+
+        primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/images/settings.png"))));
 
         primaryStage.showAndWait();
     }

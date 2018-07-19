@@ -41,6 +41,10 @@ public class EditorController {
 
         CMFile.cmfile.book.sortPanels();
 
+        if (CMFile.cmfile.book.getPages().size() == 0) {
+            return;
+        }
+
         for (ComicPanel panel : CMFile.cmfile.book.getPages().get(CMFile.cmfile.currentPage).getPanels()) {
             Pane panelPane = CanvasHelper.getPanel(panel);
 

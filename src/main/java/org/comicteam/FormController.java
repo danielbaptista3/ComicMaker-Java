@@ -40,7 +40,6 @@ public class FormController {
             Image image = new Image(url.toExternalForm());
             //canvas.getGraphicsContext2D().drawImage(image, 100, 100);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
         }*/
 
         //ComicBook bulletin = DodoStop.getBook();

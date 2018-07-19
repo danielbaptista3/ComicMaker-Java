@@ -10,7 +10,6 @@ import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.PluginHelper;
 import org.comicteam.plugins.Plugin;
 
-import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -69,12 +68,20 @@ public class PluginsController {
         }
 
         pluginsList.setOnMouseClicked(e -> {
-            Plugin p = (Plugin) pluginsList.getSelectionModel().getSelectedItem();
-
-            pluginNameLabel.setText(p.getName());
-            pluginVersionLabel.setText(p.getVersion());
-            pluginDescriptionLabel.setText(p.getDescription());
+            selectPlugin();
         });
+
+        pluginsList.setOnKeyPressed(e -> {
+            selectPlugin();
+        });
+    }
+
+    public void selectPlugin() {
+        Plugin p = (Plugin) pluginsList.getSelectionModel().getSelectedItem();
+
+        pluginNameLabel.setText(p.getName());
+        pluginVersionLabel.setText(p.getVersion());
+        pluginDescriptionLabel.setText(p.getDescription());
     }
 
     @FXML

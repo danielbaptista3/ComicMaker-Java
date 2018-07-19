@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/ComicMaker</output-path>
     <properties id="javafx-properties">
       <options>
-        <option name="appClass" value="org.comicteam.MainForm" />
+        <option name="appClass" value="org.comicteam.Main" />
         <option name="description" value="Viewer and editor for comics" />
         <option name="height" value="500" />
         <option name="htmlPlaceholderId" value="" />
@@ -43,7 +43,6 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/httpmime-4.5.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/json-20160212.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/json-simple-1.1.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/junit-4.10.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/unirest-java-1.4.9.jar" path-in-jar="/" />
     </root>
   </artifact>
