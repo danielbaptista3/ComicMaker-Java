@@ -5,9 +5,9 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.RightClickPageController">
    <children>
-      <Button fx:id="deletePageButton" mnemonicParsing="false" onMouseClicked="#deletePageButtonClick" text="Supprimer la page" />
-      <Button fx:id="addPanelButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#addPanelButtonClick" text="Ajouter une case" />
-      <Button fx:id="upButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#upButtonClick" text="Up" />
-      <Button fx:id="downButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#downButtonClick" text="Down" />
+      <Button fx:id="deletePageButton" mnemonicParsing="false" onAction="#deletePageButtonClick" text="Supprimer la page" />
+      <Button fx:id="addPanelButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addPanelButtonClick" text="Ajouter une case" />
+      <Button fx:id="upButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#upButtonClick" text="Up" />
+      <Button fx:id="downButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#downButtonClick" text="Down" />
    </children>
 </VBox>

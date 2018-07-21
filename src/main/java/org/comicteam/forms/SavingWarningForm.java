@@ -32,7 +32,7 @@ public class SavingWarningForm extends Application {
         primaryStage.initModality(Modality.APPLICATION_MODAL);
 
         primaryStage.setOnCloseRequest(e -> {
-            SavingWarningController.controller.cancelButtonClick(null);
+            SavingWarningController.controller.cancelButtonClick();
         });
 
         primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/images/logo.png"))));

@@ -1,5 +1,6 @@
 package org.comicteam;
 
+import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import org.comicteam.exceptions.DescriptorNotFoundException;
 import org.comicteam.exceptions.InvalidDescriptorException;
@@ -15,6 +16,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import javax.imageio.ImageIO;
+import javax.swing.plaf.synth.ColorType;
+import java.awt.*;
+import java.awt.image.*;
 import java.io.*;
 import java.util.Enumeration;
 import java.util.HashMap;

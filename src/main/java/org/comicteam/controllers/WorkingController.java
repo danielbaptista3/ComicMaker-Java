@@ -16,6 +16,7 @@ import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.CanvasHelper;
 import org.comicteam.helpers.FXMLHelper;
+import org.comicteam.helpers.MM;
 import org.comicteam.layouts.ComicPage;
 import org.comicteam.layouts.ComicPanel;
 import org.comicteam.layouts.Position;
@@ -127,25 +128,58 @@ public class WorkingController {
         heightField.setText(String.valueOf(model.getLayout().getSize().getVertical()));
     }
 
+    public boolean canMovePanel(ComicPanel panel, int x, int y) {
+        boolean xok = x + panel.getLayout().getSize().getHorizontal() <= MM.toMM((int) EditorController.controller.editorPane.getWidth());
+        boolean yok = y + panel.getLayout().getSize().getVertical() <= MM.toMM((int) EditorController.controller.editorPane.getHeight());
+
+        return xok && yok;
+    }
+
     @FXML
     public void measureButtonClick() {
         if (FXMLHelper.integerFieldCorrect(xField) && FXMLHelper.integerFieldCorrect(yField)
                 && FXMLHelper.integerFieldCorrect(widthField) && FXMLHelper.integerFieldCorrect(heightField)) {
+
             switch (FXMLHelper.getClassOfSelectedObject().getSimpleName()) {
                 case "ComicPanel":
-                    FXMLHelper.getSelectedComicPanel().getLayout().setPosition(
+                    if (canMovePanel(FXMLHelper.getSelectedComicPanel(), Integer.valueOf(xField.getText()), Integer.valueOf(yField.getText()))) {
+                        FXMLHelper.getSelectedComicPanel().getLayout().setPosition(
+                                new Position(
+                                        Integer.valueOf(xField.getText()),
+                                        Integer.valueOf(yField.getText())
+                                )
+                        );
+
+                        FXMLHelper.getSelectedComicPanel().getLayout().setSize(
+                                new Size(
+                                        Integer.valueOf(widthField.getText()),
+                                        Integer.valueOf(heightField.getText())
+                                )
+                        );
+
+                        CMFile.cmfile.saved = false;
+                    }
+                    break;
+                case "ComicModel":
+                    FXMLHelper.getSelectedModel().getLayout().setPosition(
                             new Position(
                                     Integer.valueOf(xField.getText()),
                                     Integer.valueOf(yField.getText())
                             )
                     );
-                    FXMLHelper.getSelectedComicPanel().getLayout().setSize(
+
+                    FXMLHelper.getSelectedModel().getLayout().setSize(
                             new Size(
                                     Integer.valueOf(widthField.getText()),
                                     Integer.valueOf(heightField.getText())
                             )
                     );
+
+                    FXMLHelper.getSelectedModel().getCanvas().setLayoutX(MM.toPx(Integer.valueOf(xField.getText())));
+                    FXMLHelper.getSelectedModel().getCanvas().setLayoutY(MM.toPx(Integer.valueOf(yField.getText())));
+
                     CMFile.cmfile.saved = false;
+
                     break;
             }
 

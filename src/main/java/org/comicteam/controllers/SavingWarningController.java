@@ -3,7 +3,6 @@ package org.comicteam.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.FXMLHelper;
@@ -42,10 +41,11 @@ public class SavingWarningController {
     public void noButtonClick() {
         FXMLHelper.closeWindow(noButton);
         FXMLHelper.closeWindow(WorkingController.controller.pane);
+        FXMLHelper.closeWindow(EditorController.controller.editorPane);
     }
 
     @FXML
-    public void cancelButtonClick(MouseEvent e) {
+    public void cancelButtonClick() {
         FXMLHelper.closeWindow(cancelButton);
         mustCancel = true;
     }

@@ -8,6 +8,6 @@
    <children>
       <TextField fx:id="modelNameField" onKeyReleased="#modelNameFieldReleased" />
       <Button fx:id="modifyModelButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Modifier le modèle" />
-      <Button fx:id="deleteModelButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#deleteModelButtonClick" text="Supprimer le modèle" />
+      <Button fx:id="deleteModelButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteModelButtonClick" text="Supprimer le modèle" />
    </children>
 </VBox>
