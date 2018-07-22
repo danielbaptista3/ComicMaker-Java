@@ -32,6 +32,8 @@
         <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpmime:4.5.2" />
         <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.1" />
         <element id="library" level="project" name="Maven: org.json:json:20160212" />
+        <element id="library" level="project" name="Maven: org.apache.pdfbox:fontbox:2.0.9" />
+        <element id="library" level="project" name="Maven: org.apache.pdfbox:pdfbox:2.0.9" />
       </element>
       <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/commons-codec-1.9.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/commons-logging-1.2.jar" path-in-jar="/" />
@@ -44,6 +46,8 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/json-20160212.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/json-simple-1.1.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/ComicMaker/unirest-java-1.4.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/pdfbox/fontbox/2.0.9/fontbox-2.0.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/pdfbox/pdfbox/2.0.9/pdfbox-2.0.9.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

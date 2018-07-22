@@ -43,6 +43,7 @@ public class Spanish extends org.comicteam.plugins.languages.Language {
     private final String eraserButton = "Borrador";
     private final String penButton = "Lápiz";
     private final String lineButton = "Línea";
+    private final String balloonButton = "Globo";
     private final String modelNameLabel = "Nombre del modelo : ";
 
     //RightClickBook

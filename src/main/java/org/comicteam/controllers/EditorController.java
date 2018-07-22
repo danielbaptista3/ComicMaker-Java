@@ -47,7 +47,6 @@ public class EditorController {
             }
 
             for (ComicModel model : panel.getModels()) {
-                System.out.println(model.getLayout().getPosition());
                 panelPane.getChildren().add(model.getCanvas());
 
                 setMouseActions(panelPane, panel, model.getCanvas(), model);
@@ -183,7 +182,6 @@ public class EditorController {
                 0
         );
 
-        System.out.println("add actions");
         setMouseActions(((Pane) getSelectedPanel()), FXMLHelper.getSelectedComicPanel(), canvas, model);
 
         FXMLHelper.getSelectedComicPanel().getModels().add(model);

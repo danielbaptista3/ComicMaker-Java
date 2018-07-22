@@ -30,6 +30,7 @@ public class PluginsController {
     public Button deletePluginButton;
 
     public void initialize() {
+        MenuController.controller.pluginsBox.getChildren().clear();
         TranslateProcessor.translate(PluginsController.class, this);
 
         pluginsList.getItems().clear();
@@ -90,6 +91,10 @@ public class PluginsController {
         String filename = chooser.showOpenDialog(addPluginButton.getScene().getWindow()).getAbsolutePath();
 
         Path path = Paths.get(filename);
+
+        if (path.getNameCount() == 0) {
+            return;
+        }
 
         PluginHelper.addPlugin(path);
         PluginHelper.loadInstalledPlugins();

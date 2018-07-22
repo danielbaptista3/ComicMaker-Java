@@ -193,8 +193,6 @@ public class CanvasHelper {
         double scaleX = x / MM.toPx(model.getLayout().getSize().getHorizontal());
         double scaleY = y / MM.toPx(model.getLayout().getSize().getVertical());
 
-        System.out.println(scaleX + "   " + scaleY);
-
         canvas.setScaleX(scaleX);
         canvas.setScaleY(scaleY);
 

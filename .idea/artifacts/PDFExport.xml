@@ -2,15 +2,15 @@
   <artifact type="jar" name="PDFExport">
     <output-path>$PROJECT_DIR$/out/artifacts/PDFExport</output-path>
     <root id="archive" name="PDFExport.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/classes/org/comicteam/plugins/META-INF/MANIFEST.MF" />
+      </element>
       <element id="directory" name="org">
         <element id="directory" name="comicteam">
           <element id="directory" name="plugins">
             <element id="file-copy" path="$PROJECT_DIR$/target/classes/org/comicteam/plugins/PDFExport.class" />
           </element>
         </element>
-      </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/classes/org/comicteam/plugins/languages/META-INF/MANIFEST.MF" />
       </element>
     </root>
   </artifact>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <SCRIPT src="https://java.com/js/dtjava.js"></SCRIPT><script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'ComicMaker.jnlp'
+            },
+            {
+                javafx : '9.0.1+'
+            },
+            {}
+        );
+        return false;
+    }
+</script><script>
+    function javafxEmbedorg.comicteam() {
+        dtjava.embed(
+            {
+                id : 'org.comicteam',
+                url : 'ComicMaker.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '700',
+                height : '500'
+            },
+            {
+                javafx : '9.0.1+'
+            },
+            {}
+        );
+    }
+    
+            <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedorg.comicteam);
+</script>
+    </head>
+    <body>
+        <h2>
+            Test page for <b>Main</b>
+        </h2>
+        <b>Webstart:</b><a href="ComicMaker.jnlp" onclick="return launchApplication('ComicMaker.jnlp');">click to launch this app as webstart</a>
+        <br>
+        <hr>
+        <br>
+        
+        <!-- Applet will be inserted here -->
+        <div id="javafx-app-placeholder"></div>
+    </body>
+</html>

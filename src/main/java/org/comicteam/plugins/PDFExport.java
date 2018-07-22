@@ -116,17 +116,13 @@ public class PDFExport extends Plugin {
             return;
         }
 
-        /*for (ComicPage page : CMFile.cmfile.book.getPages()) {PageLayout
+        for (ComicPage page : CMFile.cmfile.book.getPages()) {
             WorkingController.controller.selectPage(page);
 
-            job.showPrintDialog(print.getScene().getWindow())//.printPage(EditorController.controller.editorPane);
-        }*/
+            PageLayout pl = printer.createPageLayout(Paper.A4, PageOrientation.PORTRAIT, 0, 0, 0, 0);
 
-        PageLayout pl = printer.createPageLayout(Paper.A4, PageOrientation.PORTRAIT, 0, 0, 0, 0);
-
-        job.printPage(pl, EditorController.controller.editorPane);
-
-        //job.showPrintDialog(print.getScene().getWindow());
+            job.printPage(pl, EditorController.controller.editorPane);
+        }
 
         job.endJob();
 

@@ -36,9 +36,6 @@ public class ClipartController {
     @FXML
     private ImageView imageView11;
 
-    //@FXML
-    //private SVGPath svgPath;
-
     public void initialize() {
         TranslateProcessor.translate(ClipartController.class, this);
         resultsScrollBar.setMax(0);

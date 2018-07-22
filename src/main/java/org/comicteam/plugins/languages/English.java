@@ -43,6 +43,7 @@ public class English extends org.comicteam.plugins.languages.Language {
     private final String eraserButton = "Eraser";
     private final String penButton = "Pen";
     private final String lineButton = "Line";
+    private final String balloonButton = "Balloon";
     private final String modelNameLabel = "Model name : ";
 
     //RightClickBook

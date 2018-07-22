@@ -36,7 +36,6 @@ public class ClipartHelper {
 
             for (int i = 0; i < imagesJson.length(); i++)  {
                 images.add(getImage(i));
-                //System.out.println(i + 1 + "   " + getLoadedPagesCount());
             }
         } catch (UnirestException e) {
             e.printStackTrace();

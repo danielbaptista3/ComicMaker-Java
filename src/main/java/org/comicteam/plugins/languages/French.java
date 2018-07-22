@@ -43,6 +43,7 @@ public class French extends org.comicteam.plugins.languages.Language {
     private final String eraserButton = "Gomme";
     private final String penButton = "Crayon";
     private final String lineButton = "Ligne";
+    private final String balloonButton = "Bulle";
     private final String modelNameLabel = "Nom du modèle : ";
 
     //RightClickBook

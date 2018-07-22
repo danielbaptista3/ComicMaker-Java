@@ -3,12 +3,9 @@ package org.comicteam.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.PixelReader;
-import javafx.scene.image.WritableImage;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
+import org.comicteam.CMFile;
 import org.comicteam.annotations.Translate;
 import org.comicteam.annotations.TranslateProcessor;
 import org.comicteam.helpers.FXMLHelper;
@@ -18,14 +15,11 @@ import org.comicteam.layouts.Position;
 import org.comicteam.layouts.Size;
 import org.comicteam.models.ComicModel;
 
-import javax.imageio.ImageIO;
-import java.awt.event.MouseEvent;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-
 public class ModelEditorController {
+    public static ModelEditorController controller;
+
     @FXML
-    private Pane drawingPane;
+    public Pane drawingPane;
 
     @Translate
     @FXML
@@ -36,6 +30,9 @@ public class ModelEditorController {
     @Translate
     @FXML
     public ToggleButton lineButton;
+    @Translate
+    @FXML
+    public ToggleButton balloonButton;
     @Translate
     @FXML
     public Label modelNameLabel;
@@ -54,12 +51,10 @@ public class ModelEditorController {
 
     private Canvas c;
 
-    //double x, y;
-
     @FXML
     private TextField modelNameField;
-    //@FXML
-    //private Button saveButton;
+
+    private boolean existing;
 
     public void initialize() {
         TranslateProcessor.translate(ModelEditorController.class, this);
@@ -69,14 +64,22 @@ public class ModelEditorController {
         toggles.getToggles().add(eraserButton);
         toggles.getToggles().add(penButton);
         toggles.getToggles().add(lineButton);
+        toggles.getToggles().add(balloonButton);
 
-        prepareCanvas();
+        prepareCanvas(null);
+        controller = this;
     }
 
-    private void prepareCanvas() {
+    public void prepareCanvas(Canvas ext) {
         drawingPane.setBorder(FXMLHelper.defaultBorder);
 
-        c = new Canvas(610, 540);
+        if (ext == null) {
+            existing = false;
+            c = new Canvas(610, 540);
+        } else {
+            existing = true;
+            c = ext;
+        }
         colorPicker.setValue(Color.BLACK);
 
         colorPicker.setOnAction(e -> {
@@ -94,16 +97,21 @@ public class ModelEditorController {
                 c.getGraphicsContext2D().fillOval(x1, y1, penSlider.getValue(), penSlider.getValue());
             } else if (toggles.getSelectedToggle() == lineButton) {
                 drawingPane.setOnMouseReleased(r -> {
-                    double xr = e.getSceneX() - drawingPane.getLayoutX();
-                    double yr = e.getSceneY() - drawingPane.getLayoutY();
+                    double xr = r.getSceneX() - drawingPane.getLayoutX();
+                    double yr = r.getSceneY() - drawingPane.getLayoutY();
 
                     double xr2 = x1 + r.getX();
                     double yr2 = y1 + r.getY();
 
-                    System.out.println(x1 + "-" + y1);
-
                     c.getGraphicsContext2D().setLineWidth(lineSlider.getValue());
-                    c.getGraphicsContext2D().strokeLine(x1, y1, xr2, yr2);
+                    c.getGraphicsContext2D().strokeLine(x1, y1, xr, yr);
+                });
+            } else if (toggles.getSelectedToggle() == balloonButton) {
+                drawingPane.setOnMouseDragged(r -> {
+                    double x2 = r.getSceneX() - drawingPane.getLayoutX();
+                    double y2 = r.getSceneY() - drawingPane.getLayoutY();
+
+                    c.getGraphicsContext2D().strokeOval(x1, y1, 150, 100);
                 });
             }
         });
@@ -116,25 +124,14 @@ public class ModelEditorController {
 
     @FXML
     public void saveButtonClick() {
-        //trim canvas
-        /*WritableImage im = new WritableImage((int) c.getWidth(), (int) c.getHeight());
+        String modelName = "Model";
 
-        c.snapshot(null, im);
-        ImageIO.read(new ByteArrayInputStream(im.))
-
-        int bx = 0;
-
-
-        for (; bx < im.getWidth(); bx++) {
-            for (int y = 0; y < im.getHeight(); y++) {
-                if (im.getPixelReader().getColor(bx, y).equals(Color.WHITE)) {
-
-                }
-            }
-        }*/
+        if (!modelNameField.getText().equals("")) {
+            modelName = modelNameField.getText();
+        }
 
         ComicModel model = new ComicModel(
-                modelNameField.getText(),
+                modelName,
                 c,
                 new ComicLayout(
                         new Position(0, 0),
@@ -145,10 +142,15 @@ public class ModelEditorController {
                 ),
                 0);
 
-        FXMLHelper.getSelectedComicPanel().getModels().add(model);
-
         FXMLHelper.closeWindow(modelNameField);
-        WorkingController.controller.redrawComponentsTree();
         EditorController.controller.redrawEditorPane();
+        CMFile.cmfile.saved = false;
+
+        if (existing) {
+            return;
+        }
+
+        FXMLHelper.getSelectedComicPanel().getModels().add(model);
+        WorkingController.controller.redrawComponentsTree();
     }
 }

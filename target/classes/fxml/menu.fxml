@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane layoutY="50.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.MenuController">
+   <children>
+      <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="newProjectButton" mnemonicParsing="false" onAction="#newProjectButtonClick" prefHeight="50.0" text="Nouveau projet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="openProjectButton" layoutY="50.0" mnemonicParsing="false" onAction="#openProjectButtonClick" prefHeight="50.0" text="Ouvrir projet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="saveProjectButton" layoutY="100.0" mnemonicParsing="false" onAction="#saveProjectButtonClick" prefHeight="50.0" text="Sauvegarder projet" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="settingsButton" layoutY="150.0" mnemonicParsing="false" onAction="#settingsButtonClick" prefHeight="50.0" text="Paramètres" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="pluginsButton" layoutY="200.0" mnemonicParsing="false" onAction="#pluginsButtonClick" prefHeight="50.0" text="Plugins" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="quitButton" layoutY="250.0" mnemonicParsing="false" onAction="#quitButtonClick" prefHeight="50.0" text="Quitter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonClick" prefHeight="50.0" text="No update" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <VBox fx:id="pluginsBox" layoutX="6.0" layoutY="350.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="350.0" />
+   </children>
+</AnchorPane>

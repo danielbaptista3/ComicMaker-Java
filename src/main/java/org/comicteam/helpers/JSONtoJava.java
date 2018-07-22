@@ -67,19 +67,13 @@ public class JSONtoJava {
             JSONObject j2 = (JSONObject) model;
 
             if (j2.containsKey("ComicModel")) {
-                System.out.println("ComicModel");
                 models.add(javaModel((JSONObject) model));
             } else if (j2.containsKey("SpeechBalloon")) {
-                System.out.println("SpeechBalloon");
                 models.add(javaSpeechBalloon((JSONObject) model));
             } else if (j2.containsKey("ThoughtBalloon")) {
-                System.out.println("ThoughtBalloon");
                 models.add(javaThoughtBalloon((JSONObject) model));
             } else if (j2.containsKey("Caption")) {
-                System.out.println("Caption");
                 models.add(javaCaption((JSONObject) model));
-            } else {
-                System.out.println("null");
             }
         }
 

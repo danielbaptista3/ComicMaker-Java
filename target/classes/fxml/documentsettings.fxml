@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.comicteam.controllers.DocumentSettingsController">
+   <children>
+      <Label fx:id="nameLabel" focusTraversable="false" layoutX="50.0" layoutY="46.0" text="Nom :" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <TextField fx:id="nameField" layoutX="71.0" layoutY="15.0" onKeyReleased="#nameFieldKeyReleased" prefHeight="26.0" prefWidth="366.0" AnchorPane.rightAnchor="10.0" />
+      <Label fx:id="serieLabel" focusTraversable="false" layoutX="141.0" layoutY="177.0" text="Série :" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60.0" />
+      <TextField fx:id="serieField" layoutX="80.0" layoutY="55.0" onKeyReleased="#serieFieldKeyReleased" prefHeight="26.0" prefWidth="366.0" AnchorPane.rightAnchor="10.0" />
+      <Label fx:id="authorsLabel" focusTraversable="false" layoutX="80.0" layoutY="242.0" text="Auteurs :" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0" />
+      <TextArea fx:id="authorsArea" layoutX="20.0" layoutY="124.0" onKeyReleased="#authorsAreaKeyReleased" prefHeight="146.0" prefWidth="420.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" />
+      <Label fx:id="descriptionLabel" focusTraversable="false" layoutX="123.0" layoutY="363.0" text="Description :" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="280.0" />
+      <TextArea fx:id="descriptionArea" layoutX="20.0" layoutY="306.0" onKeyReleased="#descriptionAreaKeyReleased" prefHeight="186.0" prefWidth="420.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+   </children>
+</AnchorPane>

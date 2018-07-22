@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ComicMaker.jnlp">
+    <information>
+        <title>ComicMaker</title>
+        <vendor>comicteam</vendor>
+        <description>Viewer and editor for comics</description>
+        <offline-allowed/>
+    </information>
+    <update check="background"/>
+    <resources>
+        <j2se version="9.0.1+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="ComicMaker.jar" size="6529618" download="eager"/>
+        <jar href="commons-codec-1.9.jar" size="263965" download="eager"/>
+        <jar href="commons-logging-1.2.jar" size="61829" download="eager"/>
+        <jar href="fontbox-2.0.9.jar" size="1554777" download="eager"/>
+        <jar href="hamcrest-core-1.1.jar" size="76643" download="eager"/>
+        <jar href="httpasyncclient-4.1.1.jar" size="177013" download="eager"/>
+        <jar href="httpclient-4.5.2.jar" size="736658" download="eager"/>
+        <jar href="httpcore-4.4.4.jar" size="326724" download="eager"/>
+        <jar href="httpcore-nio-4.4.4.jar" size="356091" download="eager"/>
+        <jar href="httpmime-4.5.2.jar" size="41029" download="eager"/>
+        <jar href="json-20160212.jar" size="49176" download="eager"/>
+        <jar href="json-simple-1.1.1.jar" size="23931" download="eager"/>
+        <jar href="junit-4.10.jar" size="253160" download="eager"/>
+        <jar href="pdfbox-2.0.9.jar" size="2513383" download="eager"/>
+        <jar href="unirest-java-1.4.9.jar" size="44604" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="700" height="500" main-class="org.comicteam.Main" name="Main"/>
+</jnlp>
+
